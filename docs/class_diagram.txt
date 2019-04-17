@@ -1,0 +1,123 @@
+@startuml
+package src {
+    class Main { 
+        int main()
+    }
+
+    class AudioClient {
+        model: AudioModel
+        setup()
+        setInput(device: ofSoundDevice)
+        getInputList(): ofSoundDevice
+        setSmoothing(smoothing: Float)
+        audioIn(buffer: ofSoundBuffer)
+        update(buffer: ofSoundBuffer)
+        exit()
+    }
+    AudioClient <-- AudioModel 
+
+    class AudioModel {
+        rms : float
+        power : float
+        pitchFreqNorm : float
+        pitchConf : float
+        pitchSalience : float
+        hfcNorm : float
+        specCompNorm : float
+        centroidNorm : float
+        inharmonicity : float
+        dissonance : float
+        rollOffNorm : float
+        oddToEvenNorm : float
+        strongPeakNorm : float
+        strongDecayNorm : float
+        spectrum : vector<float>
+        melBands : vector<float>
+        mfcc : vector<float>
+        hpcp : vector<float>
+        tristimulus : vector<float>
+        isOnset : bool
+    }
+
+    class LedClient {
+        setup(params)
+        beginStage()
+        endStage()
+        isConnected()
+        drawStage()
+        exit()
+    }
+    class BoxClient {
+        BoxInfo getInfo()
+        start()
+        stop()
+        restart()
+        setConfig(configJson: String)
+    }
+    BoxClient <-- BoxModel
+    note top of BoxClient : TODO\nRequires Box API Service
+
+
+    class BoxModel {
+        deviceList: List<FadecandyDevice>
+        configJson : String
+    }
+
+    class FadecandyDevice {
+        name : String
+        serialNumber : String
+        firmwareVersion : String
+    }
+
+    BoxModel o-- FadecandyDevice
+
+    class AppContext <<Singleton>> {
+        audio: AudioClient
+        led: LedClient
+        box: BoxClient
+        log(message: String)
+    }
+
+    AppContext <-- AudioClient
+    AppContext <-- LedClient
+    AppContext <-- BoxClient
+
+    Main <.. SystemWindow
+    Main <.. VisualMixerWindow
+
+    class SystemWindow {
+        setup()
+        update()
+        draw()
+        exit()
+    }
+    class VisualMixerWindow {
+        visualList: List<BaseVisual>
+        setup()
+        update()
+        draw()
+        exit()
+    }
+
+    abstract class BaseVisual {
+        name : String
+        isEnabled : Boolean
+        alpha: Float
+
+        setup()
+        update()
+        draw()
+        exit()
+    }
+    VisualMixerWindow o-- BaseVisual
+
+    class FunkyVisual
+    class TrippyVisual
+    class ShaderVisual
+
+    BaseVisual <|-- FunkyVisual
+    BaseVisual <|-- TrippyVisual
+    BaseVisual <|-- ShaderVisual
+}
+
+@enduml
