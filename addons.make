@@ -1,0 +1,7 @@
+ofxAudioAnalyzer
+ofxAudioDecoder
+ofxGui
+ofxNetwork
+ofxOPC
+ofxGraph
+ofxXmlSettings

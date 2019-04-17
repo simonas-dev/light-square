@@ -1,0 +1,648 @@
+<?xml version="1.0"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup>
+		<ClCompile Include="src\ofApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\main.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofCamBox.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="src\ofAllAlgsApp.cpp">
+			<Filter>src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerAlgorithms.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAMultiPitchKlapuriAlgorithm.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAOnsetsAlgorithm.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofSoundPlayerExtended.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerUnit.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzer.cpp">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\src\ofxAudioDecoder.cpp">
+			<Filter>addons\ofxAudioDecoder\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\libs\src\audiodecoderbase.cpp">
+			<Filter>addons\ofxAudioDecoder\libs\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\libs\src\audiodecodercoreaudio.cpp">
+			<Filter>addons\ofxAudioDecoder\libs\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxBaseGui.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxColorPicker.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxSliderGroup.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxToggle.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxButton.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxGuiGroup.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxInputField.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxLabel.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxPanel.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxSlider.cpp">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxUDPManager.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPServer.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPManager.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPClient.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxNetworkUtils.cpp">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxOPC.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelGrid.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelRing.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelStrip.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelObject.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelCustomObject.cpp">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxGraph\src\ofxGraph.cpp">
+			<Filter>addons\ofxGraph\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp">
+			<Filter>addons\ofxXmlSettings\src</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp">
+			<Filter>addons\ofxXmlSettings\libs</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp">
+			<Filter>addons\ofxXmlSettings\libs</Filter>
+		</ClCompile>
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxml.cpp">
+			<Filter>addons\ofxXmlSettings\libs</Filter>
+		</ClCompile>
+	</ItemGroup>
+	<ItemGroup>
+		<Filter Include="src">
+			<UniqueIdentifier>{d8376475-7454-4a24-b08a-aac121d3ad6f}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons">
+			<UniqueIdentifier>{71834F65-F3A9-211E-73B8-DC85}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer">
+			<UniqueIdentifier>{5B17798F-6E77-461D-CF90-1B98}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\src">
+			<UniqueIdentifier>{115F203C-8AF6-00B3-4FC7-1255}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs">
+			<UniqueIdentifier>{5AD03A49-A7B7-4210-BD86-7908}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\fftw3f">
+			<UniqueIdentifier>{38D64F29-BEA8-A4EE-C328-6538}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\fftw3f\include">
+			<UniqueIdentifier>{200BB2D8-3FCE-225E-4CED-7A26}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\sndfile">
+			<UniqueIdentifier>{D587E7FD-531F-FDC2-E7F7-ED38}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\sndfile\include">
+			<UniqueIdentifier>{AF31687F-30CC-ED34-4625-EAA2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia">
+			<UniqueIdentifier>{C6C2E6FA-1C04-0AD9-C37D-174E}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include">
+			<UniqueIdentifier>{E54E5864-C47C-8681-B1E7-0B36}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia">
+			<UniqueIdentifier>{BE39C841-7E0E-B49E-2FF8-AB69}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler">
+			<UniqueIdentifier>{8E09B475-B8BE-9F68-7E60-BD24}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils">
+			<UniqueIdentifier>{37173E66-2457-305B-68C8-C0CB}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt">
+			<UniqueIdentifier>{7EBE9D1A-B531-2529-ADBF-47F1}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming">
+			<UniqueIdentifier>{46A9934D-7E1F-8A2E-CF8F-761F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms">
+			<UniqueIdentifier>{4D74219B-2CFA-1844-AE48-B2AF}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder">
+			<UniqueIdentifier>{B392EF4F-538A-9A5F-2908-E562}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder\src">
+			<UniqueIdentifier>{19EA0C39-DAAB-239B-E919-BA4D}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder\libs">
+			<UniqueIdentifier>{3C3D65F6-0FF6-B2E5-AEC1-7924}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder\libs\include">
+			<UniqueIdentifier>{A4CB77E5-E476-06B9-5603-030F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder\libs\include\apple">
+			<UniqueIdentifier>{61189726-EDE5-DF0B-4C76-A8C2}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxAudioDecoder\libs\src">
+			<UniqueIdentifier>{9C96B577-3400-CE90-D36A-2A4F}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGui">
+			<UniqueIdentifier>{4F2A59AF-5F4E-704B-D067-EC13}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGui\src">
+			<UniqueIdentifier>{645E9533-4DCD-6179-1CDF-CB65}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxNetwork">
+			<UniqueIdentifier>{01A15744-29A6-108D-08E9-83A7}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxNetwork\src">
+			<UniqueIdentifier>{3D1C10C7-8F35-E796-9C70-F5F3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxOPC">
+			<UniqueIdentifier>{F9C3B8CB-D65A-4057-F2C7-F2D6}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxOPC\src">
+			<UniqueIdentifier>{4EB90E49-E56A-4D9F-65DC-0469}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGraph">
+			<UniqueIdentifier>{1200DEAB-7150-1CD6-345C-7C0A}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxGraph\src">
+			<UniqueIdentifier>{94D3FEA1-7E7A-7953-0852-9EEC}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxXmlSettings">
+			<UniqueIdentifier>{877F005D-13E6-0592-1D97-F2E3}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxXmlSettings\src">
+			<UniqueIdentifier>{CCB2AC63-49D2-977C-CFE8-AEAD}</UniqueIdentifier>
+		</Filter>
+		<Filter Include="addons\ofxXmlSettings\libs">
+			<UniqueIdentifier>{687714A8-1662-FA1C-261F-50F0}</UniqueIdentifier>
+		</Filter>
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofAllAlgsApp.h">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="src\ofCamBox.hpp">
+			<Filter>src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAOnsetsAlgorithm.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerAlgorithms.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerUnit.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAMultiPitchKlapuriAlgorithm.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzer.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofSoundPlayerExtended.h">
+			<Filter>addons\ofxAudioAnalyzer\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include\fftw3.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\fftw3f\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\sndfile\include\sndfile.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\sndfile\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentia.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\iotypewrappers_impl.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\range.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\version.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\pool.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\configurable.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streamconnector.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithm.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\config.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\types.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\parameter.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\threading.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\iotypewrappers.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\network.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\networkparser.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\graphutils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentiamath.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\stringutil.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentiautil.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\asciidagparser.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\asciidag.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\metadatautils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\audiocontext.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\bpmutil.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\output.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array3d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt2vector.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_math_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array1d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array2d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_version.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array3d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array2d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_svd.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt2essentiautils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array1d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_i_refvec.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_cmat.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_vec.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_qr.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_cholesky.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_stopwatch.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_subscript.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array3d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array1d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_lu.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array3d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array2d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_sparse_matrix_csr.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_eig.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array1d_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array2d.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\ringbufferimpl.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\synth_utils.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\betools.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\MersenneTwister.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\ffmpegapi.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\peak.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\yamlast.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\jsonconvert.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\atomic.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\bpfutil.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\roguevector.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\accumulatoralgorithm.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\source.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\vectoroutput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\poolstorage.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbufferinput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\diskwriter.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbuffervectoroutput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\devnull.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\vectorinput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\fileoutput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbufferoutput.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\copy.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\phantombuffer.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sourceproxy.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sink.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithmwrapper.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sourcebase.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithmcomposite.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\phantombuffer_impl.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sinkproxy.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\multiratebuffer.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithm.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sinkbase.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\debugging.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithmfactory.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\connector.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithmfactory_impl.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streamutil.h">
+			<Filter>addons\ofxAudioAnalyzer\libs\essentia\include\essentia</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\src\ofxAudioDecoder.h">
+			<Filter>addons\ofxAudioDecoder\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\apple\CAStreamBasicDescription.h">
+			<Filter>addons\ofxAudioDecoder\libs\include\apple</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\apple\CADebugMacros.h">
+			<Filter>addons\ofxAudioDecoder\libs\include\apple</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecoder.h">
+			<Filter>addons\ofxAudioDecoder\libs\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecodercoreaudio.h">
+			<Filter>addons\ofxAudioDecoder\libs\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecoderbase.h">
+			<Filter>addons\ofxAudioDecoder\libs\include</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxGuiGroup.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxToggle.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxSlider.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxGui.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxBaseGui.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxButton.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxLabel.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxInputField.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxSliderGroup.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxColorPicker.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxPanel.h">
+			<Filter>addons\ofxGui\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPManager.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPClient.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxNetwork.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxUDPSettings.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxNetworkUtils.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPSettings.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxUDPManager.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPServer.h">
+			<Filter>addons\ofxNetwork\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixels.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelRing.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelStrip.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelGrid.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelObject.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelCustomObject.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\Effects.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxOPC.h">
+			<Filter>addons\ofxOPC\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxGraph\src\ofxGraph.h">
+			<Filter>addons\ofxGraph\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h">
+			<Filter>addons\ofxXmlSettings\src</Filter>
+		</ClInclude>
+		<ClInclude Include="..\..\addons\ofxXmlSettings\libs\tinyxml.h">
+			<Filter>addons\ofxXmlSettings\libs</Filter>
+		</ClInclude>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc" />
+	</ItemGroup>
+</Project>

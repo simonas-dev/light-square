@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<group>
+	<Smoothing>0</Smoothing>
+	<Fade_Ratio>0.0245</Fade_Ratio>
+	<Max_Note_Ratio>0.065</Max_Note_Ratio>
+	<Add___Blend_Ratio>0.29</Add___Blend_Ratio>
+</group>
+<Options>
+	<BufSize>128</BufSize>
+	<Pause>0</Pause>
+	<No_draw>0</No_draw>
+</Options>

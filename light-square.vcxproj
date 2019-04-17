@@ -1,0 +1,382 @@
+<?xml version="1.0"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+	<ItemGroup Label="ProjectConfigurations">
+		<ProjectConfiguration Include="Debug|Win32">
+			<Configuration>Debug</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Debug|x64">
+			<Configuration>Debug</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|Win32">
+			<Configuration>Release</Configuration>
+			<Platform>Win32</Platform>
+		</ProjectConfiguration>
+		<ProjectConfiguration Include="Release|x64">
+			<Configuration>Release</Configuration>
+			<Platform>x64</Platform>
+		</ProjectConfiguration>
+	</ItemGroup>
+	<PropertyGroup Condition="'$(WindowsTargetPlatformVersion)'==''">
+		<LatestTargetPlatformVersion>$([Microsoft.Build.Utilities.ToolLocationHelper]::GetLatestSDKTargetPlatformVersion('Windows', '10.0'))</LatestTargetPlatformVersion>
+		<WindowsTargetPlatformVersion Condition="'$(WindowsTargetPlatformVersion)' == ''">$(LatestTargetPlatformVersion)</WindowsTargetPlatformVersion>
+		<TargetPlatformVersion>$(WindowsTargetPlatformVersion)</TargetPlatformVersion>
+	</PropertyGroup>
+	<PropertyGroup Label="Globals">
+		<ProjectGuid>{7FD42DF7-442E-479A-BA76-D0022F99702A}</ProjectGuid>
+		<Keyword>Win32Proj</Keyword>
+		<RootNamespace>light-square</RootNamespace>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+		<ConfigurationType>Application</ConfigurationType>
+		<CharacterSet>Unicode</CharacterSet>
+		<WholeProgramOptimization>true</WholeProgramOptimization>
+		<PlatformToolset>v141</PlatformToolset>
+	</PropertyGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../libs\openFrameworksCompiled\project\vs\openFrameworksRelease.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+		<Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+		<Import Project="../../libs\openFrameworksCompiled\project\vs\openFrameworksDebug.props" />
+	</ImportGroup>
+	<PropertyGroup Label="UserMacros" />
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<TargetName>$(ProjectName)_debug</TargetName>
+		<LinkIncremental>true</LinkIncremental>
+		<GenerateManifest>true</GenerateManifest>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<OutDir>bin\</OutDir>
+		<IntDir>obj\$(Platform)\$(Configuration)\</IntDir>
+		<LinkIncremental>false</LinkIncremental>
+	</PropertyGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAudioAnalyzer\libs;..\..\addons\ofxAudioAnalyzer\libs\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt;..\..\addons\ofxAudioAnalyzer\libs\essentia\lib;..\..\addons\ofxAudioAnalyzer\libs\fftw3f;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\lib;..\..\addons\ofxAudioAnalyzer\libs\sndfile;..\..\addons\ofxAudioAnalyzer\libs\sndfile\include;..\..\addons\ofxAudioAnalyzer\libs\sndfile\lib;..\..\addons\ofxAudioAnalyzer\src;..\..\addons\ofxAudioDecoder\libs;..\..\addons\ofxAudioDecoder\libs\include;..\..\addons\ofxAudioDecoder\libs\include\apple;..\..\addons\ofxAudioDecoder\libs\src;..\..\addons\ofxAudioDecoder\src;..\..\addons\ofxGui\src;..\..\addons\ofxNetwork\src;..\..\addons\ofxOPC\src;..\..\addons\ofxGraph\src;..\..\addons\ofxXmlSettings\libs;..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+		<ClCompile>
+			<Optimization>Disabled</Optimization>
+			<BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAudioAnalyzer\libs;..\..\addons\ofxAudioAnalyzer\libs\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt;..\..\addons\ofxAudioAnalyzer\libs\essentia\lib;..\..\addons\ofxAudioAnalyzer\libs\fftw3f;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\lib;..\..\addons\ofxAudioAnalyzer\libs\sndfile;..\..\addons\ofxAudioAnalyzer\libs\sndfile\include;..\..\addons\ofxAudioAnalyzer\libs\sndfile\lib;..\..\addons\ofxAudioAnalyzer\src;..\..\addons\ofxAudioDecoder\libs;..\..\addons\ofxAudioDecoder\libs\include;..\..\addons\ofxAudioDecoder\libs\include\apple;..\..\addons\ofxAudioDecoder\libs\src;..\..\addons\ofxAudioDecoder\src;..\..\addons\ofxGui\src;..\..\addons\ofxNetwork\src;..\..\addons\ofxOPC\src;..\..\addons\ofxGraph\src;..\..\addons\ofxXmlSettings\libs;..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<GenerateDebugInformation>true</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAudioAnalyzer\libs;..\..\addons\ofxAudioAnalyzer\libs\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt;..\..\addons\ofxAudioAnalyzer\libs\essentia\lib;..\..\addons\ofxAudioAnalyzer\libs\fftw3f;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\lib;..\..\addons\ofxAudioAnalyzer\libs\sndfile;..\..\addons\ofxAudioAnalyzer\libs\sndfile\include;..\..\addons\ofxAudioAnalyzer\libs\sndfile\lib;..\..\addons\ofxAudioAnalyzer\src;..\..\addons\ofxAudioDecoder\libs;..\..\addons\ofxAudioDecoder\libs\include;..\..\addons\ofxAudioDecoder\libs\include\apple;..\..\addons\ofxAudioDecoder\libs\src;..\..\addons\ofxAudioDecoder\src;..\..\addons\ofxGui\src;..\..\addons\ofxNetwork\src;..\..\addons\ofxOPC\src;..\..\addons\ofxGraph\src;..\..\addons\ofxXmlSettings\libs;..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<MultiProcessorCompilation>true</MultiProcessorCompilation>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+		<ClCompile>
+			<WholeProgramOptimization>false</WholeProgramOptimization>
+			<PreprocessorDefinitions>%(PreprocessorDefinitions)</PreprocessorDefinitions>
+			<RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+			<WarningLevel>Level3</WarningLevel>
+			<AdditionalIncludeDirectories>%(AdditionalIncludeDirectories);src;..\..\addons\ofxAudioAnalyzer\libs;..\..\addons\ofxAudioAnalyzer\libs\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils;..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt;..\..\addons\ofxAudioAnalyzer\libs\essentia\lib;..\..\addons\ofxAudioAnalyzer\libs\fftw3f;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include;..\..\addons\ofxAudioAnalyzer\libs\fftw3f\lib;..\..\addons\ofxAudioAnalyzer\libs\sndfile;..\..\addons\ofxAudioAnalyzer\libs\sndfile\include;..\..\addons\ofxAudioAnalyzer\libs\sndfile\lib;..\..\addons\ofxAudioAnalyzer\src;..\..\addons\ofxAudioDecoder\libs;..\..\addons\ofxAudioDecoder\libs\include;..\..\addons\ofxAudioDecoder\libs\include\apple;..\..\addons\ofxAudioDecoder\libs\src;..\..\addons\ofxAudioDecoder\src;..\..\addons\ofxGui\src;..\..\addons\ofxNetwork\src;..\..\addons\ofxOPC\src;..\..\addons\ofxGraph\src;..\..\addons\ofxXmlSettings\libs;..\..\addons\ofxXmlSettings\src</AdditionalIncludeDirectories>
+			<CompileAs>CompileAsCpp</CompileAs>
+			<ObjectFileName>$(IntDir)</ObjectFileName>
+		</ClCompile>
+		<Link>
+			<IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+			<GenerateDebugInformation>false</GenerateDebugInformation>
+			<SubSystem>Console</SubSystem>
+			<OptimizeReferences>true</OptimizeReferences>
+			<EnableCOMDATFolding>true</EnableCOMDATFolding>
+			<RandomizedBaseAddress>false</RandomizedBaseAddress>
+			<AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+			<AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+		</Link>
+		<PostBuildEvent />
+	</ItemDefinitionGroup>
+	<ItemGroup>
+		<ClCompile Include="src\main.cpp" />
+		<ClCompile Include="src\ofApp.cpp" />
+		<ClCompile Include="src\ofCamBox.cpp" />
+		<ClCompile Include="src\ofAllAlgsApp.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerAlgorithms.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAMultiPitchKlapuriAlgorithm.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAOnsetsAlgorithm.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofSoundPlayerExtended.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerUnit.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzer.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\src\ofxAudioDecoder.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\libs\src\audiodecoderbase.cpp" />
+		<ClCompile Include="..\..\addons\ofxAudioDecoder\libs\src\audiodecodercoreaudio.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxBaseGui.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxColorPicker.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxSliderGroup.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxToggle.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxButton.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxGuiGroup.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxInputField.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxLabel.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxPanel.cpp" />
+		<ClCompile Include="..\..\addons\ofxGui\src\ofxSlider.cpp" />
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxUDPManager.cpp" />
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPServer.cpp" />
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPManager.cpp" />
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxTCPClient.cpp" />
+		<ClCompile Include="..\..\addons\ofxNetwork\src\ofxNetworkUtils.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxOPC.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelGrid.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelRing.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelStrip.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelObject.cpp" />
+		<ClCompile Include="..\..\addons\ofxOPC\src\ofxNeoPixelCustomObject.cpp" />
+		<ClCompile Include="..\..\addons\ofxGraph\src\ofxGraph.cpp" />
+		<ClCompile Include="..\..\addons\ofxXmlSettings\src\ofxXmlSettings.cpp" />
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxmlparser.cpp" />
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxmlerror.cpp" />
+		<ClCompile Include="..\..\addons\ofxXmlSettings\libs\tinyxml.cpp" />
+	</ItemGroup>
+	<ItemGroup>
+		<ClInclude Include="src\ofApp.h" />
+		<ClInclude Include="src\ofAllAlgsApp.h" />
+		<ClInclude Include="src\ofCamBox.hpp" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAOnsetsAlgorithm.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerAlgorithms.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzerUnit.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAAMultiPitchKlapuriAlgorithm.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofxAudioAnalyzer.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\src\ofSoundPlayerExtended.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\fftw3f\include\fftw3.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\sndfile\include\sndfile.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentia.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\iotypewrappers_impl.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\range.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\version.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\pool.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\configurable.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streamconnector.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithm.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\config.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\types.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\parameter.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\threading.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\iotypewrappers.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\network.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\networkparser.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\scheduler\graphutils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentiamath.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\stringutil.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\essentiautil.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\asciidagparser.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\asciidag.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\metadatautils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\audiocontext.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\bpmutil.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\output.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array3d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt2vector.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_math_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array1d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array2d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_version.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array3d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array2d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_svd.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt2essentiautils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array1d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_i_refvec.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_cmat.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_vec.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_qr.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_cholesky.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_stopwatch.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_subscript.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array3d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array1d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_lu.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array3d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_fortran_array2d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_sparse_matrix_csr.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\jama_eig.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array1d_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\tnt\tnt_array2d.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\ringbufferimpl.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\synth_utils.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\betools.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\MersenneTwister.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\ffmpegapi.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\peak.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\yamlast.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\jsonconvert.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\atomic.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\utils\bpfutil.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\roguevector.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\accumulatoralgorithm.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\source.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\vectoroutput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\poolstorage.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbufferinput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\diskwriter.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbuffervectoroutput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\devnull.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\vectorinput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\fileoutput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\ringbufferoutput.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\algorithms\copy.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\phantombuffer.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sourceproxy.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sink.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithmwrapper.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sourcebase.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithmcomposite.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\phantombuffer_impl.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sinkproxy.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\multiratebuffer.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\streamingalgorithm.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streaming\sinkbase.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\debugging.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithmfactory.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\connector.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\algorithmfactory_impl.h" />
+		<ClInclude Include="..\..\addons\ofxAudioAnalyzer\libs\essentia\include\essentia\streamutil.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\src\ofxAudioDecoder.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\apple\CAStreamBasicDescription.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\apple\CADebugMacros.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecoder.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecodercoreaudio.h" />
+		<ClInclude Include="..\..\addons\ofxAudioDecoder\libs\include\audiodecoderbase.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxGuiGroup.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxToggle.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxSlider.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxGui.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxBaseGui.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxButton.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxLabel.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxInputField.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxSliderGroup.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxColorPicker.h" />
+		<ClInclude Include="..\..\addons\ofxGui\src\ofxPanel.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPManager.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPClient.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxNetwork.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxUDPSettings.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxNetworkUtils.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPSettings.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxUDPManager.h" />
+		<ClInclude Include="..\..\addons\ofxNetwork\src\ofxTCPServer.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixels.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelRing.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelStrip.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelGrid.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelObject.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxNeoPixelCustomObject.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\Effects.h" />
+		<ClInclude Include="..\..\addons\ofxOPC\src\ofxOPC.h" />
+		<ClInclude Include="..\..\addons\ofxGraph\src\ofxGraph.h" />
+		<ClInclude Include="..\..\addons\ofxXmlSettings\src\ofxXmlSettings.h" />
+		<ClInclude Include="..\..\addons\ofxXmlSettings\libs\tinyxml.h" />
+	</ItemGroup>
+	<ItemGroup>
+		<ProjectReference Include="$(OF_ROOT)\libs\openFrameworksCompiled\project\vs\openframeworksLib.vcxproj">
+			<Project>{5837595d-aca9-485c-8e76-729040ce4b0b}</Project>
+		</ProjectReference>
+	</ItemGroup>
+	<ItemGroup>
+		<ResourceCompile Include="icon.rc">
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalOptions Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">/D_DEBUG %(AdditionalOptions)</AdditionalOptions>
+			<AdditionalIncludeDirectories>$(OF_ROOT)\libs\openFrameworksCompiled\project\vs</AdditionalIncludeDirectories>
+		</ResourceCompile>
+	</ItemGroup>
+	<Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+	<ProjectExtensions>
+		<VisualStudio>
+			<UserProperties RESOURCE_FILE="icon.rc" />
+		</VisualStudio>
+	</ProjectExtensions>
+</Project>
