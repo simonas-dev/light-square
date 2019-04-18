@@ -1,9 +1,9 @@
 #include "ofMain.h"
-#include "ofApp.h"
-#include "ofAllAlgsApp.h"
-#include "ofAppGLFWWindow.h"
+//#include "ofApp.h"
+//#include "ofAllAlgsApp.h"
 #include "ofAppGLFWWindow.h"
 #include "SystemWindow.hpp"
+#include "VisualMixerWindow.hpp"
 
 int main() {
     ofGLFWWindowSettings settings;
@@ -31,8 +31,16 @@ int main() {
     settings.setPosition(ofVec2f(300,0));
     settings.resizable = true;
     shared_ptr<ofAppBaseWindow> systemWindow = ofCreateWindow(settings);
-    shared_ptr<SystemWindow> stageApp(new SystemWindow(context.get()));
-    ofRunApp(systemWindow, stageApp);
+    shared_ptr<SystemWindow> systemApp(new SystemWindow(context.get()));
+    ofRunApp(systemWindow, systemApp);
+
+    
+    settings.setSize(1280, 800);
+    settings.setPosition(ofVec2f(300,0));
+    settings.resizable = true;
+    shared_ptr<ofAppBaseWindow> mixerWindow = ofCreateWindow(settings);
+    shared_ptr<VisualMixerWindow> mixerApp(new VisualMixerWindow(context.get()));
+    ofRunApp(mixerWindow, mixerApp);
 
     ofRunMainLoop();
 }

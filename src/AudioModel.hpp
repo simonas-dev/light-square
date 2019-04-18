@@ -4,6 +4,7 @@
 //
 //  Created by Simonas Sankauskas on 4/18/19.
 //
+#pragma once
 
 #ifndef AudioModel_hpp
 #define AudioModel_hpp

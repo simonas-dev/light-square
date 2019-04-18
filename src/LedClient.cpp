@@ -21,7 +21,7 @@ void LedClient::endStage() {
     opcClient.endStage();
     
     try {
-        opcClient.getStagePixels(opcGrid.getPixelCoordinates(), opcGridLeft.colors);
+        opcClient.getStagePixels(opcGrid.getPixelCoordinates(), opcGrid.colors);
         // If the client is not connected do not try and send information
         if (!opcClient.isConnected()) {
             // Will continue to try and reconnect to the Pixel Server
@@ -29,7 +29,7 @@ void LedClient::endStage() {
             opcClient.retryConnecting();
         } else {
             for (int channel = 1; channel <= 8; channel++) {
-                vector<ofColor> gridData = opcGridLeft.colorData();
+                vector<ofColor> gridData = opcGrid.colorData();
                 int from = (channel-1) * 64;
                 int to = channel * 64;
                 vector<ofColor> chanelColorData(gridData.begin()+from, gridData.begin()+to);
