@@ -25,6 +25,7 @@
 		701BB7C12268624700E0B8A8 /* AppContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7BF2268624700E0B8A8 /* AppContext.cpp */; };
 		701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */; };
 		701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C82268690600E0B8A8 /* AudioModel.cpp */; };
+		701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
 		70358F3421A5C91E00DEA97D /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2A21A5C91E00DEA97D /* ofxTCPServer.cpp */; };
 		70358F3521A5C91E00DEA97D /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2D21A5C91E00DEA97D /* ofxTCPManager.cpp */; };
@@ -161,6 +162,8 @@
 		701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
 		701BB7C82268690600E0B8A8 /* AudioModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
 		701BB7C92268690600E0B8A8 /* AudioModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioModel.hpp; sourceTree = "<group>"; };
+		701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SystemWindow.cpp; sourceTree = "<group>"; };
+		701BB7CC22686D2F00E0B8A8 /* SystemWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SystemWindow.hpp; sourceTree = "<group>"; };
 		70358F2621A5C91E00DEA97D /* ofxTCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
 		70358F2721A5C91E00DEA97D /* ofxTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
 		70358F2821A5C91E00DEA97D /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
@@ -760,9 +763,9 @@
 				701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */,
 				701BB7C82268690600E0B8A8 /* AudioModel.cpp */,
 				701BB7C92268690600E0B8A8 /* AudioModel.hpp */,
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				701550322214CB770065675F /* ofAllAlgsApp.cpp */,
 				701550332214CB770065675F /* ofAllAlgsApp.h */,
-				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */,

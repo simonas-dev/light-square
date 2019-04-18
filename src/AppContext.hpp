@@ -17,5 +17,6 @@
 class AppContext {
     
 public:
-    
+    AudioClient audio = AudioClient();
+    LedClient led = LedClient();
 };
