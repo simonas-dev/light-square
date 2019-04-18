@@ -1,7 +1,6 @@
 #include "ofMain.h"
 #include "ofApp.h"
 #include "ofAllAlgsApp.h"
-#include "ofCamBox.hpp"
 #include "ofAppGLFWWindow.h"
 #include "ofAppGLFWWindow.h"
 

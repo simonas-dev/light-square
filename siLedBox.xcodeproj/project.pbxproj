@@ -27,7 +27,6 @@
 		70358F3521A5C91E00DEA97D /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2D21A5C91E00DEA97D /* ofxTCPManager.cpp */; };
 		70358F3621A5C91E00DEA97D /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2E21A5C91E00DEA97D /* ofxTCPClient.cpp */; };
 		70358F3721A5C91E00DEA97D /* ofxNetworkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2F21A5C91E00DEA97D /* ofxNetworkUtils.cpp */; };
-		707E207E222B0CE1006CF518 /* ofCamBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 707E207C222B0CE1006CF518 /* ofCamBox.cpp */; };
 		70EB54EB21A5C8C8005A236E /* ofxOPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549221A5C8C8005A236E /* ofxOPC.cpp */; };
 		70EB54EC21A5C8C8005A236E /* ofxNeoPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549421A5C8C8005A236E /* ofxNeoPixelGrid.cpp */; };
 		70EB54ED21A5C8C8005A236E /* ofxNeoPixelRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549621A5C8C8005A236E /* ofxNeoPixelRing.cpp */; };
@@ -166,8 +165,6 @@
 		70358F3021A5C91E00DEA97D /* ofxTCPSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPSettings.h; sourceTree = "<group>"; };
 		70358F3121A5C91E00DEA97D /* ofxUDPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUDPManager.h; sourceTree = "<group>"; };
 		70358F3221A5C91E00DEA97D /* ofxTCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPServer.h; sourceTree = "<group>"; };
-		707E207C222B0CE1006CF518 /* ofCamBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofCamBox.cpp; sourceTree = "<group>"; };
-		707E207D222B0CE1006CF518 /* ofCamBox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ofCamBox.hpp; sourceTree = "<group>"; };
 		70EB548F21A5C8C8005A236E /* ofxNeoPixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixels.h; sourceTree = "<group>"; };
 		70EB549021A5C8C8005A236E /* ofxNeoPixelRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixelRing.h; sourceTree = "<group>"; };
 		70EB549121A5C8C8005A236E /* ofxNeoPixelStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixelStrip.h; sourceTree = "<group>"; };
@@ -753,8 +750,8 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				707E207C222B0CE1006CF518 /* ofCamBox.cpp */,
-				707E207D222B0CE1006CF518 /* ofCamBox.hpp */,
+				701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */,
+				701BB7CC22686D2F00E0B8A8 /* SystemWindow.hpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -893,7 +890,6 @@
 				866AC116016D40F86DCB4510 /* ofxAAOnsetsAlgorithm.cpp in Sources */,
 				70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */,
 				98355E578D9CCEE106FBC6EC /* ofSoundPlayerExtended.cpp in Sources */,
-				707E207E222B0CE1006CF518 /* ofCamBox.cpp in Sources */,
 				70358F3721A5C91E00DEA97D /* ofxNetworkUtils.cpp in Sources */,
 				2302BCF25C1D2BBFE43ADCE6 /* ofxAudioAnalyzerUnit.cpp in Sources */,
 				70EB54EC21A5C8C8005A236E /* ofxNeoPixelGrid.cpp in Sources */,
