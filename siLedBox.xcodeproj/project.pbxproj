@@ -24,6 +24,7 @@
 		70187AA022201A780000EAEF /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */; };
 		701BB7C12268624700E0B8A8 /* AppContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7BF2268624700E0B8A8 /* AppContext.cpp */; };
 		701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */; };
+		701BB7C7226862E800E0B8A8 /* LedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C5226862E800E0B8A8 /* LedClient.cpp */; };
 		701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C82268690600E0B8A8 /* AudioModel.cpp */; };
 		701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
@@ -160,6 +161,8 @@
 		701BB7C02268624700E0B8A8 /* AppContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppContext.hpp; sourceTree = "<group>"; };
 		701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioClient.cpp; sourceTree = "<group>"; };
 		701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
+		701BB7C5226862E800E0B8A8 /* LedClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LedClient.cpp; sourceTree = "<group>"; };
+		701BB7C6226862E800E0B8A8 /* LedClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LedClient.hpp; sourceTree = "<group>"; };
 		701BB7C82268690600E0B8A8 /* AudioModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
 		701BB7C92268690600E0B8A8 /* AudioModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioModel.hpp; sourceTree = "<group>"; };
 		701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SystemWindow.cpp; sourceTree = "<group>"; };
@@ -763,6 +766,8 @@
 				701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */,
 				701BB7C82268690600E0B8A8 /* AudioModel.cpp */,
 				701BB7C92268690600E0B8A8 /* AudioModel.hpp */,
+				701BB7C5226862E800E0B8A8 /* LedClient.cpp */,
+				701BB7C6226862E800E0B8A8 /* LedClient.hpp */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				701550322214CB770065675F /* ofAllAlgsApp.cpp */,
 				701550332214CB770065675F /* ofAllAlgsApp.h */,
@@ -922,6 +927,7 @@
 				2761F96388F64FE596863183 /* audiodecodercoreaudio.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				70EB54EB21A5C8C8005A236E /* ofxOPC.cpp in Sources */,
+				701BB7C7226862E800E0B8A8 /* LedClient.cpp in Sources */,
 				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				70358F3621A5C91E00DEA97D /* ofxTCPClient.cpp in Sources */,
