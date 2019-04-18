@@ -22,6 +22,8 @@
 		70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9822201A770000EAEF /* tinyxmlerror.cpp */; };
 		70187A9F22201A780000EAEF /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9922201A770000EAEF /* tinyxml.cpp */; };
 		70187AA022201A780000EAEF /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */; };
+		701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */; };
+		701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C82268690600E0B8A8 /* AudioModel.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
 		70358F3421A5C91E00DEA97D /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2A21A5C91E00DEA97D /* ofxTCPServer.cpp */; };
 		70358F3521A5C91E00DEA97D /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2D21A5C91E00DEA97D /* ofxTCPManager.cpp */; };
@@ -152,6 +154,10 @@
 		70187A9922201A770000EAEF /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
 		70187A9C22201A770000EAEF /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
+		701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioClient.cpp; sourceTree = "<group>"; };
+		701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
+		701BB7C82268690600E0B8A8 /* AudioModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
+		701BB7C92268690600E0B8A8 /* AudioModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioModel.hpp; sourceTree = "<group>"; };
 		70358F2621A5C91E00DEA97D /* ofxTCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
 		70358F2721A5C91E00DEA97D /* ofxTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
 		70358F2821A5C91E00DEA97D /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
@@ -745,6 +751,10 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */,
+				701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */,
+				701BB7C82268690600E0B8A8 /* AudioModel.cpp */,
+				701BB7C92268690600E0B8A8 /* AudioModel.hpp */,
 				701550322214CB770065675F /* ofAllAlgsApp.cpp */,
 				701550332214CB770065675F /* ofAllAlgsApp.h */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
@@ -907,9 +917,11 @@
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				70358F3621A5C91E00DEA97D /* ofxTCPClient.cpp in Sources */,
 				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
+				701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */,
+				701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
