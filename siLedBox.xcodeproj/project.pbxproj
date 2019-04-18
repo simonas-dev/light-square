@@ -22,6 +22,7 @@
 		70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9822201A770000EAEF /* tinyxmlerror.cpp */; };
 		70187A9F22201A780000EAEF /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9922201A770000EAEF /* tinyxml.cpp */; };
 		70187AA022201A780000EAEF /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */; };
+		701BB7C12268624700E0B8A8 /* AppContext.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7BF2268624700E0B8A8 /* AppContext.cpp */; };
 		701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */; };
 		701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C82268690600E0B8A8 /* AudioModel.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
@@ -154,6 +155,8 @@
 		70187A9922201A770000EAEF /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
 		70187A9C22201A770000EAEF /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
+		701BB7BF2268624700E0B8A8 /* AppContext.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AppContext.cpp; sourceTree = "<group>"; };
+		701BB7C02268624700E0B8A8 /* AppContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppContext.hpp; sourceTree = "<group>"; };
 		701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioClient.cpp; sourceTree = "<group>"; };
 		701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
 		701BB7C82268690600E0B8A8 /* AudioModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
@@ -751,6 +754,8 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				701BB7BF2268624700E0B8A8 /* AppContext.cpp */,
+				701BB7C02268624700E0B8A8 /* AppContext.hpp */,
 				701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */,
 				701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */,
 				701BB7C82268690600E0B8A8 /* AudioModel.cpp */,
@@ -898,6 +903,7 @@
 				3CA17DE70B38CA2592D51E7D /* ofxAudioAnalyzerAlgorithms.cpp in Sources */,
 				6E22DD7AA6893113E1F2DF07 /* ofxAAMultiPitchKlapuriAlgorithm.cpp in Sources */,
 				866AC116016D40F86DCB4510 /* ofxAAOnsetsAlgorithm.cpp in Sources */,
+				701BB7C12268624700E0B8A8 /* AppContext.cpp in Sources */,
 				70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */,
 				98355E578D9CCEE106FBC6EC /* ofSoundPlayerExtended.cpp in Sources */,
 				70358F3721A5C91E00DEA97D /* ofxNetworkUtils.cpp in Sources */,
@@ -925,6 +931,7 @@
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
+				701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
