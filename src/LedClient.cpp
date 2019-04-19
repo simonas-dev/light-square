@@ -7,10 +7,19 @@
 
 #include "LedClient.hpp"
 
-void LedClient::setup() {
+const int LED_COLS = 32;
+const int LED_ROWS = 16;
+int spacing;
+void LedClient::setup(int _stageWidth, int _stageHeight) {
+    stageWidth = _stageWidth;
+    stageHeight = _stageHeight;
+    spacing = stageWidth / LED_COLS;
+    
     opcClient.setup("127.0.0.1", 7890);
-    opcClient.setupStage(320, 160);
-    opcGrid.setupLedGrid(32, 16, 7, 5, 10);
+    opcClient.setupStage(stageWidth, stageHeight);
+    int iniPixelX = spacing / 2;
+    int iniPixelY = spacing / 2;
+    opcGrid.setupLedGrid(LED_COLS, LED_ROWS, iniPixelX, iniPixelY, spacing);
 }
 void LedClient::beginStage() {
     opcClient.update();
@@ -48,7 +57,9 @@ bool LedClient::isConnected() {
 void LedClient::drawStage() {
     opcClient.drawStage(true);
     opcGrid.drawGrabRegion(true);
-    opcGrid.draw(20, 300);
+    int xOffset = spacing / 2;
+    int yOffset = spacing / 2;
+    opcGrid.draw(stageWidth+xOffset, yOffset);
 }
 
 void LedClient::exit() {

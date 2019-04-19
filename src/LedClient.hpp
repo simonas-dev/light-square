@@ -17,9 +17,11 @@
 class LedClient {
     ofxOPC opcClient;
     ofxNeoPixelGrid opcGrid;
+    int stageWidth;
+    int stageHeight;
     
 public: 
-    void setup();
+    void setup(int stageWidth, int stageHeight);
     void beginStage();
     void endStage();
     bool isConnected();

@@ -21,6 +21,6 @@ public:
     float opacity = 1.0;
     void setup();
     void update();
-    void draw();
+    virtual void drawThumb(int x, int y, float w, float h) = 0;
     void exit();
 };

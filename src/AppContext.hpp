@@ -9,7 +9,6 @@
 #ifndef AppContext_hpp
 #define AppContext_hpp
 
-#include <stdio.h>
 #include <AudioClient.hpp>
 #include <LedClient.hpp>
 

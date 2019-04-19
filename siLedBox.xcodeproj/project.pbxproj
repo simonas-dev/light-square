@@ -28,6 +28,7 @@
 		701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */; };
 		701BB7D02268800500E0B8A8 /* VisualMixerWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CE2268800500E0B8A8 /* VisualMixerWindow.cpp */; };
 		701BB7D8226886C900E0B8A8 /* DefaultVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */; };
+		701BB7DD2268A85200E0B8A8 /* RedVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
 		70358F3421A5C91E00DEA97D /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2A21A5C91E00DEA97D /* ofxTCPServer.cpp */; };
 		70358F3521A5C91E00DEA97D /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2D21A5C91E00DEA97D /* ofxTCPManager.cpp */; };
@@ -172,6 +173,8 @@
 		701BB7D42268852700E0B8A8 /* BaseVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseVisual.hpp; sourceTree = "<group>"; };
 		701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DefaultVisual.cpp; sourceTree = "<group>"; };
 		701BB7D7226886C900E0B8A8 /* DefaultVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DefaultVisual.hpp; sourceTree = "<group>"; };
+		701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RedVisual.cpp; sourceTree = "<group>"; };
+		701BB7DC2268A85200E0B8A8 /* RedVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RedVisual.hpp; sourceTree = "<group>"; };
 		70358F2621A5C91E00DEA97D /* ofxTCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
 		70358F2721A5C91E00DEA97D /* ofxTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
 		70358F2821A5C91E00DEA97D /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
@@ -430,6 +433,8 @@
 				701BB7D42268852700E0B8A8 /* BaseVisual.hpp */,
 				701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */,
 				701BB7D7226886C900E0B8A8 /* DefaultVisual.hpp */,
+				701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */,
+				701BB7DC2268A85200E0B8A8 /* RedVisual.hpp */,
 			);
 			path = visuals;
 			sourceTree = "<group>";
@@ -942,6 +947,7 @@
 				70187A93222018D10000EAEF /* ofxGraph.cpp in Sources */,
 				70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */,
 				2761F96388F64FE596863183 /* audiodecodercoreaudio.cpp in Sources */,
+				701BB7DD2268A85200E0B8A8 /* RedVisual.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				70EB54EB21A5C8C8005A236E /* ofxOPC.cpp in Sources */,
 				701BB7C7226862E800E0B8A8 /* LedClient.cpp in Sources */,

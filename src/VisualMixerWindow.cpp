@@ -8,7 +8,9 @@
 #include "VisualMixerWindow.hpp"
 
 void VisualMixerWindow::setup() {
-    context->led.setup();
+    int stageWidth = ofGetWidth()/2;
+    int stageHeight = stageWidth / 2;
+    context->led.setup(stageWidth, stageHeight);
 }
 
 void VisualMixerWindow::update() {
@@ -19,7 +21,14 @@ void VisualMixerWindow::update() {
 }
 void VisualMixerWindow::draw() {
     context->led.drawStage();
+    int xpos = 0;
+    int thumbSize = 250;
+    for (BaseVisual * visual : visuals) {
+        visual->drawThumb(xpos, ofGetHeight()-thumbSize, thumbSize, thumbSize);
+        xpos += thumbSize;
+    }
 }
+
 void VisualMixerWindow::exit() {
     context->led.exit();
 }

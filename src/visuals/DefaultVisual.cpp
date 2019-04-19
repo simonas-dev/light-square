@@ -6,3 +6,8 @@
 //
 
 #include "DefaultVisual.hpp"
+
+void DefaultVisual::drawThumb(int x, int y, float w, float h) {
+    ofSetColor(ofColor::green);
+    ofDrawRectangle(x, y, w, h);
+}

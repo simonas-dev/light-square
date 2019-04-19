@@ -17,5 +17,8 @@
 class DefaultVisual : public BaseVisual {
     
 public:
-    
+    DefaultVisual(string title) {
+        name = title;
+    };
+    void drawThumb(int x, int y, float w, float h);
 };
