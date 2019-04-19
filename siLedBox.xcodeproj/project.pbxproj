@@ -22,12 +22,18 @@
 		70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9822201A770000EAEF /* tinyxmlerror.cpp */; };
 		70187A9F22201A780000EAEF /* tinyxml.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9922201A770000EAEF /* tinyxml.cpp */; };
 		70187AA022201A780000EAEF /* ofxXmlSettings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */; };
+		701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */; };
+		701BB7C7226862E800E0B8A8 /* LedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C5226862E800E0B8A8 /* LedClient.cpp */; };
+		701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7C82268690600E0B8A8 /* AudioModel.cpp */; };
+		701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */; };
+		701BB7D02268800500E0B8A8 /* VisualMixerWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7CE2268800500E0B8A8 /* VisualMixerWindow.cpp */; };
+		701BB7D8226886C900E0B8A8 /* DefaultVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */; };
+		701BB7DD2268A85200E0B8A8 /* RedVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */; };
 		70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2921A5C91E00DEA97D /* ofxUDPManager.cpp */; };
 		70358F3421A5C91E00DEA97D /* ofxTCPServer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2A21A5C91E00DEA97D /* ofxTCPServer.cpp */; };
 		70358F3521A5C91E00DEA97D /* ofxTCPManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2D21A5C91E00DEA97D /* ofxTCPManager.cpp */; };
 		70358F3621A5C91E00DEA97D /* ofxTCPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2E21A5C91E00DEA97D /* ofxTCPClient.cpp */; };
 		70358F3721A5C91E00DEA97D /* ofxNetworkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70358F2F21A5C91E00DEA97D /* ofxNetworkUtils.cpp */; };
-		707E207E222B0CE1006CF518 /* ofCamBox.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 707E207C222B0CE1006CF518 /* ofCamBox.cpp */; };
 		70EB54EB21A5C8C8005A236E /* ofxOPC.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549221A5C8C8005A236E /* ofxOPC.cpp */; };
 		70EB54EC21A5C8C8005A236E /* ofxNeoPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549421A5C8C8005A236E /* ofxNeoPixelGrid.cpp */; };
 		70EB54ED21A5C8C8005A236E /* ofxNeoPixelRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 70EB549621A5C8C8005A236E /* ofxNeoPixelRing.cpp */; };
@@ -153,6 +159,22 @@
 		70187A9922201A770000EAEF /* tinyxml.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = tinyxml.cpp; sourceTree = "<group>"; };
 		70187A9B22201A770000EAEF /* ofxXmlSettings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ofxXmlSettings.cpp; sourceTree = "<group>"; };
 		70187A9C22201A770000EAEF /* ofxXmlSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxXmlSettings.h; sourceTree = "<group>"; };
+		701BB7C02268624700E0B8A8 /* AppContext.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AppContext.hpp; sourceTree = "<group>"; };
+		701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioClient.cpp; sourceTree = "<group>"; };
+		701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
+		701BB7C5226862E800E0B8A8 /* LedClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LedClient.cpp; sourceTree = "<group>"; };
+		701BB7C6226862E800E0B8A8 /* LedClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LedClient.hpp; sourceTree = "<group>"; };
+		701BB7C82268690600E0B8A8 /* AudioModel.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
+		701BB7C92268690600E0B8A8 /* AudioModel.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = AudioModel.hpp; sourceTree = "<group>"; };
+		701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = SystemWindow.cpp; sourceTree = "<group>"; };
+		701BB7CC22686D2F00E0B8A8 /* SystemWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = SystemWindow.hpp; sourceTree = "<group>"; };
+		701BB7CE2268800500E0B8A8 /* VisualMixerWindow.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = VisualMixerWindow.cpp; sourceTree = "<group>"; };
+		701BB7CF2268800500E0B8A8 /* VisualMixerWindow.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = VisualMixerWindow.hpp; sourceTree = "<group>"; };
+		701BB7D42268852700E0B8A8 /* BaseVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseVisual.hpp; sourceTree = "<group>"; };
+		701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DefaultVisual.cpp; sourceTree = "<group>"; };
+		701BB7D7226886C900E0B8A8 /* DefaultVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = DefaultVisual.hpp; sourceTree = "<group>"; };
+		701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = RedVisual.cpp; sourceTree = "<group>"; };
+		701BB7DC2268A85200E0B8A8 /* RedVisual.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = RedVisual.hpp; sourceTree = "<group>"; };
 		70358F2621A5C91E00DEA97D /* ofxTCPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPManager.h; sourceTree = "<group>"; };
 		70358F2721A5C91E00DEA97D /* ofxTCPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPClient.h; sourceTree = "<group>"; };
 		70358F2821A5C91E00DEA97D /* ofxNetwork.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNetwork.h; sourceTree = "<group>"; };
@@ -166,8 +188,6 @@
 		70358F3021A5C91E00DEA97D /* ofxTCPSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPSettings.h; sourceTree = "<group>"; };
 		70358F3121A5C91E00DEA97D /* ofxUDPManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxUDPManager.h; sourceTree = "<group>"; };
 		70358F3221A5C91E00DEA97D /* ofxTCPServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxTCPServer.h; sourceTree = "<group>"; };
-		707E207C222B0CE1006CF518 /* ofCamBox.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ofCamBox.cpp; sourceTree = "<group>"; };
-		707E207D222B0CE1006CF518 /* ofCamBox.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = ofCamBox.hpp; sourceTree = "<group>"; };
 		70EB548F21A5C8C8005A236E /* ofxNeoPixels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixels.h; sourceTree = "<group>"; };
 		70EB549021A5C8C8005A236E /* ofxNeoPixelRing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixelRing.h; sourceTree = "<group>"; };
 		70EB549121A5C8C8005A236E /* ofxNeoPixelStrip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ofxNeoPixelStrip.h; sourceTree = "<group>"; };
@@ -405,6 +425,18 @@
 				70187A9C22201A770000EAEF /* ofxXmlSettings.h */,
 			);
 			path = src;
+			sourceTree = "<group>";
+		};
+		701BB7D22268851800E0B8A8 /* visuals */ = {
+			isa = PBXGroup;
+			children = (
+				701BB7D42268852700E0B8A8 /* BaseVisual.hpp */,
+				701BB7D6226886C900E0B8A8 /* DefaultVisual.cpp */,
+				701BB7D7226886C900E0B8A8 /* DefaultVisual.hpp */,
+				701BB7DB2268A85200E0B8A8 /* RedVisual.cpp */,
+				701BB7DC2268A85200E0B8A8 /* RedVisual.hpp */,
+			);
+			path = visuals;
 			sourceTree = "<group>";
 		};
 		70358F2221A5C91E00DEA97D /* ofxNetwork */ = {
@@ -748,13 +780,23 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				701BB7C02268624700E0B8A8 /* AppContext.hpp */,
+				701BB7C2226862DB00E0B8A8 /* AudioClient.cpp */,
+				701BB7C3226862DB00E0B8A8 /* AudioClient.hpp */,
+				701BB7C82268690600E0B8A8 /* AudioModel.cpp */,
+				701BB7C92268690600E0B8A8 /* AudioModel.hpp */,
+				701BB7C5226862E800E0B8A8 /* LedClient.cpp */,
+				701BB7C6226862E800E0B8A8 /* LedClient.hpp */,
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				701550322214CB770065675F /* ofAllAlgsApp.cpp */,
 				701550332214CB770065675F /* ofAllAlgsApp.h */,
-				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				707E207C222B0CE1006CF518 /* ofCamBox.cpp */,
-				707E207D222B0CE1006CF518 /* ofCamBox.hpp */,
+				701BB7CB22686D2F00E0B8A8 /* SystemWindow.cpp */,
+				701BB7CC22686D2F00E0B8A8 /* SystemWindow.hpp */,
+				701BB7CE2268800500E0B8A8 /* VisualMixerWindow.cpp */,
+				701BB7CF2268800500E0B8A8 /* VisualMixerWindow.hpp */,
+				701BB7D22268851800E0B8A8 /* visuals */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -893,7 +935,6 @@
 				866AC116016D40F86DCB4510 /* ofxAAOnsetsAlgorithm.cpp in Sources */,
 				70187A9E22201A780000EAEF /* tinyxmlerror.cpp in Sources */,
 				98355E578D9CCEE106FBC6EC /* ofSoundPlayerExtended.cpp in Sources */,
-				707E207E222B0CE1006CF518 /* ofCamBox.cpp in Sources */,
 				70358F3721A5C91E00DEA97D /* ofxNetworkUtils.cpp in Sources */,
 				2302BCF25C1D2BBFE43ADCE6 /* ofxAudioAnalyzerUnit.cpp in Sources */,
 				70EB54EC21A5C8C8005A236E /* ofxNeoPixelGrid.cpp in Sources */,
@@ -901,22 +942,29 @@
 				87EB71A35D524340AE0A8C4C /* ofxAudioDecoder.cpp in Sources */,
 				477F449F6256389CCDB36FFC /* audiodecoderbase.cpp in Sources */,
 				701550342214CB770065675F /* ofAllAlgsApp.cpp in Sources */,
+				701BB7D8226886C900E0B8A8 /* DefaultVisual.cpp in Sources */,
 				70187AA022201A780000EAEF /* ofxXmlSettings.cpp in Sources */,
 				70187A93222018D10000EAEF /* ofxGraph.cpp in Sources */,
 				70358F3321A5C91E00DEA97D /* ofxUDPManager.cpp in Sources */,
 				2761F96388F64FE596863183 /* audiodecodercoreaudio.cpp in Sources */,
+				701BB7DD2268A85200E0B8A8 /* RedVisual.cpp in Sources */,
 				856AA354D08AB4B323081444 /* ofxBaseGui.cpp in Sources */,
 				70EB54EB21A5C8C8005A236E /* ofxOPC.cpp in Sources */,
+				701BB7C7226862E800E0B8A8 /* LedClient.cpp in Sources */,
 				853E0BA2F448076739446874 /* ofxColorPicker.cpp in Sources */,
 				B56FE57CC35806596D38118C /* ofxSliderGroup.cpp in Sources */,
 				70358F3621A5C91E00DEA97D /* ofxTCPClient.cpp in Sources */,
 				1CD33E884D9E3358252E82A1 /* ofxToggle.cpp in Sources */,
+				701BB7C4226862DB00E0B8A8 /* AudioClient.cpp in Sources */,
+				701BB7D02268800500E0B8A8 /* VisualMixerWindow.cpp in Sources */,
 				5CBB2AB3A60F65431D7B555D /* ofxButton.cpp in Sources */,
 				B266578FC55D23BFEBC042E7 /* ofxGuiGroup.cpp in Sources */,
 				852E0891794923EE7583C621 /* ofxInputField.cpp in Sources */,
+				701BB7CA2268690600E0B8A8 /* AudioModel.cpp in Sources */,
 				483908258D00B98B4BE69F07 /* ofxLabel.cpp in Sources */,
 				F285EB3169F1566CA3D93C20 /* ofxPanel.cpp in Sources */,
 				837220E80EB56CD44AD27F2A /* ofxSlider.cpp in Sources */,
+				701BB7CD22686D2F00E0B8A8 /* SystemWindow.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

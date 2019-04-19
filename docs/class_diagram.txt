@@ -71,7 +71,7 @@ package src {
 
     BoxModel o-- FadecandyDevice
 
-    class AppContext <<Singleton>> {
+    class AppContext {
         audio: AudioClient
         led: LedClient
         box: BoxClient
@@ -84,25 +84,32 @@ package src {
 
     Main <.. SystemWindow
     Main <.. VisualMixerWindow
+    Main <.right. AppContext
 
     class SystemWindow {
+        context: AppContext
         setup()
         update()
         draw()
         exit()
     }
     class VisualMixerWindow {
+        context: AppContext
         visualList: List<BaseVisual>
         setup()
         update()
         draw()
         exit()
     }
+    SystemWindow <-- AppContext
+    VisualMixerWindow <-- AppContext
+    
 
     abstract class BaseVisual {
         name : String
         isEnabled : Boolean
         alpha: Float
+        context: AppContext
 
         setup()
         update()
