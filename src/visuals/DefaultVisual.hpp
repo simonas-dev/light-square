@@ -11,14 +11,43 @@
 
 #include "ofMain.h"
 #include "BaseVisual.hpp"
+#include "AudioModel.hpp"
 
 #endif /* DefaultVisual_hpp */
 
 class DefaultVisual : public BaseVisual {
-    
+    AudioModel * audioModel;
 public:
-    DefaultVisual(string title) {
-        name = title;
+    DefaultVisual(AppContext * appContext) {
+        name = "Original Visual";
+        context = appContext;
+        audioModel = &appContext->audio.model;
     };
+    void setup();
+    void drawScene(int x, int y, float w, float h);
+    void drawVisual(int x, int y, float w, float h);
     void drawThumb(int x, int y, float w, float h);
+    
+    float peakMel = 1.0f;
+    ofColor mixColor = ofColor::black;
+    
+    vector<ofColor>bandColors = {
+        ofColor::fromHex(0xFF0000),
+        ofColor::fromHex(0xFF7F00),
+        ofColor::fromHex(0xFFFF00),
+        ofColor::fromHex(0x7FFF00),
+        ofColor::fromHex(0x00FF00),
+        ofColor::fromHex(0x00FF7F),
+        ofColor::fromHex(0x00FFFF),
+        ofColor::fromHex(0x007FFF),
+        ofColor::fromHex(0x0000FF),
+        ofColor::fromHex(0x7F00FF),
+        ofColor::fromHex(0xFF00FF),
+        ofColor::fromHex(0xFF007F)
+    };
+    ofColor currentColor = ofColor::fromHex(0x000000);
+    
+    ofxFloatSlider maxNoteRatio;
+    ofxFloatSlider fadeRatio;
+    ofxFloatSlider addOrBlendRatio;
 };

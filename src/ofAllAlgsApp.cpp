@@ -1,51 +1,10 @@
 
 #include "ofAllAlgsApp.h"
 
-bool isIniting = true;
-int WINDOW_W = 1280;
-int WINDOW_H = 800;
-
-ofAllAlgsApp::ofAllAlgsApp() {
-
-}
-
 //--------------------------------------------------------------
 void ofAllAlgsApp::setup(){
     ofBackground(34);
     ofSetFrameRate(60);
-    
-    soundStream.printDeviceList();
-    
-    ofSoundStreamSettings settings;
-    ofSoundDevice device;
-    
-    auto devices = soundStream.getDeviceList(ofSoundDevice::Api::OSX_CORE);
-    if(!devices.empty()){
-        for (ofSoundDevice deviceItem : devices) {
-            if (deviceItem.isDefaultInput) {
-                device = deviceItem;
-                settings.setInDevice(device);
-            }
-        }
-    }
-    
-    float sampleRate = 44100;
-    float bufferSize = 512;
-    int inChannels = device.inputChannels;
-    
-    settings.setInListener(this);
-    settings.sampleRate = sampleRate;
-    settings.numOutputChannels = 0;
-    settings.numInputChannels = inChannels;
-    settings.bufferSize = bufferSize;
-    
-    soundStream.setup(settings);
-    
-    audioAnalyzer.setup(sampleRate, bufferSize, inChannels);
-    
-    gui.setup();
-    gui.setPosition(10, 500);
-    gui.add(smoothing.setup("Smoothing", 0.0, 0.0, 1.0));
     
     // Histograms
     
@@ -80,7 +39,7 @@ void ofAllAlgsApp::setupHistogram(ofxGraph * graph, string name, int row, int co
     int height = 100;
     int xMargin = 10;
     int yMargin = 20;
-    int width = ((WINDOW_W-60)/4)-xMargin;
+    int width = ((ofGetWidth()-60)/4)-xMargin;
     int x = (width*col + xMargin*col)+xOffset;
     int y = (row*height + yMargin*row)+yOffset;
     graph->setup(name);
@@ -92,54 +51,45 @@ void ofAllAlgsApp::setupHistogram(ofxGraph * graph, string name, int row, int co
     graph->setColor(ofColor::cyan);
 }
 
-void ofAllAlgsApp::audioIn(ofSoundBuffer & input){
-    soundBuffer = input;
-    isIniting = false;
-}
-
 //--------------------------------------------------------------
 void ofAllAlgsApp::update(){
-    if (isIniting) return;
-    
-    ofSetWindowTitle("ofxAudioAnalyzer " + ofToString(ofGetFrameRate()));
-    
-    //-:ANALYZE SOUNDBUFFER:
-    audioAnalyzer.analyze(soundBuffer);
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
+    if (context->audio.isReady == false) return;
     
     //-:get Values:
-    rms = audioAnalyzer.getValue(RMS, 0, smoothing);
-    power = audioAnalyzer.getValue(POWER, 0, smoothing);
-    pitchFreq = audioAnalyzer.getValue(PITCH_FREQ, 0, smoothing);
-    pitchConf = audioAnalyzer.getValue(PITCH_CONFIDENCE, 0, smoothing);
-    pitchSalience = audioAnalyzer.getValue(PITCH_SALIENCE, 0, smoothing);
-    inharmonicity = audioAnalyzer.getValue(INHARMONICITY, 0, smoothing);
-    hfc = audioAnalyzer.getValue(HFC, 0, smoothing);
-    specComp = audioAnalyzer.getValue(SPECTRAL_COMPLEXITY, 0, smoothing);
-    centroid = audioAnalyzer.getValue(CENTROID, 0, smoothing);
-    rollOff = audioAnalyzer.getValue(ROLL_OFF, 0, smoothing);
-    oddToEven = audioAnalyzer.getValue(ODD_TO_EVEN, 0, smoothing);
-    strongPeak = audioAnalyzer.getValue(STRONG_PEAK, 0, smoothing);
-    strongDecay = audioAnalyzer.getValue(STRONG_DECAY, 0, smoothing);
+    rms = context->audio.model.rms;
+    power = context->audio.model.power;
+    pitchFreq = context->audio.model.pitchFreq;
+    pitchConf = context->audio.model.pitchConf;
+    pitchSalience = context->audio.model.pitchSalience;
+    inharmonicity = context->audio.model.inharmonicity;
+    hfc = context->audio.model.hfc;
+    specComp = context->audio.model.specComp;
+    centroid = context->audio.model.centroid;
+    rollOff = context->audio.model.rollOff;
+    oddToEven = context->audio.model.oddToEven;
+    strongPeak = context->audio.model.strongPeak;
+    strongDecay = context->audio.model.strongDecay;
     //Normalized values for graphic meters:
-    pitchFreqNorm = audioAnalyzer.getValue(PITCH_FREQ, 0, smoothing, TRUE);
-    hfcNorm = audioAnalyzer.getValue(HFC, 0, smoothing, TRUE);
-    specCompNorm = audioAnalyzer.getValue(SPECTRAL_COMPLEXITY, 0, smoothing, TRUE);
-    centroidNorm = audioAnalyzer.getValue(CENTROID, 0, smoothing, TRUE);
-    rollOffNorm = audioAnalyzer.getValue(ROLL_OFF, 0, smoothing, TRUE);
-    oddToEvenNorm = audioAnalyzer.getValue(ODD_TO_EVEN, 0, smoothing, TRUE);
-    strongPeakNorm = audioAnalyzer.getValue(STRONG_PEAK, 0, smoothing, TRUE);
-    strongDecayNorm = audioAnalyzer.getValue(STRONG_DECAY, 0, smoothing, TRUE);
+    pitchFreqNorm = context->audio.model.pitchFreqNorm;
+    hfcNorm = context->audio.model.hfcNorm;
+    specCompNorm = context->audio.model.specCompNorm;
+    centroidNorm = context->audio.model.centroidNorm;
+    rollOffNorm = context->audio.model.rollOffNorm;
+    oddToEvenNorm = context->audio.model.oddToEvenNorm;
+    strongPeakNorm = context->audio.model.strongPeakNorm;
+    strongDecayNorm = context->audio.model.strongDecayNorm;
     
-    dissonance = audioAnalyzer.getValue(DISSONANCE, 0, smoothing);
+    dissonance = context->audio.model.dissonance;
     
-    spectrum = audioAnalyzer.getValues(SPECTRUM, 0, smoothing);
-    melBands = audioAnalyzer.getValues(MEL_BANDS, 0, smoothing);
-    mfcc = audioAnalyzer.getValues(MFCC, 0, smoothing);
-    hpcp = audioAnalyzer.getValues(HPCP, 0, smoothing);
+    spectrum = context->audio.model.spectrum;
+    melBands = context->audio.model.melBands;
+    mfcc = context->audio.model.mfcc;
+    hpcp = context->audio.model.hpcp;
     
-    tristimulus = audioAnalyzer.getValues(TRISTIMULUS, 0, smoothing);
+    tristimulus = context->audio.model.tristimulus;
     
-    isOnset = audioAnalyzer.getOnsetValue(0);
+    isOnset = context->audio.model.isOnset;
     
     rmsHistogram.add(rms);
     powerHistogram.add(power);
@@ -161,7 +111,7 @@ void ofAllAlgsApp::update(){
 
 //--------------------------------------------------------------
 void ofAllAlgsApp::draw(){
-    if (isIniting) return;
+    if (context->audio.isReady == false) return;
     
     ofPushStyle();
         rmsHistogram.draw();
@@ -190,7 +140,7 @@ void ofAllAlgsApp::draw(){
     
         int windowPadding = 60;
         int graphMargin = 10;
-        int barChartWidth = ((WINDOW_W-windowPadding)/5)-graphMargin;
+        int barChartWidth = ((ofGetWidth()-windowPadding)/5)-graphMargin;
         int graphH = 75;
         int xoffset = barChartWidth + graphMargin;
         int ypos = histogramEnd;
@@ -267,26 +217,9 @@ void ofAllAlgsApp::draw(){
         }
         ofPopMatrix();
     ofPopMatrix();
-    
-    int barChartEnd = 550+graphH;
-    
-//    ofPushStyle();
-//    ofColor hitColor = ofColor::pink;
-//
-//    ofPushMatrix();
-//
-//    ofSetColor(hitColor);
-//    ofTranslate(30, barChartEnd);
-//    ofDrawRectangle(0, 0, barChartWidth, 400);
-//
-//    ofPopMatrix();
-//
-//    ofPopStyle();
-
-    gui.draw();
 }
 
 //--------------------------------------------------------------
 void ofAllAlgsApp::exit(){
-    audioAnalyzer.exit();
+    
 }

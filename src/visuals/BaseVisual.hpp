@@ -10,17 +10,23 @@
 #define BaseVisual_hpp
 
 #include "ofMain.h"
+#include "AppContext.hpp"
+#include "ofxGui.h"
 
 #endif /* BaseVisual_hpp */
 
 class BaseVisual {
-  
 public:
+    AppContext * context;
+    ofxPanel gui;
+    ofxToggle isEnabled;
+    
     string name = "Untitled";
-    bool isEnabled = true;
     float opacity = 1.0;
-    void setup();
+    virtual void setup() = 0;
     void update();
+    virtual void drawVisual(int x, int y, float w, float h) = 0;
     virtual void drawThumb(int x, int y, float w, float h) = 0;
+    virtual void drawScene(int x, int y, float w, float h) = 0;
     void exit();
 };

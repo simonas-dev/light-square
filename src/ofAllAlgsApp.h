@@ -5,26 +5,21 @@
 #include "ofSoundPlayerExtended.h"
 #include "ofxGui.h"
 #include "ofxGraph.h"
+#include "AppContext.hpp"
 
 class ofAllAlgsApp : public ofBaseApp {
 
+    AppContext * context;
+    
 	public:
-        ofAllAlgsApp();
+        ofAllAlgsApp(AppContext * appContext) {
+            context = appContext;
+        }
     
 		void setup();
 		void update();
 		void draw();
         void exit();
-    
-        void audioIn(ofSoundBuffer & input);
-        ofSoundStream soundStream;
-        ofxAudioAnalyzer audioAnalyzer;
-        ofSoundPlayerExtended player;
-    
-        int sampleRate;
-        int bufferSize;
-    
-        ofSoundBuffer soundBuffer;
     
         float rms;
         float power;
@@ -57,9 +52,6 @@ class ofAllAlgsApp : public ofBaseApp {
         vector<float> tristimulus;
     
         bool isOnset;
-    
-        ofxPanel gui;
-        ofxFloatSlider smoothing;
     
     private:
         void setupHistogram(ofxGraph * graph, string name, int row, int col, int xOffset, int yOffset, int min, int max);

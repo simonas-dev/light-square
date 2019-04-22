@@ -13,21 +13,23 @@
 #include "AppContext.hpp"
 #include "BaseVisual.hpp"
 #include "DefaultVisual.hpp"
-#include "RedVisual.hpp"
+#include "StrobeVisual.hpp"
+#include "PrismVisual.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 
 class VisualMixerWindow : public ofBaseApp {
     AppContext * context;
-    BaseVisual* visuals[3] = {
-        new DefaultVisual("Visual One"),
-        new RedVisual(),
-        new DefaultVisual("Visual Two")
-    };
+    vector<BaseVisual*> visuals;
     
 public:
     VisualMixerWindow(AppContext * appContext) {
         context = appContext;
+        visuals = {
+            new DefaultVisual(context),
+            new RedVisual(context),
+            new PrismVisual(context)
+        };
     };
     void setup();
     void update();

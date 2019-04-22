@@ -8,7 +8,6 @@
 #include "SystemWindow.hpp"
 
 void SystemWindow::setup() {
-    ofSetFrameRate(60);
     ofBackground(0);
     context->audio.setup();
 }
@@ -18,6 +17,7 @@ void SystemWindow::update() {
 }
 
 void SystemWindow::draw() {
+    ofSetWindowTitle(ofToString(ofGetFrameRate()));
     auto color = ofColor::red.getLerped(ofColor::green, context->audio.model.power);
     ofSetColor(color);
     ofDrawRectangle(0, 0, 200, 200);

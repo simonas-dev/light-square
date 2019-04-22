@@ -5,3 +5,4 @@ ofxNetwork
 ofxOPC
 ofxGraph
 ofxXmlSettings
+ofxShadertoy
