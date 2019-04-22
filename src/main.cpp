@@ -1,35 +1,19 @@
 #include "ofMain.h"
-//#include "ofApp.h"
-//#include "ofAllAlgsApp.h"
+#include "ofAllAlgsApp.h"
 #include "ofAppGLFWWindow.h"
 #include "SystemWindow.hpp"
 #include "VisualMixerWindow.hpp"
 
 int main() {
-    ofGLFWWindowSettings settings;
-//
-//    settings.setSize(1280, 800);
-//    settings.setPosition(ofVec2f(300,0));
-//    settings.resizable = true;
-//    shared_ptr<ofAppBaseWindow> stageWindow = ofCreateWindow(settings);
-//
-//    settings.setSize(1280, 800);
-//    settings.setPosition(ofVec2f(0,0));
-//    settings.resizable = false;
-//    shared_ptr<ofAppBaseWindow> algoWindow = ofCreateWindow(settings);
-//
-//    shared_ptr<ofAllAlgsApp> algoApp(new ofAllAlgsApp());
-//    shared_ptr<ofApp> stageApp(new ofApp(algoApp.get()));
-//
-//    ofRunApp(algoWindow, algoApp);
-//    ofRunApp(stageWindow, stageApp);
+    ofGLWindowSettings settings;
     
+    // ofxShadertoy NEEDS the GL Programmable Renderer
+    settings.setGLVersion(3, 2);
     
     shared_ptr<AppContext> context(new AppContext());
     
     settings.setSize(1280, 800);
     settings.setPosition(ofVec2f(300,0));
-    settings.resizable = true;
     shared_ptr<ofAppBaseWindow> systemWindow = ofCreateWindow(settings);
     shared_ptr<SystemWindow> systemApp(new SystemWindow(context.get()));
     ofRunApp(systemWindow, systemApp);
@@ -37,10 +21,15 @@ int main() {
     
     settings.setSize(1280, 800);
     settings.setPosition(ofVec2f(300,0));
-    settings.resizable = true;
     shared_ptr<ofAppBaseWindow> mixerWindow = ofCreateWindow(settings);
     shared_ptr<VisualMixerWindow> mixerApp(new VisualMixerWindow(context.get()));
     ofRunApp(mixerWindow, mixerApp);
+    
+//    settings.setSize(1280, 800);
+//    settings.setPosition(ofVec2f(0,0));
+//    shared_ptr<ofAppBaseWindow> algoWindow = ofCreateWindow(settings);
+//    shared_ptr<ofAllAlgsApp> algoApp(new ofAllAlgsApp(context.get()));
+//    ofRunApp(algoWindow, algoApp);
 
     ofRunMainLoop();
 }

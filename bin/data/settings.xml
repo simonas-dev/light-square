@@ -10,3 +10,9 @@
 	<Pause>0</Pause>
 	<No_draw>0</No_draw>
 </Options>
+<Original_Visual>
+	<Is_Enabled>1</Is_Enabled>
+	<Fade_Ratio>0.021</Fade_Ratio>
+	<Max_Note_Ratio>0.515</Max_Note_Ratio>
+	<Volume>0.38</Volume>
+</Original_Visual>
