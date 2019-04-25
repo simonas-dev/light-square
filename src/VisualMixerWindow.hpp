@@ -27,7 +27,7 @@ public:
         context = appContext;
         visuals = {
             new DefaultVisual(context),
-            new RedVisual(context),
+            new StrobeVisual(context),
             new PrismVisual(context)
         };
     };
