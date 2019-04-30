@@ -98,7 +98,6 @@
 		774C7637B2948F40F3156A89 /* PollingThread.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 108FC7179633A17668235AF2 /* PollingThread.cpp */; };
 		781076BE6E35C2E2B48B5629 /* ClientSessionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3C0082662A793CAEB9B /* ClientSessionProvider.cpp */; };
 		7B589D52F1FD2472AE994721 /* HTTPHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5141238B757FB4CCF88CCDE8 /* HTTPHost.cpp */; };
-		7CCD97026416764B01BA3475 /* BoxTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD92637474226A2897DA56 /* BoxTest.cpp */; };
 		7CCD9BE003BD6BBE331E63B1 /* BoxClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD917F411ED6CDE69045D1 /* BoxClient.cpp */; };
 		817603EE655EE3365B256E5A /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2271EF8762ACE471CF677BE2 /* ofxInputField.cpp */; };
 		8323EEA75F66B7F0C0FCA276 /* ofxNeoPixelRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC4F3687D12D7E02C1C5B3D6 /* ofxNeoPixelRing.cpp */; };
@@ -500,7 +499,6 @@
 		7CAE56CE29D31846B8D1B65D /* yamlast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = yamlast.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/yamlast.h; sourceTree = SOURCE_ROOT; };
 		7CCD915AFC5896D9105B34FF /* FcState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcState.h; sourceTree = "<group>"; };
 		7CCD917F411ED6CDE69045D1 /* BoxClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxClient.cpp; sourceTree = "<group>"; };
-		7CCD92637474226A2897DA56 /* BoxTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BoxTest.cpp; sourceTree = "<group>"; };
 		7CCD9703C16EB2A486ADF276 /* FcMapping.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcMapping.h; sourceTree = "<group>"; };
 		7CCD990CEABBF301517849FF /* BoxClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BoxClient.h; sourceTree = "<group>"; };
 		7CCD991663C07E8F10ED331B /* FcConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FcConfig.h; sourceTree = "<group>"; };
@@ -1592,14 +1590,6 @@
 			name = include;
 			sourceTree = "<group>";
 		};
-		7CCD964B6300C9EF7DE5F5CC /* test */ = {
-			isa = PBXGroup;
-			children = (
-				7CCD92637474226A2897DA56 /* BoxTest.cpp */,
-			);
-			path = test;
-			sourceTree = "<group>";
-		};
 		7CCD9F09C27BC56E1E48738C /* box */ = {
 			isa = PBXGroup;
 			children = (
@@ -2601,7 +2591,6 @@
 				BB4B014C10F69532006C3DED /* addons */,
 				6948EE371B920CB800B5AC1A /* local_addons */,
 				E4B69B5B0A3A1756003C02F2 /* light-squareDebug.app */,
-				7CCD964B6300C9EF7DE5F5CC /* test */,
 			);
 			sourceTree = "<group>";
 		};
@@ -2921,7 +2910,6 @@
 				AD05112F172B4435D821D26A /* WebSocketFrame.cpp in Sources */,
 				736C6D40B72D543FF8172676 /* WebSocketRoute.cpp in Sources */,
 				7CCD9BE003BD6BBE331E63B1 /* BoxClient.cpp in Sources */,
-				7CCD97026416764B01BA3475 /* BoxTest.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

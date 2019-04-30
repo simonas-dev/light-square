@@ -14,7 +14,7 @@ class BoxClient {
 
 private:
     ofxHTTP::Client client;
-    string baseUrl = "localhost:8080";
+    string baseUrl = "http://localhost:8080";
     string stateUrl = baseUrl + "/fc";
 public:
     BoxResult<FcState> getState();

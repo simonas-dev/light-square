@@ -11,6 +11,7 @@
 
 #include <AudioClient.hpp>
 #include <LedClient.hpp>
+#include "BoxClient.h"
 
 #endif /* AppContext_hpp */
 
