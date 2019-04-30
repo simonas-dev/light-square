@@ -6,10 +6,11 @@
 //
 
 #include "VisualMixerWindow.hpp"
+#include "ofFbo.h"
 
 void VisualMixerWindow::setup() {
     ofBackground(0);
-    
+
     int stageWidth = ofGetWidth()/2;
     int stageHeight = stageWidth / 2;
     context->led.setup(stageWidth, stageHeight);

@@ -1,0 +1,214 @@
+@startuml
+scale 2
+autonumber "<b>[0]"
+
+participant BoxClient
+participant ofxHTTPGetRequest
+participant ofxHTTPPostRequest
+participant ofxHTTPClient
+participant ofxHTTPResponse
+participant FcState
+participant FcConfig
+
+boundary FadecandyREST
+
+[-> BoxClient : getState()
+activate BoxClient
+
+BoxClient -> ofxHTTPGetRequest : ofxHTTPGetRequest(url)
+activate ofxHTTPGetRequest
+BoxClient <-- ofxHTTPGetRequest
+deactivate ofxHTTPGetRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPGetRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    BoxClient -> ofxHTTPResponse : toJson()
+    BoxClient <-- ofxHTTPResponse : ofJson
+    BoxClient -> BoxClient : FcState(ofJson)
+    BoxClient <-- BoxClient : FcState
+    [<-- BoxClient : FcState
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+[<-- BoxClient : Success
+deactivate BoxClient
+
+[-> BoxClient : getConfig()
+activate BoxClient
+
+BoxClient -> ofxHTTPGetRequest : ofxHTTPGetRequest(url)
+activate ofxHTTPGetRequest
+BoxClient <-- ofxHTTPGetRequest
+deactivate ofxHTTPGetRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPGetRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    BoxClient -> ofxHTTPResponse : toJson()
+    BoxClient <-- ofxHTTPResponse : ofJson
+    BoxClient -> BoxClient : FcConfig(ofJson)
+    BoxClient <-- BoxClient : FcConfig
+    [<-- BoxClient : FcConfig
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+
+[<-- BoxClient : Success
+deactivate BoxClient
+
+[-> BoxClient : setConfig(FcConfig model)
+activate BoxClient
+
+BoxClient -> ofxHTTPPostRequest : ofxHTTPPostRequest(url)
+activate ofxHTTPPostRequest
+BoxClient <-- ofxHTTPPostRequest
+deactivate ofxHTTPPostRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPPostRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    [<-- BoxClient : Success
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+
+[<-- BoxClient : Success
+deactivate BoxClient
+
+[-> BoxClient : start()
+activate BoxClient
+
+BoxClient -> ofxHTTPGetRequest : ofxHTTPGetRequest(url)
+activate ofxHTTPGetRequest
+BoxClient <-- ofxHTTPGetRequest
+deactivate ofxHTTPGetRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPGetRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    [<-- BoxClient : Success
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+
+[<-- BoxClient : Success
+deactivate BoxClient
+
+[-> BoxClient : stop()
+activate BoxClient
+
+BoxClient -> ofxHTTPGetRequest : ofxHTTPGetRequest(url)
+activate ofxHTTPGetRequest
+BoxClient <-- ofxHTTPGetRequest
+deactivate ofxHTTPGetRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPGetRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    [<-- BoxClient : Success
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+
+[<-- BoxClient : Success
+deactivate BoxClient
+
+[-> BoxClient : restart()
+activate BoxClient
+
+BoxClient -> ofxHTTPGetRequest : ofxHTTPGetRequest(url)
+activate ofxHTTPGetRequest
+BoxClient <-- ofxHTTPGetRequest
+deactivate ofxHTTPGetRequest
+
+BoxClient -> ofxHTTPClient : execute(ofxHTTPGetRequest)
+activate ofxHTTPClient
+ofxHTTPClient -> FadecandyREST : <<HTTP Request>>
+activate FadecandyREST
+ofxHTTPClient <-- FadecandyREST : <<HTTP Response>>
+deactivate FadecandyREST
+
+BoxClient <-- ofxHTTPClient
+deactivate ofxHTTPClient
+
+BoxClient -> ofxHTTPResponse : getStatus()
+activate ofxHTTPResponse
+alt Status=HTTP_OK
+    BoxClient <-- ofxHTTPResponse : Ok
+    [<-- BoxClient : Success
+else
+    BoxClient <-- ofxHTTPResponse : Failed
+    deactivate ofxHTTPResponse
+    [<-- BoxClient : Failure Message
+end
+
+[<-- BoxClient : Success
+deactivate BoxClient
+
+@enduml

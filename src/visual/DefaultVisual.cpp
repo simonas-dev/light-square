@@ -76,10 +76,11 @@ void DefaultVisual::drawVisual(int x, int y, float w, float h) {
     
     // Fade the Scene
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    ofSetColor(ofColor::black, (int) (255*fadeRatio));
-    ofDrawRectangle(x, y, full_w, h);
-    ofSetColor(ofColor::black, 3);
-    ofDrawRectangle(x, y, full_w, h);
+    int fade =  (255*fadeRatio);
+    if (fade == 0 && fadeRatio > 0) {
+        fade = 1;
+    }
+    ofSetColor(ofColor::black, fade);
     ofDisableBlendMode();
     
     ofPopMatrix();

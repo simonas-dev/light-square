@@ -1,0 +1,139 @@
+@startuml VisualMixerWindow
+scale 2
+autonumber "<b>[0]"
+
+actor Human
+
+participant VisualMixerWindow
+
+participant AppContext
+participant LedClient
+participant BaseVisual
+
+[-> VisualMixerWindow : VisualMixerWindow(AppContext)
+
+activate VisualMixerWindow
+
+loop Create :visuals Colletion
+    VisualMixerWindow -> BaseVisual : BaseVisual(AppContext)
+    VisualMixerWindow <-- BaseVisual
+end
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+[-> VisualMixerWindow : setup()
+activate VisualMixerWindow
+
+VisualMixerWindow -> AppContext : led.setup()
+activate AppContext
+AppContext -> LedClient : setup()
+activate LedClient
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+[-> VisualMixerWindow : update()
+activate VisualMixerWindow
+
+VisualMixerWindow -> AppContext : led.beginStage()
+activate AppContext
+AppContext -> LedClient : beginStage()
+activate LedClient
+AppContext <-- LedClient
+VisualMixerWindow <-- AppContext
+
+loop For Each In :visuals
+    VisualMixerWindow -> BaseVisual : drawScene()
+    activate BaseVisual
+    VisualMixerWindow <-- BaseVisual : Draw visual on the main stage
+    deactivate BaseVisual
+end
+deactivate BaseVisual
+
+VisualMixerWindow -> AppContext : led.endStage()
+AppContext -> LedClient : endStage()
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+[-> VisualMixerWindow : draw()
+activate VisualMixerWindow
+VisualMixerWindow -> AppContext : led.drawStage
+activate AppContext
+AppContext -> LedClient : drawStage()
+activate LedClient
+
+loop For Each In :visuals
+    VisualMixerWindow -> BaseVisual : drawThumb()
+    activate BaseVisual
+    VisualMixerWindow <-- BaseVisual : Draw thumbnail with its settings
+    deactivate BaseVisual
+end
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+
+[-> VisualMixerWindow : exit()
+activate VisualMixerWindow
+VisualMixerWindow -> AppContext : led.exit()
+activate AppContext
+AppContext -> LedClient : led()
+activate LedClient
+
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+[<-- VisualMixerWindow
+
+deactivate VisualMixerWindow
+
+Human -> VisualMixerWindow : Turn off effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : isEnabled(false)
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+Human -> VisualMixerWindow : Turn on effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : isEnabled(true)
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+Human -> VisualMixerWindow : Configure effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : Configure Non Abstract Effect Properties
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+
+@enduml

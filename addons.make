@@ -1,3 +1,4 @@
+ofxPoco
 ofxAudioAnalyzer
 ofxAudioDecoder
 ofxGui
@@ -6,3 +7,8 @@ ofxOPC
 ofxGraph
 ofxXmlSettings
 ofxShadertoy
+ofxIO
+ofxMediaType
+ofxSSLManager
+ofxNetworkUtils
+ofxHTTP

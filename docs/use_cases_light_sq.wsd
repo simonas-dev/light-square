@@ -1,0 +1,47 @@
+@startuml Panaudojimo Atvėjai
+scale 2
+
+actor :Naudotojas: as client
+actor :Įrenginių saityno paslauga: as box_client
+
+(Valdyti šviesos efektus) as (control_effects)
+(Mėgautis įrenginio šviesos efektais) as (effect_enjoy)
+
+' EFFECTS
+client -- control_effects
+
+(Valdyti efektų atvaizdavimo parametrus) as (effects_params_edit)
+(Peržiurėti efektus) as (effects_view_avialable)
+(Peržiurėti bendrą efektų simuliaciją) as (effect_mix_stage)
+
+control_effects <.down. (effects_params_edit) : extends
+control_effects <.down. effects_view_avialable : extends
+control_effects <.down. effect_mix_stage : extends
+
+(Generuoti efekto visualiziaciją) as (effect_generate)
+(Įjungti efektą) as (effects_auto_generation_on)
+(Išjungti efektą) as (effects_auto_generation_off)
+(Keisti specifinius parametrus) as (effects_auto_generation_custom_params)
+(Gauti efekto parametrus) as (effects_get_custom_params)
+(Analizuoti garso duomenis) as (effects_analyze_audio)
+
+effects_params_edit <.down. (effects_auto_generation_on) : extends
+effects_params_edit <.down. (effects_auto_generation_off) : extends
+effects_params_edit <.down. (effects_auto_generation_custom_params) : extends
+effects_params_edit <.down. (effects_get_custom_params) : extends
+
+effect_mix_stage .down.> effect_generate : include
+effects_view_avialable .down.> effect_generate : include
+effect_generate .down.> effects_analyze_audio : include
+effect_generate .down.> effects_get_custom_params : include
+
+' PRODUCT
+client -- effect_enjoy
+
+(Siųsti bendrą efektų visualizaciją įrenginiui) as (effect_send_mix)
+effect_send_mix -- box_client
+
+effect_enjoy .down.> effect_send_mix : include
+effect_send_mix .down.> effect_generate : include
+
+@enduml

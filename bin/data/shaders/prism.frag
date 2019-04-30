@@ -24,6 +24,8 @@
 //     fragColor = vec4(cl, 1.);
 // }
 
+uniform float iAlpha;
+
 // Colorful bubbles -- LED Optimized
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
@@ -57,7 +59,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     // vigneting  
   color *= sqrt(1.5-0.5*length(uv));
 
-  fragColor = vec4(color,1.0);
+  fragColor = vec4(color, iAlpha);
 }
 
 

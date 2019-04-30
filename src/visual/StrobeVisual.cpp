@@ -11,6 +11,8 @@ void StrobeVisual::setup() {
     gui.setup();
     gui.setName(name);
     gui.add(isEnabled.setup("Is Enabled", true));
+    gui.add(fadeRatio.setup("Fade Ratio", 0.035, 0.0, 0.35));
+    gui.add(powerRatio.setup("Strobe Power Ratio", 0.0, 0.5, 1));
 }
 
 void StrobeVisual::drawScene(int x, int y, float w, float h) {
@@ -23,12 +25,12 @@ void StrobeVisual::drawVisual(int x, int y, float w, float h) {
     ofPushMatrix();
     ofEnableBlendMode(OF_BLENDMODE_ALPHA);
     if (ofColor::white, context->audio.model.isOnset) {
-        ofSetColor(ofColor::white, 255);
+        ofSetColor(ofColor::white, (int) (255 * powerRatio));
     } else {
         ofSetColor(ofColor::white, 0);
     }
     ofDrawRectangle(x, y, w, h);
-    ofSetColor(ofColor::black, 10);
+    ofSetColor(ofColor::black, (int) (255 * fadeRatio));
     ofDrawRectangle(x, y, w, h);
     ofDisableBlendMode();
     ofPopMatrix();

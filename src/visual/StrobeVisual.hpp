@@ -25,4 +25,7 @@ public:
     void drawScene(int x, int y, float w, float h);
     void drawVisual(int x, int y, float w, float h);
     void drawThumb(int x, int y, float w, float h);
+
+    ofxFloatSlider fadeRatio;
+    ofxFloatSlider powerRatio;
 };

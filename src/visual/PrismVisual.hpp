@@ -22,6 +22,7 @@ public:
     };
     
     ofxShadertoy shadertoy;
+    ofxFloatSlider alphaRatio;
     ofxToggle reloadShader;
     
     void setup();

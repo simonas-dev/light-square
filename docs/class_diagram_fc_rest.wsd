@@ -1,0 +1,101 @@
+@startuml
+scale 2
+
+package src {
+    package contracts {
+        interface FadecandyContract {
+            Result<FcConfig> getConfig()
+            Result<FcConfig> setConfig(config: FcConfig)
+            Result<Unit> restart()
+            Result<Unit> start()
+            Result<Unit> stop()
+            Result<FcServerState> getState()
+        }
+    }
+
+    package controllers {
+        class FadecandyController  {
+            __private__
+            FadecandyDriver driver
+            FcServerState state 
+        }
+        FadecandyContract <|-left- FadecandyController
+    }
+
+    package models {
+        class FcServerState
+        class FcConfig
+        class FcColor
+        class FcDevice
+        class FcDeviceMapping
+
+        FcServerState <-down- FcDevice
+        FcConfig <-down- FcDeviceMapping
+        FcConfig <-down- FcColor
+
+        FadecandyController <-- FcServerState
+    }
+
+    package fadecandy {
+        class FadecandyDriver {
+              FcConfig config
+              onDeviceConnected(FcDevice device)
+              onDeviceDisconnected(FcDevice device)
+              Result<Unit> start()
+              Result<Unit>  kill()
+              __private__
+              FadecandyProcessReader processReader
+        }
+        FadecandyController <-right- FadecandyDriver
+        class FadecandyProcessReader {
+            FadecandyProcessReader.Event parseLog(String line)
+        }
+        enum FadecandyProcessReader.Event {
+            Running
+            Error
+            Connected
+            Disconnected
+        }
+        FadecandyProcessReader <. FadecandyProcessReader.Event
+        FadecandyDriver <-- FadecandyProcessReader
+    }
+
+    package services {
+        object FadecandyServicekt {
+            installFadecandyService(Routing routing, FadecandyContract controller)
+        }
+        class Response<T: Class> {
+            T value
+            Boolean isSuccess
+            String errorMessage
+            String stackTrace
+        }
+        FadecandyServicekt <.down. FadecandyContract
+        FadecandyServicekt <.down. Response
+        FadecandyServicekt <.down. FadecandyLocation
+        FadecandyServicekt <.down. FadecandyLocation.Start
+        FadecandyServicekt <.up. FadecandyLocation.Stop
+        FadecandyServicekt <.up. FadecandyLocation.Restart
+        FadecandyServicekt <.up. FadecandyLocation.Config
+        FadecandyServicekt <.down. FcConfig
+        FadecandyServicekt <.down. FcServerState
+    }
+}
+
+object Mainkt {
+    main()
+    module(Application app, FadecandyContract fadecandy)
+}
+
+class FadecandyLocation <<RouterLocation>>
+class FadecandyLocation.Start <<RouterLocation>>
+class FadecandyLocation.Stop <<RouterLocation>>
+class FadecandyLocation.Restart <<RouterLocation>>
+class FadecandyLocation.Config <<RouterLocation>>
+
+Mainkt <.down. FadecandyServicekt
+Mainkt <.down. FadecandyContract
+Mainkt <.down. FadecandyController
+
+
+@enduml

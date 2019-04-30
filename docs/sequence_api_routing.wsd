@@ -1,0 +1,32 @@
+@startuml Fadecandy REST
+scale 2
+autonumber "<b>[0]"
+
+actor HttpClient
+participant NettyApplicationEngine
+participant ContentNegotiation
+participant Routing
+participant FadecandyService
+participant Response
+
+HttpClient -> NettyApplicationEngine : HTTP Request
+activate NettyApplicationEngine
+NettyApplicationEngine -> Routing : Intercept Request
+activate Routing
+Routing -> Routing : Resolve Route
+Routing -> FadecandyService : Execute Route
+activate FadecandyService
+Routing <-- FadecandyService : Execution Response Model 
+deactivate FadecandyService
+NettyApplicationEngine <-- Routing : Intercepted Response
+deactivate Routing
+NettyApplicationEngine -> ContentNegotiation : Intercept Response
+activate ContentNegotiation
+ContentNegotiation -> ContentNegotiation : Convert Response Body to JSON
+NettyApplicationEngine <-- ContentNegotiation : Intercepted Response
+deactivate ContentNegotiation
+HttpClient <-- NettyApplicationEngine : HTTP Response
+deactivate NettyApplicationEngine
+
+
+@enduml
