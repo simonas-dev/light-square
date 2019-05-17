@@ -1,0 +1,96 @@
+@startuml
+scale 2
+
+package src {
+
+    package components {
+        
+    }
+
+    package audio {
+        
+    }
+
+    package led {
+        
+    }
+
+    package windows {
+        
+    }
+    
+    ' BOX Deprecated
+    ' package box {
+    '     AppContext <-- BoxClient
+
+
+    '     class BoxClient {
+    '         setConfig(configJson: String)
+    '         BoxResult<FcState> getState()
+    '         BoxResult<FcConfig> getConfig()
+    '         BoxResult<void> setConfig(FcConfig model)
+    '         BoxResult<void> start()
+    '         BoxResult<void> stop()
+    '         BoxResult<void> restart()
+    '     }
+    '     BoxClient <.down. BoxResult
+
+    '     class BoxResult<T : Class> {
+    '         bool isSuccess
+    '         string error
+    '         T value
+    '     }
+    
+    '     class FcConfig {
+    '         FcAddress listen
+    '         FcAddress relay
+    '         bool verbose
+    '         FcColor color
+    '         vector<FcMapping> devices
+    '     }
+    '     FcConfig <.down. BoxClient
+    '     FcConfig <-- FcAddress
+    '     FcConfig <-- FcColor
+    '     FcConfig o-- FcMapping
+
+
+    '     class FcState {
+    '         bool isConnected
+    '         vector<FcDevice> connectedDevices
+    '     }
+    '     FcState <.down. BoxClient
+    '     FcState o--FcDevice
+
+    '     class FcAddress {
+    '         string address
+    '         int port
+    '     }
+
+    '     class FcColor {
+    '         float gamma
+    '         vector<float> whitepoint
+    '         float linearSlope
+    '         float linearCutoff
+    '     }
+        
+    '     class FcDevice {
+    '         string type
+    '         string serial
+    '         string version
+    '     }
+    '     class FcMapping {
+    '         string type
+    '         bool dither
+    '         bool interpolate
+    '         string serial
+    '         vector<tuple<int, int, int, int>> map
+    '     }
+    ' }
+
+
+    package visuals {
+        
+    }
+}
+
+@enduml

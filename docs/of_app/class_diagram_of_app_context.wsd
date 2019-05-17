@@ -1,0 +1,68 @@
+@startuml
+scale 2
+
+package src {
+    class Main { 
+        int main()
+    }
+    
+    class AppContext {
+        audio: AudioClient
+        led: LedClient
+    }
+
+    package audio {
+        class AudioClient {
+            model: AudioModel
+            setup()
+            setInput(device: ofSoundDevice)
+            getInputList(): ofSoundDevice
+            setSmoothing(smoothing: Float)
+            audioIn(buffer: ofSoundBuffer)
+            update(buffer: ofSoundBuffer)
+            exit()
+        }
+        AudioClient <-- AudioModel 
+        AppContext <-- AudioClient
+
+        class AudioModel {
+            rms : float
+            power : float
+            pitchFreqNorm : float
+            pitchConf : float
+            pitchSalience : float
+            hfcNorm : float
+            specCompNorm : float
+            centroidNorm : float
+            inharmonicity : float
+            dissonance : float
+            rollOffNorm : float
+            oddToEvenNorm : float
+            strongPeakNorm : float
+            strongDecayNorm : float
+            spectrum : vector<float>
+            melBands : vector<float>
+            mfcc : vector<float>
+            hpcp : vector<float>
+            tristimulus : vector<float>
+            isOnset : bool
+        }
+    }
+
+    package led {
+        class LedClient {
+            setup(params)
+            beginStage()
+            endStage()
+            isConnected()
+            drawStage()
+            exit()
+        }
+        AppContext <-- LedClient
+    }
+
+   
+    Main <. AppContext
+}
+
+@enduml

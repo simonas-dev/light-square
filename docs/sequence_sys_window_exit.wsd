@@ -1,0 +1,25 @@
+@startuml SystemWindow
+scale 2
+autonumber "<b>[0]"
+
+participant SystemWindow
+
+participant AppContext
+participant AudioClient
+
+[-> SystemWindow : exit()
+activate SystemWindow
+
+SystemWindow -> AppContext : audio.exit()
+activate AppContext
+AppContext -> AudioClient : exit()
+activate AudioClient
+AppContext <-- AudioClient
+deactivate AudioClient
+SystemWindow <-- AppContext
+deactivate AppContext
+
+[<-- SystemWindow
+deactivate SystemWindow
+
+@enduml

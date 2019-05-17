@@ -1,0 +1,44 @@
+@startuml Led Client
+scale 2
+autonumber "<b>[0]"
+
+participant LedClient
+participant ofxOPC
+participant ofxNeoPixelGrid
+
+[-> LedClient : isConnected()
+activate LedClient
+LedClient -> ofxOPC : isConnected() 
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+[<-- LedClient
+deactivate LedClient
+
+[-> LedClient : drawStage()
+activate LedClient
+LedClient -> ofxOPC : drawStage()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+
+LedClient -> ofxNeoPixelGrid : drawGrabRegion()
+activate ofxNeoPixelGrid
+LedClient <-- ofxNeoPixelGrid
+deactivate ofxNeoPixelGrid
+
+LedClient -> ofxNeoPixelGrid : draw()
+activate ofxNeoPixelGrid
+LedClient <-- ofxNeoPixelGrid
+deactivate ofxNeoPixelGrid
+
+[<-- LedClient
+deactivate LedClient
+
+
+[-> LedClient : exit()
+activate LedClient
+[<-- LedClient
+deactivate LedClient
+
+@enduml

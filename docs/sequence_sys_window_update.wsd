@@ -1,0 +1,48 @@
+@startuml SystemWindow
+scale 2
+autonumber "<b>[0]"
+
+participant SystemWindow
+
+participant AppContext
+participant AudioClient
+participant AudioModel
+participant Grapher
+
+
+[-> SystemWindow : update()
+activate SystemWindow
+
+SystemWindow -> AppContext : audio.update()
+activate AppContext
+AppContext -> AudioClient : update()
+activate AudioClient
+AppContext <-- AudioClient
+deactivate AudioClient
+SystemWindow <-- AppContext
+deactivate AppContext
+
+loop for each class :property in AudioModel
+    SystemWindow -> AppContext : audio.model.:propert
+    activate AppContext
+    AppContext -> AudioClient : model.:property
+    activate AudioClient
+    AudioClient -> AudioModel : :property
+    activate AudioModel
+    AudioClient <-- AudioModel : :property
+    deactivate AudioModel
+    AppContext <-- AudioClient : :property
+    deactivate AudioClient
+    SystemWindow <-- AppContext : :property
+    deactivate AppContext
+    
+    SystemWindow -> Grapher : add(:property)
+    activate Grapher
+    SystemWindow <-- Grapher
+    deactivate Grapher
+end
+
+[<-- SystemWindow
+deactivate SystemWindow
+
+@enduml

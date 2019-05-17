@@ -1,0 +1,53 @@
+@startuml
+
+package src {
+    package contracts {
+        interface FadecandyContract {
+            Result<FcConfig> getConfig()
+            Result<FcConfig> setConfig(config: FcConfig)
+            Result<Unit> restart()
+            Result<Unit> start()
+            Result<Unit> stop()
+            Result<FcServerState> getState()
+        }
+    }
+
+    package models {
+        class FcServerState {
+            
+        }
+        class FcConfig {
+            
+        }
+    }
+
+    package services {
+        object FadecandyServicekt {
+            installFadecandyService(Routing routing, FadecandyContract controller)
+        }
+        class Response<T: Class> {
+            T value
+            Boolean isSuccess
+            String errorMessage
+            String stackTrace
+        }
+        FadecandyServicekt <.up. FadecandyContract
+        FadecandyServicekt <.down. Response
+        FadecandyServicekt <.up. FcConfig
+        FadecandyServicekt <.up. FcServerState
+    }
+
+    class FadecandyLocation <<RouterLocation>>
+    class FadecandyLocation.Start <<RouterLocation>>
+    class FadecandyLocation.Stop <<RouterLocation>>
+    class FadecandyLocation.Restart <<RouterLocation>>
+    class FadecandyLocation.Config <<RouterLocation>>
+
+    FadecandyServicekt <.up. FadecandyLocation
+    FadecandyServicekt <.up. FadecandyLocation.Start
+    FadecandyServicekt <.down. FadecandyLocation.Stop
+    FadecandyServicekt <.down. FadecandyLocation.Restart
+    FadecandyServicekt <.down. FadecandyLocation.Config
+}
+
+@enduml

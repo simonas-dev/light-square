@@ -4,72 +4,29 @@ autonumber "<b>[0]"
 
 participant AudioClient
 participant ofxAudioAnalyzer
-participant ofSoundStream
-participant ofSoundDevice
-participant ofSoundStreamSettings
-
-[-> AudioClient: setup()
-activate AudioClient
-AudioClient -> AudioClient : getDefaultInput()
-activate AudioClient
-AudioClient -> AudioClient : getInputDevices()
-activate AudioClient
-AudioClient -> ofSoundStream : getInputDevices(ofSoundDevice::Api)
-AudioClient <-- ofSoundStream
-AudioClient <-- AudioClient : Collection of Audio Input Devices
-deactivate AudioClient
-
-loop For Each InputDevice
-    AudioClient -> ofSoundDevice : isDefault()
-end
-alt Default Device Found
-    AudioClient <-- ofSoundDevice : Return Default Audio Input Device
-
-else No Default Device
-    AudioClient <-- ofSoundDevice : Return NULL
-end
-AudioClient <-- AudioClient : Default Device or NULL
-deactivate AudioClient
-
-
-AudioClient -> AudioClient : setInput(ofSoundDevice)
-activate AudioClient
-AudioClient -> ofSoundStreamSettings : setInListener(AudioClient::audioIn(ofSoundBuffer)
-AudioClient <-- ofSoundStreamSettings
-AudioClient -> ofSoundStream : setup() 
-AudioClient <-- ofSoundStream
-AudioClient -> ofxAudioAnalyzer : setup() 
-AudioClient <-- ofxAudioAnalyzer
-AudioClient <-- AudioClient : Input Device Set
-
-deactivate AudioClient
-[<-- AudioClient
-deactivate AudioClient
-
 
 
 [-> AudioClient: exit()
 activate AudioClient
 AudioClient -> ofxAudioAnalyzer : exit()
+activate ofxAudioAnalyzer
 AudioClient <-- ofxAudioAnalyzer
+deactivate ofxAudioAnalyzer
 [<-- AudioClient
 deactivate AudioClient
-
 
 
 [-> AudioClient: update()
 activate AudioClient
 AudioClient -> ofxAudioAnalyzer : analyze(ofSoundBuffer)
+activate ofxAudioAnalyzer
 AudioClient <-- ofxAudioAnalyzer
+deactivate ofxAudioAnalyzer
 AudioClient -> ofxAudioAnalyzer : Get Analysis Results
+activate ofxAudioAnalyzer
 AudioClient <-- ofxAudioAnalyzer
+deactivate ofxAudioAnalyzer
 [<-- AudioClient 
 deactivate AudioClient
-
-ofSoundStream -> AudioClient: audioIn(ofSoundBuffer)
-activate AudioClient
-ofSoundStream <-- AudioClient 
-deactivate AudioClient
-
 
 @enduml

@@ -1,0 +1,42 @@
+@startuml VisualMixerWindow
+scale 2
+autonumber "<b>[0]"
+
+
+participant VisualMixerWindow
+
+participant AppContext
+participant LedClient
+participant BaseVisual
+
+
+
+[-> VisualMixerWindow : update()
+activate VisualMixerWindow
+
+VisualMixerWindow -> AppContext : led.beginStage()
+activate AppContext
+AppContext -> LedClient : beginStage()
+activate LedClient
+AppContext <-- LedClient
+VisualMixerWindow <-- AppContext
+
+loop For Each In :visuals
+    VisualMixerWindow -> BaseVisual : drawScene()
+    activate BaseVisual
+    VisualMixerWindow <-- BaseVisual : Draw visual on the main stage
+    deactivate BaseVisual
+end
+deactivate BaseVisual
+
+VisualMixerWindow -> AppContext : led.endStage()
+AppContext -> LedClient : endStage()
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+@enduml

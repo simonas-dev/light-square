@@ -1,0 +1,26 @@
+@startuml Led Client
+scale 2
+autonumber "<b>[0]"
+
+participant LedClient
+participant ofxOPC
+participant ofxNeoPixelGrid
+
+[-> LedClient : setup()
+activate LedClient
+LedClient -> ofxOPC : setup()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+LedClient -> ofxOPC : setupStage()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+LedClient -> ofxNeoPixelGrid : setupLedGrid()
+activate ofxNeoPixelGrid
+LedClient <-- ofxNeoPixelGrid
+deactivate ofxNeoPixelGrid
+[<-- LedClient
+deactivate LedClient
+
+@enduml

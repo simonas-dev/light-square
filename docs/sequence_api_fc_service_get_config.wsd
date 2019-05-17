@@ -1,0 +1,25 @@
+@startuml Fadecandy REST Fc Service
+scale 2
+autonumber "<b>[0]"
+
+participant FadecandyService
+participant FadecandyController
+participant FadecandyDriver
+
+
+[-> FadecandyService : get<FadecandyLocation.Config>
+activate FadecandyService
+FadecandyService -> FadecandyController : getConfig()
+activate FadecandyController
+FadecandyController -> FadecandyDriver : getConfig()
+activate FadecandyDriver
+FadecandyController <-- FadecandyDriver : config
+deactivate FadecandyDriver
+FadecandyService <-- FadecandyController : config
+deactivate FadecandyController
+[<-- FadecandyService : Execution Response Model
+deactivate FadecandyService
+
+
+
+@enduml

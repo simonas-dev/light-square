@@ -1,0 +1,28 @@
+@startuml
+scale 2
+
+package src {
+    
+    package contracts {
+        
+    }
+
+    package controllers {
+
+    }
+
+    package models {
+
+    }
+
+    package services {
+        
+    }
+
+    package fadecandy {
+        
+    }
+}
+
+
+@enduml

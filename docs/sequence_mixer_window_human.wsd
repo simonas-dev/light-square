@@ -1,0 +1,45 @@
+@startuml VisualMixerWindow
+scale 2
+autonumber "<b>[0]"
+
+actor Human
+
+participant VisualMixerWindow
+
+participant BaseVisual
+
+Human -> VisualMixerWindow : Turn off effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : isEnabled(false)
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+Human -> VisualMixerWindow : Turn on effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : isEnabled(true)
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+Human -> VisualMixerWindow : Configure effect
+activate VisualMixerWindow
+
+VisualMixerWindow -> BaseVisual : Configure Non Abstract Effect Properties
+activate BaseVisual
+VisualMixerWindow <-- BaseVisual
+deactivate BaseVisual
+
+Human <-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+
+@enduml
