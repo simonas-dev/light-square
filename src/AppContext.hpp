@@ -9,9 +9,8 @@
 #ifndef AppContext_hpp
 #define AppContext_hpp
 
-#include <AudioClient.hpp>
-#include <LedClient.hpp>
-#include "BoxClient.h"
+#include <audio/AudioClient.hpp>
+#include <led/LedClient.hpp>
 
 #endif /* AppContext_hpp */
 
