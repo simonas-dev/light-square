@@ -16,7 +16,9 @@ activate VisualMixerWindow
 
 loop Create :visuals Colletion
     VisualMixerWindow -> BaseVisual : BaseVisual(AppContext)
+    activate BaseVisual
     VisualMixerWindow <-- BaseVisual
+    deactivate BaseVisual
 end
 
 [<-- VisualMixerWindow

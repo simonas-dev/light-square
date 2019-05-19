@@ -1,14 +1,9 @@
 @startuml Panaudojimo Atvėjai
 scale 2
+left to right direction
 
-actor :Įrenginių saityno paslauga: as box_client
 
 actor :Naudotojas: as client
-
-(Valdyti techinę įrangą) as (control_tech)
-
-' BOX CLIENT
-client -- control_tech
 
 (Keisti technės įrangos konfiguraciją) as (tech_view_config)
 (Peržiurėti techinės įrangos būseną) as (tech_view_state)
@@ -16,28 +11,11 @@ client -- control_tech
 (Stabdyti techinės įrangos valdiklio procesą) as (tech_stop)
 (Paleisti techinę įrangos valdiklio procesą) as (tech_start)
 
-control_tech .down.> (tech_start) : extends
-control_tech .down.> (tech_reboot) : extends
-control_tech .down.> (tech_stop) : extends
-control_tech .down.> (tech_view_config) : extends
-control_tech .down.> (tech_view_state) : extends
 
-(Gauti technės įrangos konfiguraciją) as (api_tech_view_config)
-(Gauti techinės įrangos būseną) as (api_tech_view_state)
-(Siųsti užklausą perkrauti techinės įrangos valdiklio procesą) as (api_tech_reboot)
-(Siųsti užklausą stabdyti techinės įrangos valdiklio procesą) as (api_tech_stop)
-(Siųsti užklausą Paleisti techinę įrangos valdiklio procesą) as (api_tech_start)
-
-tech_start .down.> api_tech_start : include
-tech_reboot .down.> api_tech_reboot : include
-tech_stop .down.> api_tech_stop : include
-tech_view_config .down.> api_tech_view_config : include
-tech_view_state .down.> api_tech_view_state : include
-
-box_client -up- (api_tech_start)
-box_client -up- (api_tech_reboot)
-box_client -up- (api_tech_stop)
-box_client -up- (api_tech_view_config)
-box_client -up- (api_tech_view_state)
+client -- tech_view_config
+client -- tech_view_state
+client -- tech_reboot
+client -- tech_stop
+client -- tech_start
 
 @enduml

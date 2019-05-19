@@ -11,10 +11,10 @@
 
 #include "ofMain.h"
 #include "AppContext.hpp"
-#include "visual/BaseVisual.hpp"
-#include "visual/DefaultVisual.hpp"
-#include "visual/StrobeVisual.hpp"
-#include "visual/PrismVisual.hpp"
+#include "BaseVisual.hpp"
+#include "DefaultVisual.hpp"
+#include "StrobeVisual.hpp"
+#include "PrismVisual.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 

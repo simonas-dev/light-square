@@ -1,0 +1,29 @@
+@startuml Fadecandy REST Fc Service
+scale 2
+autonumber "<b>[0]"
+
+participant FadecandyService
+participant FadecandyController
+participant FadecandyDriver
+participant FadecandyProcessReader
+
+[-> FadecandyService : get<FadecandyLocation.Stop>
+activate FadecandyService
+FadecandyService -> FadecandyController : stop()
+activate FadecandyController
+FadecandyController -> FadecandyDriver : kill()
+activate FadecandyDriver
+FadecandyDriver -> FadecandyDriver : Kill Fadecandy Process
+FadecandyDriver -> FadecandyProcessReader : Kill Process Logs Reader
+activate FadecandyProcessReader
+FadecandyDriver <-- FadecandyProcessReader
+deactivate FadecandyProcessReader
+FadecandyController <-- FadecandyDriver
+deactivate FadecandyDriver
+FadecandyService <-- FadecandyController
+deactivate FadecandyController
+[<-- FadecandyService : Execution Response Model
+deactivate FadecandyService
+
+
+@enduml

@@ -1,0 +1,59 @@
+@startuml
+
+
+package src {
+    package contracts {
+        interface FadecandyContract {
+            Result<FcConfig> getConfig()
+            Result<FcConfig> setConfig(config: FcConfig)
+            Result<Unit> restart()
+            Result<Unit> start()
+            Result<Unit> stop()
+            Result<FcServerState> getState()
+        }
+    }
+
+    package controllers {
+        class FadecandyController  {
+            - FadecandyDriver driver
+            - FcServerState state 
+        }
+        FadecandyContract <|-down- FadecandyController
+    }
+
+    package models {
+        class FcServerState {
+            
+        }
+        class FcConfig {
+            
+        }
+    }
+
+    package fadecandy {
+        class FadecandyDriver {
+              FcConfig config
+              onDeviceConnected(FcDevice device)
+              onDeviceDisconnected(FcDevice device)
+              Result<Unit> start()
+              Result<Unit> kill()
+              - FadecandyProcessReader processReader
+        }
+        FadecandyController <- FadecandyDriver
+        FadecandyController <- FcServerState
+        class FadecandyProcessReader {
+            FadecandyProcessReader.Event parseLog(String line)
+        }
+        enum FadecandyProcessReader.Event {
+            Running
+            Error
+            Connected
+            Disconnected
+        }
+        FadecandyProcessReader <. FadecandyProcessReader.Event
+        FadecandyDriver <-down- FadecandyProcessReader
+        FadecandyDriver <-up- FcConfig
+    }
+}
+
+@enduml

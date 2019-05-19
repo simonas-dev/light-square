@@ -4,6 +4,7 @@ scale 2
 actor :Naudotojas: as client
 actor :Įrenginių saityno paslauga: as box_client
 
+(Peržiurėti garso analizės rezultatus) as (system_audio)
 (Valdyti šviesos efektus) as (control_effects)
 (Mėgautis įrenginio šviesos efektais) as (effect_enjoy)
 
@@ -24,6 +25,9 @@ control_effects <.down. effect_mix_stage : extends
 (Keisti specifinius parametrus) as (effects_auto_generation_custom_params)
 (Gauti efekto parametrus) as (effects_get_custom_params)
 (Analizuoti garso duomenis) as (effects_analyze_audio)
+
+client -- system_audio
+system_audio .> effects_analyze_audio : include
 
 effects_params_edit <.down. (effects_auto_generation_on) : extends
 effects_params_edit <.down. (effects_auto_generation_off) : extends

@@ -16,6 +16,10 @@ activate Routing
 Routing -> Routing : Resolve Route
 Routing -> FadecandyService : Execute Route
 activate FadecandyService
+FadecandyService -> Response : Response(model)
+activate Response
+FadecandyService <-- Response
+deactivate Response
 Routing <-- FadecandyService : Execution Response Model 
 deactivate FadecandyService
 NettyApplicationEngine <-- Routing : Intercepted Response

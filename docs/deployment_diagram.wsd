@@ -2,25 +2,24 @@
 scale 2
 
 
-node "<<Device>>\nŠviesos efektų įrenginys" as light_box {
+node "<<Device>>\n Light Square" as light_box {
     node "<<Device>>\nFadecandy LED Driver" as fadecandy
-    node "<<Device>>\nLED strips" as led
-    led <-- fadecandy : "PWM signalas"
+    node "<<Device>>\nLED Pixel" as led
+    led "512" <-- "1" fadecandy : "PWM signal"
 }
 
 
-node "<<Device>>\nKompiuteris" as pc {
+node "<<Device>>\n Computer" as pc {
     node "<<OS>>\nMacOS" as macOS {
-        node "<<Application>>\nĮrenginių REST" as rest 
+        node "<<Application>>\nFadecandy REST" as rest 
+        node "<<Application>>\nFadecandy Frontend" as frontend 
         node "<<Application>>\nFadecandy OPC Server" as opc
-        node "<<Application>>\nEffects Mixer" as of
-
-        fadecandy -- opc : USB
-        rest .> opc : <<deploy>>
-        of -- rest : HTTP
-        of --> opc : WebSockets
+        node "<<Application>>\nOpenFrameworks\nEffects App" as of
+        fadecandy "1..19" -- "1..*" opc : USB
+        rest "1" .> "1" opc : <<deploy>>
+        of "1" --> "1..*" opc : TCP
+        rest "1" -- "1" frontend
     }
 }
-
 
 @enduml

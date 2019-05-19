@@ -1,0 +1,42 @@
+@startuml
+
+package src {
+
+    package models {
+        class FcServerState {
+            Boolean isRunning
+            Set<FcDevice> connectedDevices
+        }
+        class FcConfig {
+            FcDeviceAddress listen
+            FcDeviceAddress relay
+            Boolean verbose
+            FcColor color
+            List<FcDeviceMapping> devices
+        }
+        class FcColor {
+            Float gamma
+            List<Float> whitepoint
+            Float linearSlope
+            Float linearCutoff
+        }
+        class FcDevice {
+            String type
+            String serial
+            String version
+        }
+        class FcDeviceMapping {
+            String type
+            Boolean dither
+            Boolean interpolate
+            String serial
+            List<List<Int>> map
+        }
+
+        FcServerState o-down- FcDevice
+        FcConfig o-down- FcDeviceMapping
+        FcConfig <-down- FcColor
+    }
+}
+
+@enduml

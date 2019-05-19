@@ -1,0 +1,25 @@
+@startuml VisualMixerWindow
+scale 2
+autonumber "<b>[0]"
+
+participant VisualMixerWindow
+
+participant AppContext
+participant LedClient
+
+[-> VisualMixerWindow : setup()
+activate VisualMixerWindow
+
+VisualMixerWindow -> AppContext : led.setup()
+activate AppContext
+AppContext -> LedClient : setup()
+activate LedClient
+AppContext <-- LedClient
+deactivate LedClient
+VisualMixerWindow <-- AppContext
+deactivate AppContext
+
+[<-- VisualMixerWindow
+deactivate VisualMixerWindow
+
+@enduml

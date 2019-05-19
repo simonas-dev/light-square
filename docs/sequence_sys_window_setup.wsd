@@ -1,0 +1,42 @@
+@startuml SystemWindow
+scale 2
+autonumber "<b>[0]"
+
+participant SystemWindow
+
+participant AppContext
+participant AudioClient
+participant Grapher
+
+
+[-> SystemWindow : setup()
+activate SystemWindow
+
+SystemWindow -> AppContext : audio.setup()
+activate AppContext
+AppContext -> AudioClient : setup()
+activate AudioClient
+AppContext <-- AudioClient
+deactivate AudioClient
+SystemWindow <-- AppContext
+deactivate AppContext
+
+loop for each :property in AudioModel
+    SystemWindow -> SystemWindow : addHistogram()
+    activate SystemWindow
+    SystemWindow -> SystemWindow : setupHistogram()
+    activate SystemWindow
+    SystemWindow -> Grapher : setup()
+    activate Grapher
+    SystemWindow <-- Grapher 
+    deactivate Grapher
+    SystemWindow <-- SystemWindow
+    deactivate SystemWindow
+    SystemWindow <-- SystemWindow
+    deactivate SystemWindow
+end
+
+[<-- SystemWindow
+deactivate SystemWindow
+
+@enduml

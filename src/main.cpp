@@ -1,5 +1,4 @@
 #include "ofMain.h"
-#include "ofAllAlgsApp.h"
 #include "ofAppGLFWWindow.h"
 #include "SystemWindow.hpp"
 #include "VisualMixerWindow.hpp"
@@ -24,12 +23,6 @@ int main() {
     shared_ptr<ofAppBaseWindow> mixerWindow = ofCreateWindow(settings);
     shared_ptr<VisualMixerWindow> mixerApp(new VisualMixerWindow(context.get()));
     ofRunApp(mixerWindow, mixerApp);
-
-//    settings.setSize(1280, 800);
-//    settings.setPosition(ofVec2f(0,0));
-//    shared_ptr<ofAppBaseWindow> algoWindow = ofCreateWindow(settings);
-//    shared_ptr<ofAllAlgsApp> algoApp(new ofAllAlgsApp(context.get()));
-//    ofRunApp(algoWindow, algoApp);
 
     ofRunMainLoop();
 }

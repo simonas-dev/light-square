@@ -1,0 +1,175 @@
+@startuml
+
+package src {
+    class Main { 
+        int main()
+    }
+    
+    class AppContext {
+        audio: AudioClient
+        led: LedClient
+    }
+
+    package components {
+        class Grapher {
+            min_data : float
+            max_data : float
+            void add(float value)
+            void draw()
+            void setup(string name)
+            void setPosition(int x , int y)
+            setSize(int width, int height)
+            setBufSize(int size)
+            setColor(ofColor color)
+        }
+    }
+
+    package windows {
+        class ofBaseApp {
+            void setup()
+            void update()
+            void draw()
+            void exit()
+        }
+        class SystemWindow {
+            context: AppContext
+
+            rmsHistogram: Grapher
+            powerHistogram: Grapher
+            pitchFreqHistogram: Grapher
+            pitchFreqNormHistogram: Grapher
+            pitchConfHistogram: Grapher
+            pitchSalienceHistogram: Grapher
+            hfcNormHistogram: Grapher
+            specCompNormHistogram: Grapher
+            centroidNormHistogram: Grapher
+            inharmonicityHistogram: Grapher
+            dissonanceHistogram: Grapher
+            rollOffNormHistogram: Grapher
+            oddToEvenNormHistogram: Grapher
+            strongPeakNormHistogram: Grapher
+            strongDecayNormHistogram: Grapher
+            isOnsetHistogram: Grapher
+
+            setup()
+            update()
+            draw()
+            exit()
+        }
+        SystemWindow <- Grapher
+        class VisualMixerWindow {
+            context: AppContext
+            visualList: List<BaseVisual>
+            setup()
+            update()
+            draw()
+            exit()
+        }
+        ofBaseApp <|-- SystemWindow
+        ofBaseApp <|-- VisualMixerWindow
+
+        SystemWindow <-- AppContext
+        VisualMixerWindow <-- AppContext   
+        Main <.. SystemWindow
+        Main <.. VisualMixerWindow
+        Main <.right. AppContext
+    }
+    
+    ' BOX Deprecated
+    ' package box {
+    '     AppContext <-- BoxClient
+
+
+    '     class BoxClient {
+    '         setConfig(configJson: String)
+    '         BoxResult<FcState> getState()
+    '         BoxResult<FcConfig> getConfig()
+    '         BoxResult<void> setConfig(FcConfig model)
+    '         BoxResult<void> start()
+    '         BoxResult<void> stop()
+    '         BoxResult<void> restart()
+    '     }
+    '     BoxClient <.down. BoxResult
+
+    '     class BoxResult<T : Class> {
+    '         bool isSuccess
+    '         string error
+    '         T value
+    '     }
+    
+    '     class FcConfig {
+    '         FcAddress listen
+    '         FcAddress relay
+    '         bool verbose
+    '         FcColor color
+    '         vector<FcMapping> devices
+    '     }
+    '     FcConfig <.down. BoxClient
+    '     FcConfig <-- FcAddress
+    '     FcConfig <-- FcColor
+    '     FcConfig o-- FcMapping
+
+
+    '     class FcState {
+    '         bool isConnected
+    '         vector<FcDevice> connectedDevices
+    '     }
+    '     FcState <.down. BoxClient
+    '     FcState o--FcDevice
+
+    '     class FcAddress {
+    '         string address
+    '         int port
+    '     }
+
+    '     class FcColor {
+    '         float gamma
+    '         vector<float> whitepoint
+    '         float linearSlope
+    '         float linearCutoff
+    '     }
+        
+    '     class FcDevice {
+    '         string type
+    '         string serial
+    '         string version
+    '     }
+    '     class FcMapping {
+    '         string type
+    '         bool dither
+    '         bool interpolate
+    '         string serial
+    '         vector<tuple<int, int, int, int>> map
+    '     }
+    ' }
+
+
+    package visuals {
+        abstract class BaseVisual {
+            name : String
+            isEnabled : Boolean
+            context: AppContext
+
+            void setup()
+            void drawScene(int x, int y, float w, float h)
+            void drawVisual(int x, int y, float w, float h)
+            void drawThumb(int x, int y, float w, float h)
+        }
+        VisualMixerWindow o-- BaseVisual
+
+        class DefaultVisual
+        note bottom: Main Effect\nrelying on audio\nmel-energies.
+
+        class StrobeVisual
+        note bottom: Strobe effect\nwhich waits for\naudio onsets.
+
+        class PrismVisual
+        note bottom: OpenGL shader\nbased visual
+
+        BaseVisual <|-- DefaultVisual
+        BaseVisual <|-- StrobeVisual
+        BaseVisual <|-- PrismVisual
+    }
+}
+
+@enduml

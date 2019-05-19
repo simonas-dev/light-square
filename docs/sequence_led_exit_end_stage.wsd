@@ -1,0 +1,57 @@
+@startuml Led Client
+scale 2
+autonumber "<b>[0]"
+
+participant LedClient
+participant ofxOPC
+participant ofxNeoPixelGrid
+
+[-> LedClient : endStage()
+activate LedClient
+LedClient -> ofxOPC : endStage()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+LedClient -> ofxNeoPixelGrid : colors
+activate ofxNeoPixelGrid
+LedClient <-- ofxNeoPixelGrid
+deactivate ofxNeoPixelGrid
+LedClient -> ofxNeoPixelGrid : getPixelCoordinates()
+activate ofxNeoPixelGrid
+LedClient <-- ofxNeoPixelGrid
+deactivate ofxNeoPixelGrid
+LedClient -> ofxOPC : getStagePixels(colors, pixelCoordinates)
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+LedClient -> ofxOPC : isConnected()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+alt isConnected=false
+    LedClient -> ofxOPC : tryConnecting()
+    activate ofxOPC
+    LedClient <-- ofxOPC
+    deactivate ofxOPC
+    LedClient -> ofxOPC : retryConnecting()
+    activate ofxOPC
+    LedClient <-- ofxOPC
+    deactivate ofxOPC
+else isConnected=true
+    loop for 8 LED channels
+        LedClient -> ofxNeoPixelGrid : colorData()
+        activate ofxNeoPixelGrid
+        LedClient <-- ofxNeoPixelGrid
+        deactivate ofxNeoPixelGrid
+        LedClient -> ofxOPC : writeChannel(channel, colorData)
+        activate ofxOPC
+        LedClient <-- ofxOPC
+        deactivate ofxOPC
+    end
+end
+
+[<-- LedClient
+deactivate LedClient
+
+
+@enduml

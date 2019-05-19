@@ -1,0 +1,22 @@
+@startuml Led Client
+scale 2
+autonumber "<b>[0]"
+
+participant LedClient
+participant ofxOPC
+
+[-> LedClient : beginStage()
+activate LedClient
+LedClient -> ofxOPC : update()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+LedClient -> ofxOPC : beginStage()
+activate ofxOPC
+LedClient <-- ofxOPC
+deactivate ofxOPC
+[<-- LedClient
+deactivate LedClient
+
+
+@enduml

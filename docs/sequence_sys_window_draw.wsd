@@ -1,0 +1,22 @@
+@startuml SystemWindow
+scale 2
+autonumber "<b>[0]"
+
+participant SystemWindow
+
+participant Grapher
+
+
+[-> SystemWindow : draw()
+activate SystemWindow
+
+SystemWindow -> Grapher : draw()
+activate Grapher
+SystemWindow <-- Grapher
+deactivate Grapher
+
+[<-- SystemWindow
+deactivate SystemWindow
+
+
+@enduml
