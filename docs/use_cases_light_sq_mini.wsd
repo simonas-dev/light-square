@@ -1,0 +1,29 @@
+@startuml Panaudojimo Atvėjai
+scale 2
+left to right direction
+
+actor :Naudotojas: as client
+
+(Peržiurėti garso analizės rezultatus) as (system_audio)
+(Matyti šviesos įrenginio efektus) as (effect_enjoy)
+
+
+' EFFECTS
+client -- system_audio
+client -- effect_enjoy
+
+(Peržiurėti efektus) as (effects_view_avialable)
+(Peržiurėti bendrą efektų simuliaciją) as (effect_mix_stage)
+
+client -- effects_view_avialable
+client -- effect_mix_stage
+
+(Įjungti efektą) as (effects_auto_generation_on)
+(Išjungti efektą) as (effects_auto_generation_off)
+(Keisti specifinius parametrus) as (effects_auto_generation_custom_params)
+
+effects_view_avialable <.down. (effects_auto_generation_on) : extends
+effects_view_avialable <.down. (effects_auto_generation_off) : extends
+effects_view_avialable <.down. (effects_auto_generation_custom_params) : extends
+
+@enduml

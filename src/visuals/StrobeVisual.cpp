@@ -12,7 +12,7 @@ void StrobeVisual::setup() {
     gui.setName(name);
     gui.add(isEnabled.setup("Is Enabled", true));
     gui.add(fadeRatio.setup("Fade Ratio", 0.035, 0.0, 0.35));
-    gui.add(powerRatio.setup("Strobe Power Ratio", 0.0, 0.5, 1));
+    gui.add(powerRatio.setup("Strobe Power Ratio", 0.0, 0.0, 1.0));
 }
 
 void StrobeVisual::drawScene(int x, int y, float w, float h) {

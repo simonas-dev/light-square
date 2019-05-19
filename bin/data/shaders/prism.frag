@@ -24,8 +24,6 @@
 //     fragColor = vec4(cl, 1.);
 // }
 
-uniform float iAlpha;
-
 // Colorful bubbles -- LED Optimized
 void mainImage( out vec4 fragColor, in vec2 fragCoord )
 {
@@ -44,7 +42,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     float pox =      sin(float(i)*321.55+4.1) * iResolution.x / iResolution.y;
 
     // buble size, position and color
-    float rad = 0.1 + 0.5*siz;
+    float rad = 0.1*aPower + 0.5*siz;
     vec2  pos = vec2( pox, -1.0-rad + (2.0+2.0*rad)*mod(pha+0.1*iTime*(0.2+0.8*siz),1.0));
     float dis = length( uv - pos );
     vec3  col = mix( vec3(0.94,0.3,0.0), vec3(0.2,0.4,0.8), 0.5+0.5*sin(float(i)*1.2+1.9));
@@ -59,7 +57,7 @@ void mainImage( out vec4 fragColor, in vec2 fragCoord )
     // vigneting  
   color *= sqrt(1.5-0.5*length(uv));
 
-  fragColor = vec4(color, iAlpha);
+  fragColor = vec4(color, aAlpha);
 }
 
 
