@@ -1,25 +1,35 @@
 @startuml
 scale 2
 
+skinparam node {
+    backgroundColor<<Device>> #f2fccf
+    backgroundColor<<Runtime>> white
+}
 
-node "<<Device>>\n Light Square" as light_box {
-    node "<<Device>>\nFadecandy LED Driver" as fadecandy
-    node "<<Device>>\nLED Pixel" as led
+node "Light Square" <<Device>> as light_box {
+    node "Fadecandy LED Controller" <<Device>> as fadecandy
+    note bottom: Fadecandy Microcontroller
+    node "LED Pixel" <<Device>> as led
     led "512" <-- "1" fadecandy : "PWM signal"
 }
 
-
-node "<<Device>>\n Computer" as pc {
-    node "<<OS>>\nMacOS" as macOS {
-        node "<<Application>>\nFadecandy REST" as rest 
-        node "<<Application>>\nFadecandy Frontend" as frontend 
-        node "<<Application>>\nFadecandy OPC Server" as opc
-        node "<<Application>>\nOpenFrameworks\nEffects App" as of
+node "Computer" <<Device>> as pc {
+    node "MacOS" <<Runtime>> as macOS {
+        node "JVM" <<Runtime>> {
+            node "Ktor REST" <<Application>> as rest 
+        }
+        node "NodeJS" <<Runtime>> {
+            node "Vue.JS Frontend" <<Application>>  as frontend
+        }        
+        node "Fadecandy OPC Server" <<Application>> as opc
+        artifact "opc_config.json" <<Artifact>> as conf
+        conf "1" -left- "1" opc
+        note bottom: Fadecandy Firmware
+        node "Effects Generator" <<Application>> as of
         fadecandy "1..19" -- "1..*" opc : USB
-        rest "1" .> "1" opc : <<deploy>>
-        of "1" --> "1..*" opc : TCP
-        rest "1" -- "1" frontend
+        rest "1" .left.> "1" opc : <<deploy>>
+        of "1" -down-> "1..*" opc : TCP
+        rest "1" -up- "1" frontend
     }
 }
-
 @enduml
