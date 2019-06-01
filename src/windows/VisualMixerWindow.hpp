@@ -15,6 +15,7 @@
 #include "DefaultVisual.hpp"
 #include "StrobeVisual.hpp"
 #include "PrismVisual.hpp"
+#include "FadeVisual.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 
@@ -26,9 +27,10 @@ public:
     VisualMixerWindow(AppContext * appContext) {
         context = appContext;
         visuals = {
-            new DefaultVisual(context),
-            new StrobeVisual(context),
-            new PrismVisual(context)
+                new FadeVisual(context),
+                new DefaultVisual(context),
+                new StrobeVisual(context),
+                new PrismVisual(context)
         };
     };
     void setup();

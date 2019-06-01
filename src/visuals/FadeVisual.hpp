@@ -13,11 +13,11 @@
 
 #endif /* RedVisual_hpp */
 
-class StrobeVisual : public BaseVisual {
+class FadeVisual : public BaseVisual {
     
 public:
-    StrobeVisual(AppContext * appContext) {
-        name = "Strobe Visual";
+    FadeVisual(AppContext * appContext) {
+        name = "Fade Visual";
         context = appContext;
     };
     
@@ -26,5 +26,5 @@ public:
     void drawVisual(int x, int y, float w, float h);
     void drawThumb(int x, int y, float w, float h);
 
-    ofxFloatSlider powerRatio;
+    ofxFloatSlider fadeRatio;
 };

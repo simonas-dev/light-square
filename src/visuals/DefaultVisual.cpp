@@ -11,7 +11,6 @@ void DefaultVisual::setup() {
     gui.setup();
     gui.setName(name);
     gui.add(isEnabled.setup("Is Enabled", true));
-    gui.add(fadeRatio.setup("Fade Ratio", 0.035, 0.0, 0.35));
     gui.add(maxNoteRatio.setup("Max Note Ratio", 0.02, 0.0, 1.0));
     gui.add(addOrBlendRatio.setup("Volume", 1.0, 0.0, 1.0));
 }
@@ -29,7 +28,7 @@ void DefaultVisual::drawVisual(int x, int y, float w, float h) {
     
     peakMel = ofLerp(peakMel, 0.0, 0.01);
     
-    //    MEL
+    // MEL
     ofPushMatrix();
     
     ofColor mixer = ofColor::black;
@@ -55,7 +54,7 @@ void DefaultVisual::drawVisual(int x, int y, float w, float h) {
         
         ofColor drawColor = mixColor;
         
-        //        drawColor.lerp(ofColor::black, hfcNorm*10000);
+        // drawColor.lerp(ofColor::black, hfcNorm*10000);
         
         ofEnableBlendMode(OF_BLENDMODE_SUBTRACT);
         
@@ -73,16 +72,8 @@ void DefaultVisual::drawVisual(int x, int y, float w, float h) {
             ofDrawRectangle(pivot - i*bin_w - bin_w, pivotH, bin_w, bin_h);
         }
     }
-    
-    // Fade the Scene
-    ofEnableBlendMode(OF_BLENDMODE_ALPHA);
-    int fade =  (255*fadeRatio);
-    if (fade == 0 && fadeRatio > 0) {
-        fade = 1;
-    }
-    ofSetColor(ofColor::black, fade);
+
     ofDisableBlendMode();
-    
     ofPopMatrix();
 }
 

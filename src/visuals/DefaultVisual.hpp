@@ -48,6 +48,5 @@ public:
     ofColor currentColor = ofColor::fromHex(0x000000);
     
     ofxFloatSlider maxNoteRatio;
-    ofxFloatSlider fadeRatio;
     ofxFloatSlider addOrBlendRatio;
 };
