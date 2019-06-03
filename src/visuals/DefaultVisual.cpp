@@ -10,9 +10,9 @@
 void DefaultVisual::setup() {
     gui.setup();
     gui.setName(name);
-    gui.add(isEnabled.setup("Is Enabled", true));
-    gui.add(maxNoteRatio.setup("Max Note Ratio", 0.02, 0.0, 1.0));
-    gui.add(addOrBlendRatio.setup("Volume", 1.0, 0.0, 1.0));
+    gui.add(isEnabled.setup("Is Enabled", false));
+    gui.add(maxNoteRatio.setup("Max Note Ratio", 0.5, 0.0, 1.0));
+    gui.add(addOrBlendRatio.setup("Volume", 0.5, 0.0, 1.0));
 }
 
 void DefaultVisual::drawScene(int x, int y, float w, float h) {

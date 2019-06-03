@@ -10,7 +10,7 @@
 void StrobeVisual::setup() {
     gui.setup();
     gui.setName(name);
-    gui.add(isEnabled.setup("Is Enabled", true));
+    gui.add(isEnabled.setup("Is Enabled", false));
     gui.add(powerRatio.setup("Strobe Power Ratio", 0.0, 0.0, 1.0));
 }
 

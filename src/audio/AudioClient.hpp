@@ -27,7 +27,7 @@ public:
     void setInput(ofSoundDevice device);
     vector<ofSoundDevice> getInputDevices();
     ofSoundDevice getDefaultInput();
-    float smoothing;
+    float smoothing = 0.15f;
     void audioIn(ofSoundBuffer & input);
     void update();
     void exit();
