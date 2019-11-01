@@ -11,7 +11,7 @@
 void PrismVisual::setup() {
     gui.setup();
     gui.setName(name);
-    gui.add(isEnabled.setup("Is Enabled", true));
+    gui.add(isEnabled.setup("Is Enabled", false));
     gui.add(reloadShader.setup("Reload?", false));
     gui.add(alphaRatio.setup("Alpha", 0.5, 0.0, 1.0));
     shadertoy.load("shaders/prism.frag");

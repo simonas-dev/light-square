@@ -981,7 +981,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E4328149138ABC9F0047C5CB,
 				9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -1606,15 +1605,15 @@
 		7CCD9D239C977B8D24137AB1 /* visuals */ = {
 			isa = PBXGroup;
 			children = (
-				7CCD936B05071D233EA7175E /* DefaultVisual.cpp */,
-				7CCD98BE2C359011279FC5B3 /* PrismVisual.cpp */,
-				7CCD981FE699191BDC890407 /* StrobeVisual.hpp */,
-				7CCD9F764D463176DE7C8748 /* DefaultVisual.hpp */,
 				7CCD9267D8D3885DCA96FD98 /* BaseVisual.hpp */,
-				7CCD93EAAD302F9BA7AF1710 /* PrismVisual.hpp */,
-				7CCD995CC36B008487CD05EB /* StrobeVisual.cpp */,
+				7CCD936B05071D233EA7175E /* DefaultVisual.cpp */,
+				7CCD9F764D463176DE7C8748 /* DefaultVisual.hpp */,
 				7CCD9763BE441F61692F5025 /* FadeVisual.cpp */,
 				7CCD95D9281004EA84EF60D4 /* FadeVisual.hpp */,
+				7CCD98BE2C359011279FC5B3 /* PrismVisual.cpp */,
+				7CCD93EAAD302F9BA7AF1710 /* PrismVisual.hpp */,
+				7CCD995CC36B008487CD05EB /* StrobeVisual.cpp */,
+				7CCD981FE699191BDC890407 /* StrobeVisual.hpp */,
 			);
 			path = visuals;
 			sourceTree = "<group>";
@@ -2583,13 +2582,13 @@
 		E4B69B4A0A3A1720003C02F2 = {
 			isa = PBXGroup;
 			children = (
+				BB4B014C10F69532006C3DED /* addons */,
+				E4B69B5B0A3A1756003C02F2 /* light-squareDebug.app */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E42962AA2163EDD300A6A9E2 /* openFrameworks */,
 				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
 				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
 				E4B69E1C0A3A1BDC003C02F2 /* src */,
-				E42962AA2163EDD300A6A9E2 /* openFrameworks */,
-				BB4B014C10F69532006C3DED /* addons */,
-				6948EE371B920CB800B5AC1A /* local_addons */,
-				E4B69B5B0A3A1756003C02F2 /* light-squareDebug.app */,
 			);
 			sourceTree = "<group>";
 		};
@@ -3014,6 +3013,7 @@
 					../../addons/ofxHTTP/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-mtune=native",
@@ -3121,9 +3121,7 @@
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
@@ -3143,7 +3141,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = AppStore;
 		};
@@ -3250,6 +3248,7 @@
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-mtune=native",
@@ -3361,6 +3360,7 @@
 					../../addons/ofxHTTP/src,
 				);
 				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				OTHER_CODE_SIGN_FLAGS = "--deep";
 				OTHER_CPLUSPLUSFLAGS = (
 					"-D__MACOSX_CORE__",
 					"-mtune=native",
@@ -3468,9 +3468,7 @@
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
@@ -3497,6 +3495,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				FRAMEWORK_SEARCH_PATHS = (
@@ -3591,9 +3590,7 @@
 				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-				);
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
 				OTHER_LDFLAGS = (
 					"$(OF_CORE_LIBS)",
 					"$(OF_CORE_FRAMEWORKS)",
@@ -3613,7 +3610,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
 		};
