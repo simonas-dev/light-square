@@ -35,8 +35,8 @@ void VisualMixerWindow::draw() {
     ofSetWindowTitle(ofToString(ofGetFrameRate()));
     context->led.drawStage();
     int xpos = 0;
-    int thumbW = 250;
-    int thumbH = 125;
+    int thumbW = 200;
+    int thumbH = 100;
     for (BaseVisual * visual : visuals) {
         visual->drawThumb(xpos, ofGetHeight()-thumbH, thumbW, thumbH);
         xpos += thumbW;

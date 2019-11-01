@@ -48,5 +48,18 @@ public:
     ofColor currentColor = ofColor::fromHex(0x000000);
     
     ofxFloatSlider maxNoteRatio;
-    ofxFloatSlider addOrBlendRatio;
+    ofxFloatSlider alphaSlider;
+    ofxIntSlider powerSlider;
+    ofxToggle color0;
+    ofxToggle color1;
+    ofxToggle color2;
+    ofxToggle color3;
+    ofxToggle color4;
+    ofxToggle color5;
+    ofxToggle color6;
+    ofxToggle color7;
+    ofxToggle color8;
+    ofxToggle color9;
+    ofxToggle color10;
+    ofxToggle color11;
 };
