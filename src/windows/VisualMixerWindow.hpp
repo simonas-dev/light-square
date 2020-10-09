@@ -11,27 +11,30 @@
 
 #include "ofMain.h"
 #include "AppContext.hpp"
-#include "BaseVisual.hpp"
-#include "DefaultVisual.hpp"
-#include "StrobeVisual.hpp"
-#include "PrismVisual.hpp"
-#include "FadeVisual.hpp"
+#include "BaseTransformer.hpp"
+#include "FadeTransformer.hpp"
+#include "StrobeTransformer.hpp"
+#include "MelTransformer.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 
 class VisualMixerWindow : public ofBaseApp {
     AppContext * context;
-    vector<BaseVisual*> visuals;
+    TransformationPainter painter;
+    vector<BaseTransformer*> transformers;
+    vector<ofColor> colorMatrix;
     
 public:
     VisualMixerWindow(AppContext * appContext) {
         context = appContext;
-        visuals = {
-                new FadeVisual(context),
-                new DefaultVisual(context),
-                new StrobeVisual(context),
-                new PrismVisual(context)
+        transformers = {
+                new FadeTransformer(context),
+                new StrobeTransformer(context),
+                new MelTransformer(context)
         };
+        for (int i = 0; i < 512; ++i) {
+            colorMatrix.push_back(ofColor::black);
+        }
     };
     void setup();
     void update();
