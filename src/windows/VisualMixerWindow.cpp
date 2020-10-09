@@ -10,39 +10,36 @@
 
 void VisualMixerWindow::setup() {
     ofBackground(0);
-
-    int stageWidth = ofGetWidth()/2;
-    int stageHeight = stageWidth / 2;
-    context->led.setup(stageWidth, stageHeight);
+    context->matrixLed.setup();
     
-    for (BaseVisual * visual : visuals) {
-        visual->setup();
+    for (BaseTransformer * transformer : transformers) {
+        transformer->setup();
     }
 }
 
 void VisualMixerWindow::update() {
-    context->led.beginStage();
     ofSetColor(ofColor::blue);
-    for (BaseVisual * visual : visuals) {
-        int stageWidth = ofGetWidth()/2;
-        int stageHeight = stageWidth / 2;
-        visual->drawScene(0, 0, stageWidth, stageHeight);
+    for (BaseTransformer * transformer : transformers) {
+        colorMatrix = transformer->transform(colorMatrix);
     }
-    context->led.endStage();
+    context->matrixLed.draw(colorMatrix);
 }
 
 void VisualMixerWindow::draw() {
     ofSetWindowTitle(ofToString(ofGetFrameRate()));
-    context->led.drawStage();
+    int stageWidth = ofGetWidth() / 1.7;
+    int margin = (ofGetWidth() - stageWidth) / 2;
+    int stageHeight = stageWidth / 2;
+    painter.draw(colorMatrix, margin, 0, stageWidth, stageHeight);
     int xpos = 0;
     int thumbW = 200;
     int thumbH = 100;
-    for (BaseVisual * visual : visuals) {
-        visual->drawThumb(xpos, ofGetHeight()-thumbH, thumbW, thumbH);
+    for (BaseTransformer * transformer : transformers) {
+        transformer->drawThumb(xpos, ofGetHeight()-thumbH, thumbW, thumbH);
         xpos += thumbW;
     }
 }
 
 void VisualMixerWindow::exit() {
-    context->led.exit();
+
 }
