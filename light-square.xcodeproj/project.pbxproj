@@ -110,6 +110,7 @@
 		8C7AFE704457FAA1A4A6BE3A /* lz4.c in Sources */ = {isa = PBXBuildFile; fileRef = 429766248A7DB6E1B8F9E538 /* lz4.c */; };
 		8E1B6932984A7C40B699A6B2 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14CA1A41A4827A6F9FA1C6A8 /* Context.cpp */; };
 		8F15CD1DAAC7EAF2D81002F4 /* JSONWebToken.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D71DE7B0E2155E2216F21 /* JSONWebToken.cpp */; };
+		9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C5CA1D92532214700E415AC /* MelTransformer.cpp */; };
 		92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C846292EE0D139BE5E0C7E7F /* ofxButton.cpp */; };
 		93032A479EC37954EE6E0D83 /* ofxNeoPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7105E9F12FA1CC0DEB4E62B /* ofxNeoPixelGrid.cpp */; };
 		940B59EE563CE62E9ED6737D /* ofxAudioAnalyzerUnit.cpp in Sources */ = {isa = PBXBuildFile; fileRef = D96A1C60A9E1F75435C7F74E /* ofxAudioAnalyzerUnit.cpp */; };
@@ -118,6 +119,9 @@
 		98A48F812AC3C33E15613996 /* ImageUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74CDFDB9193D0A1E2A79A89 /* ImageUtils.cpp */; };
 		9AC76580040532CE75FD953E /* NetworkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEED3781BED4E5505C80CC3F /* NetworkUtils.cpp */; };
 		9C1B746AD2CD59558E417B95 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 357DD4DD672816A19F432CBD /* encode.c */; };
+		9CDB84F4252CF62900853627 /* MatrixLedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */; };
+		9CDB84FD252CFB6600853627 /* FadeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84FB252CFB6600853627 /* FadeTransformer.cpp */; };
+		9CDB8500252D01A600853627 /* StrobeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84FE252D01A600853627 /* StrobeTransformer.cpp */; };
 		9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1B275EC347E41C380E1179 /* OpenAL.framework */; };
 		9E4565C522C06DCD5308B6E5 /* HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B2656D99ED04F2ADB83BA1B4 /* HTTPClient.cpp */; };
 		9E53435C8AE905CFB0569B16 /* OAuth10HTTPClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 768FC064DF4BB02E3ECC95C1 /* OAuth10HTTPClient.cpp */; };
@@ -572,7 +576,17 @@
 		9ADDEBA0ADB85DAD061081EC /* buffer.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = buffer.h; path = ../../addons/ofxPoco/libs/openssl/include/openssl/buffer.h; sourceTree = SOURCE_ROOT; };
 		9B3B4002A6A3C517FA77AAF4 /* ByteBufferReader.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = ByteBufferReader.cpp; path = ../../addons/ofxIO/libs/ofxIO/src/ByteBufferReader.cpp; sourceTree = SOURCE_ROOT; };
 		9BBC6B376D7E35710837E5A5 /* backward_references_inc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = backward_references_inc.h; path = ../../addons/ofxIO/libs/brotli/src/enc/backward_references_inc.h; sourceTree = SOURCE_ROOT; };
+		9C5CA1D92532214700E415AC /* MelTransformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MelTransformer.cpp; sourceTree = "<group>"; };
+		9C5CA1DA2532214700E415AC /* MelTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MelTransformer.hpp; sourceTree = "<group>"; };
 		9CBDB720F44AB7179D78DA66 /* snappy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = snappy.h; path = ../../addons/ofxIO/libs/snappy/src/snappy.h; sourceTree = SOURCE_ROOT; };
+		9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixLedClient.cpp; sourceTree = "<group>"; };
+		9CDB84F3252CF62900853627 /* MatrixLedClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatrixLedClient.hpp; sourceTree = "<group>"; };
+		9CDB84F7252CFAB800853627 /* BaseTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseTransformer.hpp; sourceTree = "<group>"; };
+		9CDB84FB252CFB6600853627 /* FadeTransformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FadeTransformer.cpp; sourceTree = "<group>"; };
+		9CDB84FC252CFB6600853627 /* FadeTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FadeTransformer.hpp; sourceTree = "<group>"; };
+		9CDB84FE252D01A600853627 /* StrobeTransformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StrobeTransformer.cpp; sourceTree = "<group>"; };
+		9CDB84FF252D01A600853627 /* StrobeTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = StrobeTransformer.hpp; sourceTree = "<group>"; };
+		9CE4F026252D09340085563B /* TransformationPainter.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = TransformationPainter.hpp; sourceTree = "<group>"; };
 		9CFDB032300FCB29F7393A6C /* FileSystemRoute.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = FileSystemRoute.h; path = ../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/FileSystemRoute.h; sourceTree = SOURCE_ROOT; };
 		9D37636731E7627CBB5A54FE /* tnt_math_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tnt_math_utils.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_math_utils.h; sourceTree = SOURCE_ROOT; };
 		9D54906267E1AFA450B9BBB6 /* FilteredStreams.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 4; name = FilteredStreams.cpp; path = ../../addons/ofxIO/libs/ofxIO/src/FilteredStreams.cpp; sourceTree = SOURCE_ROOT; };
@@ -1578,6 +1592,8 @@
 			children = (
 				7CCD91384140E083031DC863 /* LedClient.cpp */,
 				7CCD946B8F2994667DD9470B /* LedClient.hpp */,
+				9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */,
+				9CDB84F3252CF62900853627 /* MatrixLedClient.hpp */,
 			);
 			path = led;
 			sourceTree = "<group>";
@@ -1787,6 +1803,21 @@
 				B2C98B62869583DB9FE30DA7 /* openssl */,
 			);
 			name = libs;
+			sourceTree = "<group>";
+		};
+		9CDB84F5252CFA7300853627 /* transformators */ = {
+			isa = PBXGroup;
+			children = (
+				9CDB84F7252CFAB800853627 /* BaseTransformer.hpp */,
+				9CDB84FB252CFB6600853627 /* FadeTransformer.cpp */,
+				9CDB84FC252CFB6600853627 /* FadeTransformer.hpp */,
+				9CDB84FE252D01A600853627 /* StrobeTransformer.cpp */,
+				9CDB84FF252D01A600853627 /* StrobeTransformer.hpp */,
+				9CE4F026252D09340085563B /* TransformationPainter.hpp */,
+				9C5CA1D92532214700E415AC /* MelTransformer.cpp */,
+				9C5CA1DA2532214700E415AC /* MelTransformer.hpp */,
+			);
+			path = transformators;
 			sourceTree = "<group>";
 		};
 		9E4032E9D5449942AD40D131 /* sndfile */ = {
@@ -2595,6 +2626,7 @@
 		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				9CDB84F5252CFA7300853627 /* transformators */,
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				88FB1085BC36F66357A198C4 /* AppContext.hpp */,
 				7CCD9A4F99AA58610AE6B086 /* components */,
@@ -2735,6 +2767,7 @@
 				2819A4D7160485C8FFFED073 /* audiodecodercoreaudio.cpp in Sources */,
 				1151337B62C399EDEF8D5730 /* ofxAudioDecoder.cpp in Sources */,
 				FA0D4902FAA63D187EA61B31 /* ofxBaseGui.cpp in Sources */,
+				9CDB84FD252CFB6600853627 /* FadeTransformer.cpp in Sources */,
 				92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */,
 				D772C476F63497951AD45BA8 /* ofxColorPicker.cpp in Sources */,
 				3A47706C1DF9A0D4045568C0 /* ofxGuiGroup.cpp in Sources */,
@@ -2753,6 +2786,7 @@
 				93032A479EC37954EE6E0D83 /* ofxNeoPixelGrid.cpp in Sources */,
 				83B3183EF23FAADD16ECE327 /* ofxNeoPixelObject.cpp in Sources */,
 				8323EEA75F66B7F0C0FCA276 /* ofxNeoPixelRing.cpp in Sources */,
+				9CDB84F4252CF62900853627 /* MatrixLedClient.cpp in Sources */,
 				17DBD513EDB15B2009EE302C /* ofxNeoPixelStrip.cpp in Sources */,
 				844FF0AE6E9F7EA7719F2375 /* ofxOPC.cpp in Sources */,
 				28DC652211D4AF8CC023D568 /* tinyxml.cpp in Sources */,
@@ -2816,6 +2850,7 @@
 				5EB2FE41B2E52889B88C603A /* StreamFilters.cpp in Sources */,
 				EBB069BFA9DC04D6FAC848BA /* Thread.cpp in Sources */,
 				D489C2BD5936955E6A2D543D /* ThreadsafeLoggerChannel.cpp in Sources */,
+				9CDB8500252D01A600853627 /* StrobeTransformer.cpp in Sources */,
 				325FE7DEE017DF229721E372 /* URIEncoding.cpp in Sources */,
 				2B5C1A536EBBE2905A0520DD /* snappy-c.cc in Sources */,
 				B16EFA8580B692B4924B736A /* snappy-sinksource.cc in Sources */,
@@ -2903,6 +2938,7 @@
 				7CCD9100543AD80745EBABA9 /* AudioModel.cpp in Sources */,
 				7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */,
 				7CCD973F812E6B3291BE8234 /* FadeVisual.cpp in Sources */,
+				9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3141,7 +3177,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			};
 			name = AppStore;
 		};
@@ -3610,7 +3646,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			};
 			name = Release;
 		};
