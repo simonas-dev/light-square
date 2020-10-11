@@ -10,7 +10,7 @@
 
 void VisualMixerWindow::setup() {
     ofBackground(0);
-    context->matrixLed.setup();
+    context->ledClient.setup();
     
     for (BaseTransformer * transformer : transformers) {
         transformer->setup();
@@ -22,7 +22,7 @@ void VisualMixerWindow::update() {
     for (BaseTransformer * transformer : transformers) {
         colorMatrix = transformer->transform(colorMatrix);
     }
-    context->matrixLed.draw(colorMatrix);
+    context->ledClient.draw(colorMatrix);
 }
 
 void VisualMixerWindow::draw() {

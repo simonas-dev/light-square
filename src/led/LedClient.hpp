@@ -1,18 +1,17 @@
 //
 //  LedClient.hpp
-//  siLedBox
+//  light-square
 //
-//  Created by Simonas Sankauskas on 4/18/19.
+//  Created by Simonas Sankauskas on 2020-10-06.
 //
-#pragma once
 
-#ifndef LedClient_hpp
-#define LedClient_hpp
+#ifndef MatrixLedClient_hpp
+#define MatrixLedClient_hpp
 
 #include "ofMain.h"
 #include "ofxOPC.h"
 
-#endif /* LedClient_hpp */
+#endif /* MatrixLedClient_hpp */
 
 class LedClient {
     ofxOPC opcClient;
@@ -20,11 +19,8 @@ class LedClient {
     int stageWidth;
     int stageHeight;
     
-public: 
-    void setup(int stageWidth, int stageHeight);
-    void beginStage();
-    void endStage();
+public:
+    void setup();
+    void draw(vector<ofColor>);
     bool isConnected();
-    void drawStage();
-    void exit();
 };
