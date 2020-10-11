@@ -95,7 +95,6 @@
 		7CCD959D20EB090FD87362A0 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9F05AC4804E8332DF215 /* AudioClient.cpp */; };
 		7CCD99BFC283878F77947C47 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9BF14583BEFAFE530C9A /* SystemWindow.cpp */; };
 		7CCD9B78CDAE70E6E7D667C2 /* Grapher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD97000988B37227E1D1CB /* Grapher.cpp */; };
-		7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD91384140E083031DC863 /* LedClient.cpp */; };
 		7CCD9F8DE647081A9A44C833 /* VisualMixerWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD993A6EFE4725C4BA7604 /* VisualMixerWindow.cpp */; };
 		817603EE655EE3365B256E5A /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2271EF8762ACE471CF677BE2 /* ofxInputField.cpp */; };
 		8323EEA75F66B7F0C0FCA276 /* ofxNeoPixelRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC4F3687D12D7E02C1C5B3D6 /* ofxNeoPixelRing.cpp */; };
@@ -116,7 +115,7 @@
 		98A48F812AC3C33E15613996 /* ImageUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F74CDFDB9193D0A1E2A79A89 /* ImageUtils.cpp */; };
 		9AC76580040532CE75FD953E /* NetworkUtils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = BEED3781BED4E5505C80CC3F /* NetworkUtils.cpp */; };
 		9C1B746AD2CD59558E417B95 /* encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 357DD4DD672816A19F432CBD /* encode.c */; };
-		9CDB84F4252CF62900853627 /* MatrixLedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */; };
+		9CDB84F4252CF62900853627 /* LedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84F2252CF62900853627 /* LedClient.cpp */; };
 		9CDB84FD252CFB6600853627 /* FadeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84FB252CFB6600853627 /* FadeTransformer.cpp */; };
 		9CDB8500252D01A600853627 /* StrobeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9CDB84FE252D01A600853627 /* StrobeTransformer.cpp */; };
 		9D72A0B4BAED5487D5CD7538 /* OpenAL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1D1B275EC347E41C380E1179 /* OpenAL.framework */; };
@@ -487,9 +486,7 @@
 		7B3098B39DF5D4B8937F7140 /* ts.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ts.h; path = ../../addons/ofxPoco/libs/openssl/include/openssl/ts.h; sourceTree = SOURCE_ROOT; };
 		7B70D610728C491B584DF64D /* diskwriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = diskwriter.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/diskwriter.h; sourceTree = SOURCE_ROOT; };
 		7CAE56CE29D31846B8D1B65D /* yamlast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = yamlast.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/yamlast.h; sourceTree = SOURCE_ROOT; };
-		7CCD91384140E083031DC863 /* LedClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LedClient.cpp; sourceTree = "<group>"; };
 		7CCD93A65EFB114C3A070D1E /* SystemWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SystemWindow.hpp; sourceTree = "<group>"; };
-		7CCD946B8F2994667DD9470B /* LedClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LedClient.hpp; sourceTree = "<group>"; };
 		7CCD97000988B37227E1D1CB /* Grapher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.ercpp; path = Grapher.cpp; sourceTree = "<group>"; };
 		7CCD97272BDF72DC00AA333B /* Grapher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grapher.h; sourceTree = "<group>"; };
 		7CCD993A6EFE4725C4BA7604 /* VisualMixerWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualMixerWindow.cpp; sourceTree = "<group>"; };
@@ -569,8 +566,8 @@
 		9C5CA1D92532214700E415AC /* MelTransformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MelTransformer.cpp; sourceTree = "<group>"; };
 		9C5CA1DA2532214700E415AC /* MelTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MelTransformer.hpp; sourceTree = "<group>"; };
 		9CBDB720F44AB7179D78DA66 /* snappy.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = snappy.h; path = ../../addons/ofxIO/libs/snappy/src/snappy.h; sourceTree = SOURCE_ROOT; };
-		9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixLedClient.cpp; sourceTree = "<group>"; };
-		9CDB84F3252CF62900853627 /* MatrixLedClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = MatrixLedClient.hpp; sourceTree = "<group>"; };
+		9CDB84F2252CF62900853627 /* LedClient.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = LedClient.cpp; sourceTree = "<group>"; };
+		9CDB84F3252CF62900853627 /* LedClient.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = LedClient.hpp; sourceTree = "<group>"; };
 		9CDB84F7252CFAB800853627 /* BaseTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = BaseTransformer.hpp; sourceTree = "<group>"; };
 		9CDB84FB252CFB6600853627 /* FadeTransformer.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = FadeTransformer.cpp; sourceTree = "<group>"; };
 		9CDB84FC252CFB6600853627 /* FadeTransformer.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = FadeTransformer.hpp; sourceTree = "<group>"; };
@@ -1580,10 +1577,8 @@
 		7CCD9419EEB95DFF76E7B788 /* led */ = {
 			isa = PBXGroup;
 			children = (
-				7CCD91384140E083031DC863 /* LedClient.cpp */,
-				7CCD946B8F2994667DD9470B /* LedClient.hpp */,
-				9CDB84F2252CF62900853627 /* MatrixLedClient.cpp */,
-				9CDB84F3252CF62900853627 /* MatrixLedClient.hpp */,
+				9CDB84F2252CF62900853627 /* LedClient.cpp */,
+				9CDB84F3252CF62900853627 /* LedClient.hpp */,
 			);
 			path = led;
 			sourceTree = "<group>";
@@ -2761,7 +2756,7 @@
 				93032A479EC37954EE6E0D83 /* ofxNeoPixelGrid.cpp in Sources */,
 				83B3183EF23FAADD16ECE327 /* ofxNeoPixelObject.cpp in Sources */,
 				8323EEA75F66B7F0C0FCA276 /* ofxNeoPixelRing.cpp in Sources */,
-				9CDB84F4252CF62900853627 /* MatrixLedClient.cpp in Sources */,
+				9CDB84F4252CF62900853627 /* LedClient.cpp in Sources */,
 				17DBD513EDB15B2009EE302C /* ofxNeoPixelStrip.cpp in Sources */,
 				844FF0AE6E9F7EA7719F2375 /* ofxOPC.cpp in Sources */,
 				28DC652211D4AF8CC023D568 /* tinyxml.cpp in Sources */,
@@ -2908,7 +2903,6 @@
 				7CCD99BFC283878F77947C47 /* SystemWindow.cpp in Sources */,
 				7CCD959D20EB090FD87362A0 /* AudioClient.cpp in Sources */,
 				7CCD9100543AD80745EBABA9 /* AudioModel.cpp in Sources */,
-				7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */,
 				9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */,
 				9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */,
 			);

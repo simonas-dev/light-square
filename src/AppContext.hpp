@@ -10,7 +10,7 @@
 #define AppContext_hpp
 
 #include <audio/AudioClient.hpp>
-#include <led/MatrixLedClient.hpp>
+#include <led/LedClient.hpp>
 
 #endif /* AppContext_hpp */
 
@@ -18,5 +18,5 @@ class AppContext {
     
 public:
     AudioClient audio;
-    MatrixLedClient matrixLed;
+    LedClient ledClient;
 };
