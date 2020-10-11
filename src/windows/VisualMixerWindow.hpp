@@ -15,6 +15,7 @@
 #include "FadeTransformer.hpp"
 #include "StrobeTransformer.hpp"
 #include "MelTransformer.hpp"
+#include "BleedTransformer.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 
@@ -30,7 +31,8 @@ public:
         transformers = {
                 new FadeTransformer(context),
                 new StrobeTransformer(context),
-                new MelTransformer(context)
+                new MelTransformer(context),
+                new BleedTransformer(context)
         };
         for (int i = 0; i < 512; ++i) {
             colorMatrix.push_back(ofColor::black);
