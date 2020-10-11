@@ -54,7 +54,7 @@ vector<ofColor> MelTransformer::transform(vector<ofColor> colors) {
     int hpcpSize = audioModel->hpcp.size();
     for (int i = 0; i < hpcpSize && colorSize != 0; i++) {
         int colorIndex = round(((i * 1.f) / hpcpSize) * colorSize);
-        float amount = audioModel->hpcp[i] * pow(audioModel->power, powerSlider);
+        float amount = audioModel->hpcp[i] * pow(audioModel->power, addSlider);
         mixer.lerp(filteredColors[colorIndex], amount);
     }
 
@@ -80,7 +80,7 @@ vector<ofColor> MelTransformer::transform(vector<ofColor> colors) {
             float mel = scaledMels[melIndex];
             int pixelIndex = row * 32 + col;
             if (mel > rowRatio) {
-                ofColor mutColor = colors[pixelIndex].lerp(mixColor, alphaSlider);
+                ofColor mutColor = colors[pixelIndex].getLerped(mixColor, alphaSlider) + colors[pixelIndex].lerp(ofColor::black, addSlider);
                 mutColors.push_back(mutColor);
             } else {
                 mutColors.push_back(colors[pixelIndex]);
@@ -96,7 +96,7 @@ void MelTransformer::setup() {
     gui.add(isEnabled.setup("Is Enabled", false));
     gui.add(maxNoteRatio.setup("Max Note Ratio", 0.5, 0.0, 1.0));
     gui.add(alphaSlider.setup("Alpha", 0.5, 0.0, 1.0));
-    gui.add(powerSlider.setup("Power", 1, 0, 10));
+    gui.add(addSlider.setup("Add", 0.0, 0.0, 1.0));
     color0.setTextColor(bandColors[0]);
     gui.add(color0.setup("color0", false));
     color1.setTextColor(bandColors[1]);

@@ -46,7 +46,7 @@ public:
 
     ofxFloatSlider maxNoteRatio;
     ofxFloatSlider alphaSlider;
-    ofxIntSlider powerSlider;
+    ofxFloatSlider addSlider;
     ofxToggle color0;
     ofxToggle color1;
     ofxToggle color2;

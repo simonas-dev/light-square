@@ -26,6 +26,7 @@ vector<ofColor> FadeTransformer::transform(vector<ofColor> colors) {
 }
 
 void FadeTransformer::drawThumb(int x, int y, float w, float h) {
+    if (context->audio.isReady == false) return;
     gui.setPosition(x, y-gui.getHeight());
     gui.draw();
 }
