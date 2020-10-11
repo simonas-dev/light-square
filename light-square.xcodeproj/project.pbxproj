@@ -92,15 +92,11 @@
 		781076BE6E35C2E2B48B5629 /* ClientSessionProvider.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CE82F3C0082662A793CAEB9B /* ClientSessionProvider.cpp */; };
 		7B589D52F1FD2472AE994721 /* HTTPHost.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5141238B757FB4CCF88CCDE8 /* HTTPHost.cpp */; };
 		7CCD9100543AD80745EBABA9 /* AudioModel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9E83B9D16CC11BE427DC /* AudioModel.cpp */; };
-		7CCD9489740585D3C32EAE07 /* StrobeVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD995CC36B008487CD05EB /* StrobeVisual.cpp */; };
 		7CCD959D20EB090FD87362A0 /* AudioClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9F05AC4804E8332DF215 /* AudioClient.cpp */; };
-		7CCD973F812E6B3291BE8234 /* FadeVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9763BE441F61692F5025 /* FadeVisual.cpp */; };
 		7CCD99BFC283878F77947C47 /* SystemWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD9BF14583BEFAFE530C9A /* SystemWindow.cpp */; };
 		7CCD9B78CDAE70E6E7D667C2 /* Grapher.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD97000988B37227E1D1CB /* Grapher.cpp */; };
 		7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD91384140E083031DC863 /* LedClient.cpp */; };
-		7CCD9E95408F4562A6D7B7C4 /* PrismVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD98BE2C359011279FC5B3 /* PrismVisual.cpp */; };
 		7CCD9F8DE647081A9A44C833 /* VisualMixerWindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD993A6EFE4725C4BA7604 /* VisualMixerWindow.cpp */; };
-		7CCD9FB3D1EEAB94D7BD5BE1 /* DefaultVisual.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 7CCD936B05071D233EA7175E /* DefaultVisual.cpp */; };
 		817603EE655EE3365B256E5A /* ofxInputField.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 2271EF8762ACE471CF677BE2 /* ofxInputField.cpp */; };
 		8323EEA75F66B7F0C0FCA276 /* ofxNeoPixelRing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC4F3687D12D7E02C1C5B3D6 /* ofxNeoPixelRing.cpp */; };
 		83B3183EF23FAADD16ECE327 /* ofxNeoPixelObject.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0428D3BF444BCA4C8FD13C33 /* ofxNeoPixelObject.cpp */; };
@@ -492,25 +488,16 @@
 		7B70D610728C491B584DF64D /* diskwriter.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = diskwriter.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/streaming/algorithms/diskwriter.h; sourceTree = SOURCE_ROOT; };
 		7CAE56CE29D31846B8D1B65D /* yamlast.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = yamlast.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/yamlast.h; sourceTree = SOURCE_ROOT; };
 		7CCD91384140E083031DC863 /* LedClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = LedClient.cpp; sourceTree = "<group>"; };
-		7CCD9267D8D3885DCA96FD98 /* BaseVisual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BaseVisual.hpp; sourceTree = "<group>"; };
-		7CCD936B05071D233EA7175E /* DefaultVisual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = DefaultVisual.cpp; sourceTree = "<group>"; };
 		7CCD93A65EFB114C3A070D1E /* SystemWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = SystemWindow.hpp; sourceTree = "<group>"; };
-		7CCD93EAAD302F9BA7AF1710 /* PrismVisual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = PrismVisual.hpp; sourceTree = "<group>"; };
 		7CCD946B8F2994667DD9470B /* LedClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = LedClient.hpp; sourceTree = "<group>"; };
-		7CCD95D9281004EA84EF60D4 /* FadeVisual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = FadeVisual.hpp; sourceTree = "<group>"; };
 		7CCD97000988B37227E1D1CB /* Grapher.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.ercpp; path = Grapher.cpp; sourceTree = "<group>"; };
 		7CCD97272BDF72DC00AA333B /* Grapher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Grapher.h; sourceTree = "<group>"; };
-		7CCD9763BE441F61692F5025 /* FadeVisual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FadeVisual.cpp; sourceTree = "<group>"; };
-		7CCD981FE699191BDC890407 /* StrobeVisual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = StrobeVisual.hpp; sourceTree = "<group>"; };
-		7CCD98BE2C359011279FC5B3 /* PrismVisual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = PrismVisual.cpp; sourceTree = "<group>"; };
 		7CCD993A6EFE4725C4BA7604 /* VisualMixerWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VisualMixerWindow.cpp; sourceTree = "<group>"; };
-		7CCD995CC36B008487CD05EB /* StrobeVisual.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = StrobeVisual.cpp; sourceTree = "<group>"; };
 		7CCD9BF14583BEFAFE530C9A /* SystemWindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SystemWindow.cpp; sourceTree = "<group>"; };
 		7CCD9E83B9D16CC11BE427DC /* AudioModel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioModel.cpp; sourceTree = "<group>"; };
 		7CCD9EFC31B961DAE601C9C2 /* AudioClient.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioClient.hpp; sourceTree = "<group>"; };
 		7CCD9F05AC4804E8332DF215 /* AudioClient.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AudioClient.cpp; sourceTree = "<group>"; };
 		7CCD9F20D4115B1F7DE91520 /* VisualMixerWindow.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = VisualMixerWindow.hpp; sourceTree = "<group>"; };
-		7CCD9F764D463176DE7C8748 /* DefaultVisual.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = DefaultVisual.hpp; sourceTree = "<group>"; };
 		7CCD9FB273E605F12CB65226 /* AudioModel.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = AudioModel.hpp; sourceTree = "<group>"; };
 		7D0A284E68AB41CA27B1903F /* pkcs7.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = pkcs7.h; path = ../../addons/ofxPoco/libs/openssl/include/openssl/pkcs7.h; sourceTree = SOURCE_ROOT; };
 		7D1DCF147EA756A7BE4BBEBB /* ecdsa.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = ecdsa.h; path = ../../addons/ofxPoco/libs/openssl/include/openssl/ecdsa.h; sourceTree = SOURCE_ROOT; };
@@ -1621,22 +1608,6 @@
 			path = components;
 			sourceTree = "<group>";
 		};
-		7CCD9D239C977B8D24137AB1 /* visuals */ = {
-			isa = PBXGroup;
-			children = (
-				7CCD9267D8D3885DCA96FD98 /* BaseVisual.hpp */,
-				7CCD936B05071D233EA7175E /* DefaultVisual.cpp */,
-				7CCD9F764D463176DE7C8748 /* DefaultVisual.hpp */,
-				7CCD9763BE441F61692F5025 /* FadeVisual.cpp */,
-				7CCD95D9281004EA84EF60D4 /* FadeVisual.hpp */,
-				7CCD98BE2C359011279FC5B3 /* PrismVisual.cpp */,
-				7CCD93EAAD302F9BA7AF1710 /* PrismVisual.hpp */,
-				7CCD995CC36B008487CD05EB /* StrobeVisual.cpp */,
-				7CCD981FE699191BDC890407 /* StrobeVisual.hpp */,
-			);
-			path = visuals;
-			sourceTree = "<group>";
-		};
 		81B9E335116A816EA1D2A2FA /* IO */ = {
 			isa = PBXGroup;
 			children = (
@@ -2635,7 +2606,6 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				88FB1085BC36F66357A198C4 /* AppContext.hpp */,
 				7CCD9A4F99AA58610AE6B086 /* components */,
-				7CCD9D239C977B8D24137AB1 /* visuals */,
 				7CCD9745F583C915EBA36996 /* windows */,
 				7CCD92F9809609587A67B8FE /* audio */,
 				7CCD9419EEB95DFF76E7B788 /* led */,
@@ -2934,15 +2904,11 @@
 				AD05112F172B4435D821D26A /* WebSocketFrame.cpp in Sources */,
 				736C6D40B72D543FF8172676 /* WebSocketRoute.cpp in Sources */,
 				7CCD9B78CDAE70E6E7D667C2 /* Grapher.cpp in Sources */,
-				7CCD9FB3D1EEAB94D7BD5BE1 /* DefaultVisual.cpp in Sources */,
-				7CCD9E95408F4562A6D7B7C4 /* PrismVisual.cpp in Sources */,
-				7CCD9489740585D3C32EAE07 /* StrobeVisual.cpp in Sources */,
 				7CCD9F8DE647081A9A44C833 /* VisualMixerWindow.cpp in Sources */,
 				7CCD99BFC283878F77947C47 /* SystemWindow.cpp in Sources */,
 				7CCD959D20EB090FD87362A0 /* AudioClient.cpp in Sources */,
 				7CCD9100543AD80745EBABA9 /* AudioModel.cpp in Sources */,
 				7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */,
-				7CCD973F812E6B3291BE8234 /* FadeVisual.cpp in Sources */,
 				9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */,
 				9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */,
 			);
