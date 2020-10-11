@@ -110,6 +110,7 @@
 		8C7AFE704457FAA1A4A6BE3A /* lz4.c in Sources */ = {isa = PBXBuildFile; fileRef = 429766248A7DB6E1B8F9E538 /* lz4.c */; };
 		8E1B6932984A7C40B699A6B2 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14CA1A41A4827A6F9FA1C6A8 /* Context.cpp */; };
 		8F15CD1DAAC7EAF2D81002F4 /* JSONWebToken.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D71DE7B0E2155E2216F21 /* JSONWebToken.cpp */; };
+		9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C13195097FDF8E432242 /* BleedTransformer.cpp */; };
 		9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C5CA1D92532214700E415AC /* MelTransformer.cpp */; };
 		92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C846292EE0D139BE5E0C7E7F /* ofxButton.cpp */; };
 		93032A479EC37954EE6E0D83 /* ofxNeoPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7105E9F12FA1CC0DEB4E62B /* ofxNeoPixelGrid.cpp */; };
@@ -555,6 +556,8 @@
 		915FF050A99B044C9F32A8DA /* static_dict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = static_dict.c; path = ../../addons/ofxIO/libs/brotli/src/enc/static_dict.c; sourceTree = SOURCE_ROOT; };
 		91C4F1F83CBC771B066D5006 /* compress_fragment.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compress_fragment.c; path = ../../addons/ofxIO/libs/brotli/src/enc/compress_fragment.c; sourceTree = SOURCE_ROOT; };
 		91CA8625BDB64D0504457CEF /* Progress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Progress.h; path = ../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Progress.h; sourceTree = SOURCE_ROOT; };
+		9226C13195097FDF8E432242 /* BleedTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BleedTransformer.cpp; sourceTree = "<group>"; };
+		9226C46D98B6964A56A2A803 /* BleedTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BleedTransformer.hpp; sourceTree = "<group>"; };
 		923C638DD046234407B071E1 /* huffman.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = huffman.h; path = ../../addons/ofxIO/libs/brotli/src/dec/huffman.h; sourceTree = SOURCE_ROOT; };
 		9352F95F6BE3F108F33E4988 /* tnt_array3d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tnt_array3d_utils.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array3d_utils.h; sourceTree = SOURCE_ROOT; };
 		9505CFB52DEEED56695CAB31 /* iotypewrappers_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iotypewrappers_impl.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/iotypewrappers_impl.h; sourceTree = SOURCE_ROOT; };
@@ -1816,6 +1819,8 @@
 				9CE4F026252D09340085563B /* TransformationPainter.hpp */,
 				9C5CA1D92532214700E415AC /* MelTransformer.cpp */,
 				9C5CA1DA2532214700E415AC /* MelTransformer.hpp */,
+				9226C13195097FDF8E432242 /* BleedTransformer.cpp */,
+				9226C46D98B6964A56A2A803 /* BleedTransformer.hpp */,
 			);
 			path = transformators;
 			sourceTree = "<group>";
@@ -2939,6 +2944,7 @@
 				7CCD9C62A13AD9F6979CB38C /* LedClient.cpp in Sources */,
 				7CCD973F812E6B3291BE8234 /* FadeVisual.cpp in Sources */,
 				9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */,
+				9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
