@@ -6,9 +6,6 @@
 int main() {
     ofGLWindowSettings settings;
 
-    // ofxShadertoy NEEDS the GL Programmable Renderer
-    settings.setGLVersion(3, 2);
-
     shared_ptr<AppContext> context(new AppContext());
 
     settings.setSize(1280, 800);
