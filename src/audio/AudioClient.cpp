@@ -44,7 +44,7 @@ void AudioClient::update() {
     model.spectrum = audioAnalyzer.getValues(SPECTRUM, 0, smoothing);
     model.melBands = audioAnalyzer.getValues(MEL_BANDS, 0, smoothing);
     model.mfcc = audioAnalyzer.getValues(MFCC, 0, smoothing);
-    model.hpcp = audioAnalyzer.getValues(HPCP, 0, smoothing);
+    model.hpcp = audioAnalyzer.getValues(HPCP, 0, hpcpSmoothing);
     
     model.tristimulus = audioAnalyzer.getValues(TRISTIMULUS, 0, smoothing);
     
