@@ -11,7 +11,6 @@ vector<ofColor> MelTransformer::transform(vector<ofColor> colors) {
     if (context->audio.isReady == false) return colors;
     if (isEnabled == false) return colors;
 
-    ofColor mixer = ofColor::black;
     vector<ofColor> filteredColors;
     if (color0 == true) {
         filteredColors.push_back(bandColors[0]);
@@ -52,13 +51,20 @@ vector<ofColor> MelTransformer::transform(vector<ofColor> colors) {
 
     int colorSize = filteredColors.size();
     int hpcpSize = audioModel->hpcp.size();
+    float maxHpcp = 0;
+    int maxHpcpIndex = -1;
     for (int i = 0; i < hpcpSize && colorSize != 0; i++) {
-        int colorIndex = round(((i * 1.f) / hpcpSize) * colorSize);
-        float amount = audioModel->hpcp[i] * pow(audioModel->power, addSlider);
-        mixer.lerp(filteredColors[colorIndex], amount);
+        if (maxHpcp < audioModel->hpcp[i]) {
+            maxHpcp = audioModel->hpcp[i];
+            maxHpcpIndex = i;
+        }
     }
 
-    mixColor.lerp(mixer, maxNoteRatio);
+    if (maxHpcpIndex > -1) {
+        float amount = audioModel->hpcp[maxHpcpIndex] * pow(audioModel->power, addSlider);
+        int colorIndex = round(((maxHpcpIndex * 1.f) / hpcpSize) * colorSize);
+        mixColor.lerp(filteredColors[colorIndex], amount * maxNoteRatio);
+    }
 
     vector<float> scaledMels;
 
@@ -74,13 +80,18 @@ vector<ofColor> MelTransformer::transform(vector<ofColor> colors) {
 
     vector<ofColor> mutColors;
     for (int row = 0; row < 16; row++) {
-        float rowRatio = (15 - row) / 15.0;
+        float rowRatio;
+        if (row < 8) {
+            rowRatio = (7 - row) / 7.0;
+        } else {
+            rowRatio = (row - 8) / 7.0;
+        }
         for (int col = 0; col < 32; col++) {
             float melIndex = col > 15 ? col % 16 : 15 - col % 16;
             float mel = scaledMels[melIndex];
             int pixelIndex = row * 32 + col;
             if (mel > rowRatio) {
-                ofColor mutColor = colors[pixelIndex].getLerped(mixColor, alphaSlider) + colors[pixelIndex].lerp(ofColor::black, addSlider);
+                ofColor mutColor = colors[pixelIndex].getLerped(mixColor, alphaSlider) + ofColor::black.getLerped(mixColor, addSlider);
                 mutColors.push_back(mutColor);
             } else {
                 mutColors.push_back(colors[pixelIndex]);

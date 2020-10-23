@@ -24,7 +24,9 @@ class VisualMixerWindow : public ofBaseApp {
     TransformationPainter painter;
     vector<BaseTransformer*> transformers;
     vector<ofColor> colorMatrix;
-    
+    ofxFloatSlider smoothing;
+    ofxFloatSlider hpcpSmoothing;
+    ofxPanel gui;
 public:
     VisualMixerWindow(AppContext * appContext) {
         context = appContext;
