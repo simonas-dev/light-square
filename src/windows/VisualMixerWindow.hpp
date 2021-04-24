@@ -13,6 +13,7 @@
 #include "AppContext.hpp"
 #include "BaseTransformer.hpp"
 #include "FadeTransformer.hpp"
+#include "ComplexityFadeTransformer.hpp"
 #include "StrobeTransformer.hpp"
 #include "MelTransformer.hpp"
 #include "BleedTransformer.hpp"
@@ -32,6 +33,7 @@ public:
         context = appContext;
         transformers = {
                 new FadeTransformer(context),
+                new ComplexityFadeTransformer(context),
                 new StrobeTransformer(context),
                 new MelTransformer(context),
                 new BleedTransformer(context)
