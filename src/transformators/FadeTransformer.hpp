@@ -19,7 +19,6 @@ public:
         context = appContext;
     };
     ofxFloatSlider fadeRatio;
-    ofxFloatSlider randomization;
     vector<ofColor> transform(vector<ofColor> colors);
     void setup();
     void drawThumb(int x, int y, float w, float h);
