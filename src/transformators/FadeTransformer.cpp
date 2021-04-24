@@ -14,13 +14,17 @@ void FadeTransformer::setup() {
 }
 
 vector<ofColor> FadeTransformer::transform(vector<ofColor> colors) {
-    vector<ofColor> mapped;
-    for (ofColor color : colors) {
-        ofColor mappedColor = color.lerp(ofColor::black, fadeRatio);
-        mapped.push_back(mappedColor);
+    if (isEnabled) {
+        vector<ofColor> mapped;
+        for (ofColor color : colors) {
+            ofColor mappedColor = color.lerp(ofColor::black, fadeRatio);
+            mapped.push_back(mappedColor);
+        }
+        lastTransformation = mapped;
+        return mapped;
+    } else {
+        return colors;
     }
-    lastTransformation = mapped;
-    return mapped;
 }
 
 void FadeTransformer::drawThumb(int x, int y, float w, float h) {
