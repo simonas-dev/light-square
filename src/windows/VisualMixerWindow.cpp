@@ -12,8 +12,8 @@ void VisualMixerWindow::setup() {
     ofBackground(0);
     context->ledClient.setup();
     gui.setup("Audio");
-    gui.add(smoothing.setup("Smoothing", 0, 0.0, 1.0));
-    gui.add(hpcpSmoothing.setup("HPCP Smoothing", 0, 0.0, 1.0));
+    gui.add(smoothing.setup("Smoothing", 0.35, 0.0, 1.0));
+    gui.add(hpcpSmoothing.setup("HPCP Smoothing", 0.8, 0.0, 1.0));
     
     for (BaseTransformer * transformer : transformers) {
         transformer->setup();
