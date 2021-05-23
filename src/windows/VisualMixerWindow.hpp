@@ -17,6 +17,7 @@
 #include "StrobeTransformer.hpp"
 #include "MelTransformer.hpp"
 #include "BleedTransformer.hpp"
+#include "MazeMelTransformer.hpp"
 
 #endif /* VisualMixerWindow_hpp */
 
@@ -36,6 +37,7 @@ public:
                 new ComplexityFadeTransformer(context),
                 new StrobeTransformer(context),
                 new MelTransformer(context),
+                new MazeMelTransformer(context),
                 new BleedTransformer(context)
         };
         for (int i = 0; i < 512; ++i) {

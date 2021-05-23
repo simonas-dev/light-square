@@ -106,6 +106,8 @@
 		8E1B6932984A7C40B699A6B2 /* Context.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14CA1A41A4827A6F9FA1C6A8 /* Context.cpp */; };
 		8F15CD1DAAC7EAF2D81002F4 /* JSONWebToken.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0D4D71DE7B0E2155E2216F21 /* JSONWebToken.cpp */; };
 		9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C13195097FDF8E432242 /* BleedTransformer.cpp */; };
+		9226C4534951FC8966E7820B /* MazeMelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */; };
+		9226C525EC564E831A7C8418 /* MatrixTrasformtions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C886173982EAED18F678 /* MatrixTrasformtions.cpp */; };
 		9226C877D5E75D0E0FD5625C /* ComplexityFadeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C103D011523F902CE79B /* ComplexityFadeTransformer.cpp */; };
 		9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C5CA1D92532214700E415AC /* MelTransformer.cpp */; };
 		92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C846292EE0D139BE5E0C7E7F /* ofxButton.cpp */; };
@@ -545,6 +547,10 @@
 		9226C13195097FDF8E432242 /* BleedTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BleedTransformer.cpp; sourceTree = "<group>"; };
 		9226C19A2968C9FBAAB5B3EE /* ComplexityFadeTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ComplexityFadeTransformer.hpp; sourceTree = "<group>"; };
 		9226C46D98B6964A56A2A803 /* BleedTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BleedTransformer.hpp; sourceTree = "<group>"; };
+		9226C738C84A04DF0AF166C2 /* MazeMelTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MazeMelTransformer.hpp; sourceTree = "<group>"; };
+		9226C886173982EAED18F678 /* MatrixTrasformtions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTrasformtions.cpp; sourceTree = "<group>"; };
+		9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MazeMelTransformer.cpp; sourceTree = "<group>"; };
+		9226CF6631A6E9CAFB723784 /* MatrixTrasformtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixTrasformtions.h; sourceTree = "<group>"; };
 		923C638DD046234407B071E1 /* huffman.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = huffman.h; path = ../../addons/ofxIO/libs/brotli/src/dec/huffman.h; sourceTree = SOURCE_ROOT; };
 		9352F95F6BE3F108F33E4988 /* tnt_array3d_utils.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = tnt_array3d_utils.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/utils/tnt/tnt_array3d_utils.h; sourceTree = SOURCE_ROOT; };
 		9505CFB52DEEED56695CAB31 /* iotypewrappers_impl.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = iotypewrappers_impl.h; path = ../../addons/ofxAudioAnalyzer/libs/essentia/include/essentia/iotypewrappers_impl.h; sourceTree = SOURCE_ROOT; };
@@ -1751,6 +1757,15 @@
 			name = lz4;
 			sourceTree = "<group>";
 		};
+		9226C76BAD53274068168DB5 /* colormatrix */ = {
+			isa = PBXGroup;
+			children = (
+				9226C886173982EAED18F678 /* MatrixTrasformtions.cpp */,
+				9226CF6631A6E9CAFB723784 /* MatrixTrasformtions.h */,
+			);
+			path = colormatrix;
+			sourceTree = "<group>";
+		};
 		92CF4367AF54E202BCF9E084 /* ofxIO */ = {
 			isa = PBXGroup;
 			children = (
@@ -1790,6 +1805,8 @@
 				9C5CA1DA2532214700E415AC /* MelTransformer.hpp */,
 				9226C13195097FDF8E432242 /* BleedTransformer.cpp */,
 				9226C46D98B6964A56A2A803 /* BleedTransformer.hpp */,
+				9226C738C84A04DF0AF166C2 /* MazeMelTransformer.hpp */,
+				9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */,
 				9226C103D011523F902CE79B /* ComplexityFadeTransformer.cpp */,
 				9226C19A2968C9FBAAB5B3EE /* ComplexityFadeTransformer.hpp */,
 			);
@@ -2609,6 +2626,7 @@
 				7CCD9745F583C915EBA36996 /* windows */,
 				7CCD92F9809609587A67B8FE /* audio */,
 				7CCD9419EEB95DFF76E7B788 /* led */,
+				9226C76BAD53274068168DB5 /* colormatrix */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -2665,13 +2683,11 @@
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "light-square" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
-				English,
-				Japanese,
-				French,
-				German,
+				en,
+				Base,
 			);
 			mainGroup = E4B69B4A0A3A1720003C02F2;
 			productRefGroup = E4B69B4A0A3A1720003C02F2;
@@ -2910,7 +2926,9 @@
 				7CCD9100543AD80745EBABA9 /* AudioModel.cpp in Sources */,
 				9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */,
 				9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */,
+				9226C4534951FC8966E7820B /* MazeMelTransformer.cpp in Sources */,
 				9226C877D5E75D0E0FD5625C /* ComplexityFadeTransformer.cpp in Sources */,
+				9226C525EC564E831A7C8418 /* MatrixTrasformtions.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3149,7 +3167,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = AppStore;
 		};
@@ -3618,7 +3636,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
 			};
 			name = Release;
 		};
