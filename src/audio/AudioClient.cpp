@@ -59,8 +59,8 @@ void AudioClient::setInput(ofSoundDevice device) {
     ofSoundStreamSettings settings;
     
     float sampleRate = 44100;
-    float bufferSize = 512;
     int inChannels = device.inputChannels;
+    float bufferSize = 1024;
     
     settings.setInListener(this);
     settings.sampleRate = sampleRate;
