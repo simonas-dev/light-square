@@ -108,7 +108,9 @@
 		9226C007E6C87A3CD066E61E /* BleedTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C13195097FDF8E432242 /* BleedTransformer.cpp */; };
 		9226C4534951FC8966E7820B /* MazeMelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */; };
 		9226C525EC564E831A7C8418 /* MatrixTrasformtions.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C886173982EAED18F678 /* MatrixTrasformtions.cpp */; };
+		9226C85564D887EB71F61267 /* CornerFadeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C0EEB2F2197CA5C4B28F /* CornerFadeTransformer.cpp */; };
 		9226C877D5E75D0E0FD5625C /* ComplexityFadeTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C103D011523F902CE79B /* ComplexityFadeTransformer.cpp */; };
+		9226CA92FAC1B739C34542BD /* MelPulseTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9226C2DDAC706F1D315E9E3D /* MelPulseTransformer.cpp */; };
 		9226CC890B9A23EFBB92AC84 /* MelTransformer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9C5CA1D92532214700E415AC /* MelTransformer.cpp */; };
 		92A50AF72101624C3A8E6446 /* ofxButton.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C846292EE0D139BE5E0C7E7F /* ofxButton.cpp */; };
 		93032A479EC37954EE6E0D83 /* ofxNeoPixelGrid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F7105E9F12FA1CC0DEB4E62B /* ofxNeoPixelGrid.cpp */; };
@@ -543,12 +545,16 @@
 		915FF050A99B044C9F32A8DA /* static_dict.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = static_dict.c; path = ../../addons/ofxIO/libs/brotli/src/enc/static_dict.c; sourceTree = SOURCE_ROOT; };
 		91C4F1F83CBC771B066D5006 /* compress_fragment.c */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.c; fileEncoding = 4; name = compress_fragment.c; path = ../../addons/ofxIO/libs/brotli/src/enc/compress_fragment.c; sourceTree = SOURCE_ROOT; };
 		91CA8625BDB64D0504457CEF /* Progress.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = Progress.h; path = ../../addons/ofxHTTP/libs/ofxHTTP/include/ofx/HTTP/Progress.h; sourceTree = SOURCE_ROOT; };
+		9226C0EEB2F2197CA5C4B28F /* CornerFadeTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CornerFadeTransformer.cpp; sourceTree = "<group>"; };
 		9226C103D011523F902CE79B /* ComplexityFadeTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ComplexityFadeTransformer.cpp; sourceTree = "<group>"; };
 		9226C13195097FDF8E432242 /* BleedTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BleedTransformer.cpp; sourceTree = "<group>"; };
 		9226C19A2968C9FBAAB5B3EE /* ComplexityFadeTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ComplexityFadeTransformer.hpp; sourceTree = "<group>"; };
+		9226C2DDAC706F1D315E9E3D /* MelPulseTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MelPulseTransformer.cpp; sourceTree = "<group>"; };
 		9226C46D98B6964A56A2A803 /* BleedTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = BleedTransformer.hpp; sourceTree = "<group>"; };
+		9226C53BC75E68BBDCA5FF9F /* MelPulseTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MelPulseTransformer.h; sourceTree = "<group>"; };
 		9226C738C84A04DF0AF166C2 /* MazeMelTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = MazeMelTransformer.hpp; sourceTree = "<group>"; };
 		9226C886173982EAED18F678 /* MatrixTrasformtions.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MatrixTrasformtions.cpp; sourceTree = "<group>"; };
+		9226C925D8EE4900B7F5EDA8 /* CornerFadeTransformer.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = CornerFadeTransformer.hpp; sourceTree = "<group>"; };
 		9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MazeMelTransformer.cpp; sourceTree = "<group>"; };
 		9226CF6631A6E9CAFB723784 /* MatrixTrasformtions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MatrixTrasformtions.h; sourceTree = "<group>"; };
 		923C638DD046234407B071E1 /* huffman.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 4; name = huffman.h; path = ../../addons/ofxIO/libs/brotli/src/dec/huffman.h; sourceTree = SOURCE_ROOT; };
@@ -1809,6 +1815,10 @@
 				9226C9271A128260F4952A71 /* MazeMelTransformer.cpp */,
 				9226C103D011523F902CE79B /* ComplexityFadeTransformer.cpp */,
 				9226C19A2968C9FBAAB5B3EE /* ComplexityFadeTransformer.hpp */,
+				9226C2DDAC706F1D315E9E3D /* MelPulseTransformer.cpp */,
+				9226C53BC75E68BBDCA5FF9F /* MelPulseTransformer.h */,
+				9226C0EEB2F2197CA5C4B28F /* CornerFadeTransformer.cpp */,
+				9226C925D8EE4900B7F5EDA8 /* CornerFadeTransformer.hpp */,
 			);
 			path = transformators;
 			sourceTree = "<group>";
@@ -2929,6 +2939,8 @@
 				9226C4534951FC8966E7820B /* MazeMelTransformer.cpp in Sources */,
 				9226C877D5E75D0E0FD5625C /* ComplexityFadeTransformer.cpp in Sources */,
 				9226C525EC564E831A7C8418 /* MatrixTrasformtions.cpp in Sources */,
+				9226CA92FAC1B739C34542BD /* MelPulseTransformer.cpp in Sources */,
+				9226C85564D887EB71F61267 /* CornerFadeTransformer.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -3167,7 +3179,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			};
 			name = AppStore;
 		};
@@ -3636,7 +3648,7 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
-				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
 			};
 			name = Release;
 		};
