@@ -10,10 +10,12 @@
 vector<ofColor> StrobeTransformer::transform(vector<ofColor> colors) {
     vector<ofColor> mapped;
     if (isEnabled) {
+        float kickFloat = powerRatio * context->audio.model.strongDecayNorm;
         for (ofColor color : colors) {
             float random = ofRandom(randomization);
-            float lerp = powerRatio * context->audio.model.strongDecayNorm * (1 - random);
-            ofColor mappedColor = color.lerp(ofColor::white, lerp);
+            float lerp = pow(kickFloat, 2) * (1 - random);
+            ofColor strobeColor = ofColor::white;
+            ofColor mappedColor = color.lerp(strobeColor, lerp);
             mapped.push_back(mappedColor);
         }
     } else {
