@@ -68,6 +68,8 @@ vector<ofColor> MazeMelTransformer::transform(vector<ofColor> colors) {
 
     vector<float> scaledMels;
 
+    if (audioModel->melBands.size() == 0) return colors;
+    
     // 32 mel bands
     for (int i = 0; i < audioModel->melBands.size(); i++) {
         float scaledValue = ofMap(audioModel->melBands[i], DB_MIN, -1.0, 0.0, 1.0, true);
