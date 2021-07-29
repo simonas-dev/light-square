@@ -105,8 +105,8 @@ void MazeMelTransformer::setup() {
     gui.setDefaultWidth(150);
     gui.setWidthElements(150);
     gui.setup();
-    gui.setName("Mel");
-    gui.add(isEnabled.setup("Is Enabled", true));
+    gui.setName("Maze Mel");
+    gui.add(isEnabled.setup("Is Enabled", false));
     gui.add(maxNoteRatio.setup("Max Note Ratio", 0.5, 0.0, 1.0));
     gui.add(alphaSlider.setup("Alpha", 0.5, 0.0, 1.0));
     gui.add(addSlider.setup("Add", 0.0, 0.0, 1.0));
