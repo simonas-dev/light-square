@@ -26,6 +26,8 @@ vector<ofColor> StrobeTransformer::transform(vector<ofColor> colors) {
 }
 
 void StrobeTransformer::setup() {
+    gui.setDefaultWidth(150);
+    gui.setWidthElements(150);
     gui.setup();
     gui.setName("Strobe");
     gui.add(isEnabled.setup("Is Enabled", false));

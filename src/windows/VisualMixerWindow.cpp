@@ -41,7 +41,7 @@ void VisualMixerWindow::draw() {
     int stageHeight = stageWidth / 2;
     painter.draw(colorMatrix, margin, 0, stageWidth, stageHeight);
     int xpos = 0;
-    int thumbW = 200;
+    int thumbW = 150;
     int thumbH = 100;
     for (BaseTransformer * transformer : transformers) {
         transformer->drawThumb(xpos, ofGetHeight()-thumbH, thumbW, thumbH);

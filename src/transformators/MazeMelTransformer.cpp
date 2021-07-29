@@ -102,6 +102,8 @@ vector<ofColor> MazeMelTransformer::transform(vector<ofColor> colors) {
 
 
 void MazeMelTransformer::setup() {
+    gui.setDefaultWidth(150);
+    gui.setWidthElements(150);
     gui.setup();
     gui.setName("Mel");
     gui.add(isEnabled.setup("Is Enabled", true));

@@ -7,6 +7,8 @@
 #include "FadeTransformer.hpp"
 
 void FadeTransformer::setup() {
+    gui.setDefaultWidth(150);
+    gui.setWidthElements(150);
     gui.setup();
     gui.setName("Fade");
     gui.add(isEnabled.setup("Is Enabled", true));

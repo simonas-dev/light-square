@@ -15,7 +15,7 @@ int main() {
     ofRunApp(systemWindow, systemApp);
 
 
-    settings.setSize(1280, 800);
+    settings.setSize(1280, 840);
     settings.setPosition(ofVec2f(300,0));
     shared_ptr<ofAppBaseWindow> mixerWindow = ofCreateWindow(settings);
     shared_ptr<VisualMixerWindow> mixerApp(new VisualMixerWindow(context.get()));

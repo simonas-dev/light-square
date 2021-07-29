@@ -7,6 +7,8 @@
 #include "ComplexityFadeTransformer.hpp"
 
 void ComplexityFadeTransformer::setup() {
+    gui.setDefaultWidth(150);
+    gui.setWidthElements(150);
     gui.setup();
     gui.setName("Complexity Fade");
     gui.add(isEnabled.setup("Is Enabled", true));
