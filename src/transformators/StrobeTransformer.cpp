@@ -30,7 +30,7 @@ void StrobeTransformer::setup() {
     gui.setName("Strobe");
     gui.add(isEnabled.setup("Is Enabled", false));
     gui.add(powerRatio.setup("Strobe Power Ratio", 0.0, 0.0, 1.0));
-    gui.add(randomization.setup("Randomization", 0, 0.0, 0.5));
+    gui.add(randomization.setup("Randomization", 0, 0.0, 1.0));
 }
 
 void StrobeTransformer::drawThumb(int x, int y, float w, float h) {
