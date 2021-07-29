@@ -8,10 +8,10 @@
 
 void ComplexityFadeTransformer::setup() {
     gui.setup();
-    gui.setName("Fade");
+    gui.setName("Complexity Fade");
     gui.add(isEnabled.setup("Is Enabled", true));
     gui.add(fadeRatio.setup("Fade Ratio", 0.035, 0.0, 0.35));
-    gui.add(dropOff.setup("Drop Off", 0.5, 0.0, 1.0));
+    gui.add(dropOff.setup("Complexity Smoothing", 0.5, 0.0, 1.0));
 }
 
 vector<ofColor> ComplexityFadeTransformer::transform(vector<ofColor> colors) {
@@ -19,7 +19,7 @@ vector<ofColor> ComplexityFadeTransformer::transform(vector<ofColor> colors) {
         vector<ofColor> mapped;
         for (ofColor color : colors) {
             float complexity = context->audio.model.specCompNorm;
-            rollingComplexity = rollingComplexity * (1 - dropOff) + complexity * (dropOff);
+            rollingComplexity = rollingComplexity * (dropOff) + complexity * (dropOff - 1);
             ofColor mappedColor = color.lerp(ofColor::black, fadeRatio * rollingComplexity);
             mapped.push_back(mappedColor);
         }
