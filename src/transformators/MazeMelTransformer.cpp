@@ -85,12 +85,12 @@ vector<ofColor> MazeMelTransformer::transform(vector<ofColor> colors) {
         for (int col = 0; col < 32; col++) {
             int pixelIndex = row * 32 + col;
             int melIndex;
-            if (col < 15) {
+            if (col < 16) {
                 melIndex = row < col ? row : col;
             } else {
-                melIndex = 15 - (col - 15) > 15 - row ? 15 - row : 15 - (col - 15);
+                melIndex = 16 - (col - 16) > 16 - row ? 16 - row : 16 - (col - 16);
             }
-            float ratio = scaledMels[15 - melIndex];
+            float ratio = scaledMels[16 - melIndex];
             float alphaRatio = alphaSlider * ratio;
             float addRatio = addSlider * ratio;
             ofColor mutColor = colors[pixelIndex].getLerped(mixColor, alphaRatio) + ofColor::black.getLerped(mixColor, addRatio);
